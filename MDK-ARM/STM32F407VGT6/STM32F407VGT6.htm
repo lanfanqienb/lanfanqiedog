@@ -3,7 +3,7 @@
 <title>Static Call Graph - [STM32F407VGT6\STM32F407VGT6.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image STM32F407VGT6\STM32F407VGT6.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sun Apr 26 15:24:48 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Tue May 12 15:19:14 2026
 <BR><P>
 <H3>Maximum Stack Usage =        488 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -366,8 +366,8 @@ Global Symbols
 <P><STRONG><a name="[1d5]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
 
 <P><STRONG><a name="[9d]"></a>__rt_lib_shutdown</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))
-<BR><BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_ls
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
+<BR><BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_ls
 </UL>
 
 <P><STRONG><a name="[1d6]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
@@ -697,7 +697,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_treble_jump_force2
-<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_double_jump_force2
+<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_double_jump_force2
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_memcpy
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FC_VMC_Jacobi
@@ -782,9 +782,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[ae]"></a>_printf_truncate_unsigned</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, _printf_truncate.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_dec
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_hex
+<BR><BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_hex
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_oct
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_dec
 </UL>
 
 <P><STRONG><a name="[aa]"></a>_printf_str</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, _printf_str.o(.text))
@@ -859,8 +859,8 @@ Global Symbols
 <P><STRONG><a name="[7b]"></a>_printf_int_oct</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, _printf_oct_int_ll.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = _printf_int_oct &rArr; _printf_longlong_oct &rArr; _printf_int_common &rArr; _printf_post_padding
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_truncate_unsigned
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_oct
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_oct
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_truncate_unsigned
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_o
 </UL>
@@ -886,8 +886,8 @@ Global Symbols
 <P><STRONG><a name="[7d]"></a>_printf_int_hex</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, _printf_hex_int_ll_ptr.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = _printf_int_hex &rArr; _printf_longlong_hex &rArr; _printf_int_common &rArr; _printf_post_padding
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_truncate_unsigned
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_hex
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_hex
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_truncate_unsigned
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_x
 </UL>
@@ -940,14 +940,14 @@ Global Symbols
 <P><STRONG><a name="[b9]"></a>_ttywrch</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, sys_wrch.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _ttywrch
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__default_signal_display
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__assert_puts
+<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__assert_puts
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__default_signal_display
 </UL>
 
 <P><STRONG><a name="[9f]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
+<BR><BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sig_exit
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
 </UL>
 
 <P><STRONG><a name="[a8]"></a>__aeabi_errno_addr</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text))
@@ -972,10 +972,10 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_dec
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_dec
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_hex
+<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_hex
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_oct
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_longlong_dec
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_dec
 </UL>
 
 <P><STRONG><a name="[1f0]"></a>__lib_sel_fp_printf</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, _printf_fp_dec.o(.text), UNUSED)
@@ -1326,8 +1326,8 @@ Global Symbols
 <LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_cosf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FC_Update_Leg
-<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sample_foot_pos
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FC_VMC_Jacobi
+<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sample_foot_pos
 </UL>
 
 <P><STRONG><a name="[e1]"></a>FC_Motor_To_Joint</STRONG> (Thumb, 124 bytes, Stack size 0 bytes, dog.o(i.FC_Motor_To_Joint))
@@ -1361,10 +1361,10 @@ Global Symbols
 <P><STRONG><a name="[e0]"></a>FC_Update_Leg</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, dog.o(i.FC_Update_Leg))
 <BR><BR>[Stack]<UL><LI>Max Depth = 292<LI>Call Chain = FC_Update_Leg &rArr; FC_VMC_Jacobi &rArr; FC_Kinematic_Solution &rArr; __hardfp_sinf &rArr; __mathlib_rredf2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FC_Motor_To_Joint
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FC_Kinematic_Solution
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FC_VMC_Jacobi
+<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FC_VMC_Jacobi
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FC_PD_Control
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FC_Motor_To_Joint
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FC_Kinematic_Solution
 </UL>
 <BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 </UL>
@@ -1372,8 +1372,8 @@ Global Symbols
 <P><STRONG><a name="[e3]"></a>FC_VMC_Jacobi</STRONG> (Thumb, 372 bytes, Stack size 136 bytes, dog.o(i.FC_VMC_Jacobi))
 <BR><BR>[Stack]<UL><LI>Max Depth = 276<LI>Call Chain = FC_VMC_Jacobi &rArr; FC_Kinematic_Solution &rArr; __hardfp_sinf &rArr; __mathlib_rredf2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FC_Kinematic_Solution
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FC_Kinematic_Solution
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FC_Update_Leg
 </UL>
@@ -1423,10 +1423,10 @@ Global Symbols
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_ErrorCallback
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_RxFifo0MsgPendingCallback
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN2_RX1_IRQHandler
+<BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN1_RX0_IRQHandler
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN2_RX1_IRQHandler
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN2_RX0_IRQHandler
 <LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN1_RX1_IRQHandler
-<LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN1_RX0_IRQHandler
 </UL>
 
 <P><STRONG><a name="[f1]"></a>HAL_CAN_Init</STRONG> (Thumb, 372 bytes, Stack size 16 bytes, stm32f4xx_hal_can.o(i.HAL_CAN_Init))
@@ -1556,15 +1556,15 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_treble_jump_force2
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
-<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump2
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump
-<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_double_jump_force2
-<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_up
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward7
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward2
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_force
+<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stairs
+<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stair
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_floor2
+<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_double_jump_force2
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_up
+<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward7
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stair2
 </UL>
 
 <P><STRONG><a name="[f5]"></a>HAL_GPIO_Init</STRONG> (Thumb, 454 bytes, Stack size 24 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_Init))
@@ -1584,8 +1584,7 @@ Global Symbols
 <P><STRONG><a name="[f3]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_GetTick))
 <BR><BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Init
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Init
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_force
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
@@ -1800,10 +1799,10 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 116 + Unknown Stack Size
 <LI>Call Chain = HAL_UARTEx_RxEventCallback &rArr; HAL_UARTEx_ReceiveToIdle_DMA &rArr; UART_Start_Receive_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_ringbuffer_put
+<BR>[Calls]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_ringbuffer_put
 <LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_DMAStop
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UARTEx_ReceiveToIdle_DMA
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
 <LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Receive_IT
@@ -2423,32 +2422,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[16c]"></a>dog_bunny_jump_force</STRONG> (Thumb, 1582 bytes, Stack size 64 bytes, yushu_app.o(i.dog_bunny_jump_force))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = dog_bunny_jump_force &rArr; __aeabi_dsub
-</UL>
-<BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[16d]"></a>dog_bunny_jump_forward2</STRONG> (Thumb, 1646 bytes, Stack size 32 bytes, yushu_app.o(i.dog_bunny_jump_forward2))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = dog_bunny_jump_forward2 &rArr; __aeabi_dsub
-</UL>
-<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[16e]"></a>dog_bunny_jump_forward7</STRONG> (Thumb, 1646 bytes, Stack size 32 bytes, yushu_app.o(i.dog_bunny_jump_forward7))
+<P><STRONG><a name="[16c]"></a>dog_bunny_jump_forward7</STRONG> (Thumb, 1646 bytes, Stack size 32 bytes, yushu_app.o(i.dog_bunny_jump_forward7))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = dog_bunny_jump_forward7 &rArr; __aeabi_dsub
 </UL>
 <BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
@@ -2460,7 +2434,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[16f]"></a>dog_bunny_jump_up</STRONG> (Thumb, 2060 bytes, Stack size 32 bytes, yushu_app.o(i.dog_bunny_jump_up))
+<P><STRONG><a name="[16d]"></a>dog_bunny_jump_up</STRONG> (Thumb, 2060 bytes, Stack size 32 bytes, yushu_app.o(i.dog_bunny_jump_up))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = dog_bunny_jump_up &rArr; __aeabi_dsub
 </UL>
 <BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
@@ -2472,17 +2446,17 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[170]"></a>dog_double_jump_force2</STRONG> (Thumb, 58 bytes, Stack size 72 bytes, yushu_app.o(i.dog_double_jump_force2))
+<P><STRONG><a name="[16e]"></a>dog_double_jump_force2</STRONG> (Thumb, 58 bytes, Stack size 72 bytes, yushu_app.o(i.dog_double_jump_force2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = dog_double_jump_force2 &rArr; dog_jump_force10 &rArr; __aeabi_dsub
 </UL>
-<BR>[Calls]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
+<BR>[Calls]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[172]"></a>dog_forward_bit_still</STRONG> (Thumb, 3242 bytes, Stack size 48 bytes, yushu_app.o(i.dog_forward_bit_still))
+<P><STRONG><a name="[170]"></a>dog_forward_bit_still</STRONG> (Thumb, 3242 bytes, Stack size 48 bytes, yushu_app.o(i.dog_forward_bit_still))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = dog_forward_bit_still &rArr; __aeabi_dmul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
@@ -2496,7 +2470,7 @@ Global Symbols
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_small_still
 </UL>
 
-<P><STRONG><a name="[173]"></a>dog_forward_bit_still_int</STRONG> (Thumb, 366 bytes, Stack size 24 bytes, yushu_app.o(i.dog_forward_bit_still_int))
+<P><STRONG><a name="[171]"></a>dog_forward_bit_still_int</STRONG> (Thumb, 366 bytes, Stack size 24 bytes, yushu_app.o(i.dog_forward_bit_still_int))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = dog_forward_bit_still_int &rArr; __aeabi_f2d
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
@@ -2507,7 +2481,7 @@ Global Symbols
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_small_still
 </UL>
 
-<P><STRONG><a name="[174]"></a>dog_forward_bit_still_out</STRONG> (Thumb, 484 bytes, Stack size 32 bytes, yushu_app.o(i.dog_forward_bit_still_out))
+<P><STRONG><a name="[172]"></a>dog_forward_bit_still_out</STRONG> (Thumb, 484 bytes, Stack size 32 bytes, yushu_app.o(i.dog_forward_bit_still_out))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = dog_forward_bit_still_out &rArr; __aeabi_dsub
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
@@ -2518,7 +2492,7 @@ Global Symbols
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_small_still
 </UL>
 
-<P><STRONG><a name="[175]"></a>dog_forward_mid</STRONG> (Thumb, 3246 bytes, Stack size 48 bytes, yushu_app.o(i.dog_forward_mid))
+<P><STRONG><a name="[173]"></a>dog_forward_mid</STRONG> (Thumb, 3246 bytes, Stack size 48 bytes, yushu_app.o(i.dog_forward_mid))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = dog_forward_mid &rArr; __aeabi_dmul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
@@ -2531,7 +2505,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[176]"></a>dog_forward_mid_int</STRONG> (Thumb, 366 bytes, Stack size 24 bytes, yushu_app.o(i.dog_forward_mid_int))
+<P><STRONG><a name="[174]"></a>dog_forward_mid_int</STRONG> (Thumb, 366 bytes, Stack size 24 bytes, yushu_app.o(i.dog_forward_mid_int))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = dog_forward_mid_int &rArr; __aeabi_f2d
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
@@ -2541,7 +2515,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[177]"></a>dog_forward_mid_out</STRONG> (Thumb, 484 bytes, Stack size 32 bytes, yushu_app.o(i.dog_forward_mid_out))
+<P><STRONG><a name="[175]"></a>dog_forward_mid_out</STRONG> (Thumb, 484 bytes, Stack size 32 bytes, yushu_app.o(i.dog_forward_mid_out))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = dog_forward_mid_out &rArr; __aeabi_dsub
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
@@ -2551,7 +2525,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[178]"></a>dog_forward_rear</STRONG> (Thumb, 2112 bytes, Stack size 48 bytes, yushu_app.o(i.dog_forward_rear))
+<P><STRONG><a name="[176]"></a>dog_forward_rear</STRONG> (Thumb, 2112 bytes, Stack size 48 bytes, yushu_app.o(i.dog_forward_rear))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = dog_forward_rear &rArr; __aeabi_dmul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
@@ -2564,7 +2538,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[179]"></a>dog_forward_rear_int</STRONG> (Thumb, 212 bytes, Stack size 24 bytes, yushu_app.o(i.dog_forward_rear_int))
+<P><STRONG><a name="[177]"></a>dog_forward_rear_int</STRONG> (Thumb, 212 bytes, Stack size 24 bytes, yushu_app.o(i.dog_forward_rear_int))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = dog_forward_rear_int &rArr; __aeabi_f2d
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
@@ -2574,7 +2548,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[17a]"></a>dog_forward_rear_out</STRONG> (Thumb, 266 bytes, Stack size 32 bytes, yushu_app.o(i.dog_forward_rear_out))
+<P><STRONG><a name="[178]"></a>dog_forward_rear_out</STRONG> (Thumb, 266 bytes, Stack size 32 bytes, yushu_app.o(i.dog_forward_rear_out))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = dog_forward_rear_out &rArr; __aeabi_dsub
 </UL>
 <BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
@@ -2584,8 +2558,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[17b]"></a>dog_jump</STRONG> (Thumb, 1680 bytes, Stack size 32 bytes, yushu_app.o(i.dog_jump))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = dog_jump &rArr; __aeabi_dsub
+<P><STRONG><a name="[179]"></a>dog_jump_floor2</STRONG> (Thumb, 1576 bytes, Stack size 32 bytes, yushu_app.o(i.dog_jump_floor2))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = dog_jump_floor2 &rArr; __aeabi_dsub
 </UL>
 <BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 <LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
@@ -2596,19 +2570,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[17c]"></a>dog_jump2</STRONG> (Thumb, 874 bytes, Stack size 56 bytes, yushu_app.o(i.dog_jump2))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = dog_jump2 &rArr; __aeabi_dsub
-</UL>
-<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-</UL>
-<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[171]"></a>dog_jump_force10</STRONG> (Thumb, 2270 bytes, Stack size 72 bytes, yushu_app.o(i.dog_jump_force10))
+<P><STRONG><a name="[16f]"></a>dog_jump_force10</STRONG> (Thumb, 2270 bytes, Stack size 72 bytes, yushu_app.o(i.dog_jump_force10))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = dog_jump_force10 &rArr; __aeabi_dsub
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
@@ -2619,8 +2581,43 @@ Global Symbols
 <LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_treble_jump_force2
-<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_double_jump_force2
+<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_double_jump_force2
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[17a]"></a>dog_jump_stair</STRONG> (Thumb, 1520 bytes, Stack size 32 bytes, yushu_app.o(i.dog_jump_stair))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = dog_jump_stair &rArr; __aeabi_dsub
+</UL>
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stairs
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[17b]"></a>dog_jump_stair2</STRONG> (Thumb, 1520 bytes, Stack size 32 bytes, yushu_app.o(i.dog_jump_stair2))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = dog_jump_stair2 &rArr; __aeabi_dsub
+</UL>
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stairs
+</UL>
+
+<P><STRONG><a name="[17c]"></a>dog_jump_stairs</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, yushu_app.o(i.dog_jump_stairs))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = dog_jump_stairs &rArr; dog_jump_stair &rArr; __aeabi_dsub
+</UL>
+<BR>[Calls]<UL><LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stair
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stair2
+</UL>
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[17d]"></a>dog_left_bit_still</STRONG> (Thumb, 3242 bytes, Stack size 48 bytes, yushu_app.o(i.dog_left_bit_still))
@@ -2887,9 +2884,9 @@ Global Symbols
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still_out
 <LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still_int
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_out
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_int
-<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still
+<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_out
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_int
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still
 <LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_bit_still_out
 <LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_bit_still_int
 <LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_bit_still
@@ -2907,9 +2904,9 @@ Global Symbols
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still_out
 <LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still_int
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_out
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_int
-<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still
+<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_out
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_int
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still
 <LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_bit_still_out
 <LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_bit_still_int
 <LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_bit_still
@@ -2959,14 +2956,14 @@ Global Symbols
 <P><STRONG><a name="[19a]"></a>dog_treble_jump_force2</STRONG> (Thumb, 88 bytes, Stack size 104 bytes, yushu_app.o(i.dog_treble_jump_force2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = dog_treble_jump_force2 &rArr; dog_jump_force10 &rArr; __aeabi_dsub
 </UL>
-<BR>[Calls]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
+<BR>[Calls]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[9a]"></a>main</STRONG> (Thumb, 4156 bytes, Stack size 40 bytes, main.o(i.main))
+<P><STRONG><a name="[9a]"></a>main</STRONG> (Thumb, 4110 bytes, Stack size 40 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 488 + Unknown Stack Size
 <LI>Call Chain = main &rArr; OLED_Printf &rArr; OLED_ShowString &rArr; OLED_ShowChar &rArr; OLED_ShowImage &rArr; OLED_ClearArea
 </UL>
@@ -2993,20 +2990,19 @@ Global Symbols
 <LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_mid_out
 <LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_mid_int
 <LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_mid
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
-<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump2
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear_out
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear_int
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid_out
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid_int
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid
-<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_double_jump_force2
-<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_up
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward7
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward2
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_force
+<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stairs
+<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stair
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_floor2
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear_out
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear_int
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear
+<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid_out
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid_int
+<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid
+<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_double_jump_force2
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_up
+<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward7
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_mid_out
 <LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_mid_int
 <LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_mid
@@ -3125,11 +3121,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FC_Send_Pos_Slot
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FC_Kinematic_Inversion
+<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_fmodf
 <LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;swing_traj
 <LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stance_traj
 <LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sample_foot_pos
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DWT_GetTick
-<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_fmodf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 </UL>
@@ -3192,22 +3188,20 @@ Global Symbols
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still_out
 <LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still_int
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
-<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump2
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear_out
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear_int
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid_out
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid_int
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_out
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_int
-<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still
-<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_up
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward7
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward2
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_force
+<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stair
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_floor2
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear_out
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear_int
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear
+<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid_out
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid_int
+<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid
+<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_out
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_int
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_up
+<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward7
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_mid_out
 <LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_mid_int
 <LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_mid
@@ -3215,6 +3209,7 @@ Global Symbols
 <LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_bit_still_int
 <LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_bit_still
 <LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_Go_int
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stair2
 </UL>
 
 <P><STRONG><a name="[1ac]"></a>_dadd</STRONG> (Thumb, 332 bytes, Stack size 16 bytes, daddsub_clz.o(x$fpl$dadd), UNUSED)
@@ -3238,9 +3233,9 @@ Global Symbols
 <LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_rear
 <LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_mid
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid
-<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear
+<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still
 <LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_mid
 <LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_bit_still
 </UL>
@@ -3271,9 +3266,9 @@ Global Symbols
 <LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_rear
 <LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_mid
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid
-<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear
+<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still
 <LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_mid
 <LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_bit_still
 </UL>
@@ -3308,9 +3303,9 @@ Global Symbols
 <LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_rear
 <LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_mid
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid
-<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear
+<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still
 <LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_mid
 <LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_bit_still
 </UL>
@@ -3329,19 +3324,18 @@ Global Symbols
 <LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_rear_int
 <LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_mid_int
 <LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still_int
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
-<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump2
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear_int
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid_int
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_int
-<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_up
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward7
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward2
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_force
+<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stair
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_floor2
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear_int
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid_int
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_int
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_up
+<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward7
 <LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_mid_int
 <LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_bit_still_int
 <LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_Go_int
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stair2
 </UL>
 
 <P><STRONG><a name="[1b5]"></a>_drsb</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, daddsub_clz.o(x$fpl$drsb), UNUSED)
@@ -3372,24 +3366,23 @@ Global Symbols
 <LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_mid
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still_out
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
-<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump2
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear_out
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid_out
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_out
-<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still
-<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_up
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward7
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward2
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_force
+<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stair
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_floor2
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear_out
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear
+<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid_out
+<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid
+<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_out
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_up
+<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward7
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_mid_out
 <LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_mid
 <LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_bit_still_out
 <LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_bit_still
 <LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_Go_int
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stair2
 </UL>
 
 <P><STRONG><a name="[1b7]"></a>_dsub</STRONG> (Thumb, 464 bytes, Stack size 32 bytes, daddsub_clz.o(x$fpl$dsub), UNUSED)
@@ -3423,22 +3416,20 @@ Global Symbols
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still_out
 <LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still_int
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_left_bit_still
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
-<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump2
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear_out
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear_int
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid_out
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid_int
-<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid
-<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_out
-<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_int
-<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still
-<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_up
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward7
-<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward2
-<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_force
+<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stair
+<LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_force10
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_floor2
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear_out
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear_int
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_rear
+<LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid_out
+<LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid_int
+<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_mid
+<LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_out
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still_int
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_forward_bit_still
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_up
+<LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_bunny_jump_forward7
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_mid_out
 <LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_mid_int
 <LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_mid
@@ -3447,6 +3438,7 @@ Global Symbols
 <LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_back_bit_still
 <LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_Go_int
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dog_jump_stair2
 </UL>
 
 <P><STRONG><a name="[1b8]"></a>_f2d</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, f2d.o(x$fpl$f2d), UNUSED)

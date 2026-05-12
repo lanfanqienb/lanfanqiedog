@@ -41,11 +41,17 @@ void dog_back_squat_int(void);
 void dog_back_squat(fp32 add,fp32 add2);
 void dog_back_squat_out(void);
 
-void dog_bunny_jump_forward2(void);
-void dog_bunny_jump_up(void);
-void dog_bunny_jump_forward4(void);
+void dog_bunny_jump_forward(void);
 void dog_bunny_jump_force(void);
-void dog_bunny_jump_force2(fp32 F,fp32 H);
+
+void dog_jump_stair(void);//台阶一阶跳
+void dog_jump_stair2(void);//台阶一阶跳
+void dog_jump_floor(void);//地面一阶跳
+void dog_jump_floor2(void);//地面二阶跳
+void dog_jump_stairs(void);//台阶连续跳
+void dog_jump_2stairs(void);
+
+void dog_bunny_jump_up(void);
 void dog_bunny_jump_force4(fp32 F,fp32 H);
 
 void dog_double_jump_force(void);
@@ -57,10 +63,6 @@ void dog_double_jump_force2(void);
 void dog_treble_jump_force2(void);
 
 void dog_bunny_jump_forward7(void);
-
-void dog_jump(void);
-void dog_jump2(fp32 W1,fp32 W2,fp32 H);
-void dog_jump3(void);
 
 void dog_rear_leg(void);
 void dog_rear_flip(void);
@@ -108,13 +110,6 @@ void dog_right_bit_out(void);
 void dog_back_bit_int(void);
 void dog_back_bit(fp32 add,fp32 add2);
 void dog_back_bit_out(void);
-
-void dog_stair_int(void);
-void dog_stair_int_still(void);
-void dog_stair_out(void);
-void dog_stair(void);
-void dog_bridge(void);
-
 
 #endif
 

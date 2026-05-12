@@ -294,10 +294,10 @@ while (1)
 						    if(flag_mode==1){
 										if(RC_Ctl.rc.ch3>=1300){dog_bunny_jump_up();flag_mode=2;HAL_Delay(600);}//dog_bunny_jump_up()dog_bunny_jump_forward
 										else if(RC_Ctl.rc.ch3<=600){dog_bunny_jump_forward7();flag_mode=2;HAL_Delay(600);}
-										else if(RC_Ctl.rc.ch2>=1300){dog_bunny_jump_force();flag_mode=3;HAL_Delay(600);}
-										else if(RC_Ctl.rc.ch2<=600){dog_bunny_jump_forward2();flag_mode=3;HAL_Delay(600);}
-										else if(RC_Ctl.rc.ch1>=1300){dog_jump();flag_mode=3;HAL_Delay(600);}
-										else if(RC_Ctl.rc.ch1<=600){dog_jump2(1.7f,2.6f,8.0f);flag_mode=3;HAL_Delay(600);}
+										//台阶跳
+                    else if(RC_Ctl.rc.ch2>=1300){dog_jump_stairs();flag_mode=3;HAL_Delay(600);}
+										else if(RC_Ctl.rc.ch2<=600){dog_jump_floor2();flag_mode=3;HAL_Delay(600);}
+										else if(RC_Ctl.rc.ch1>=1300){dog_jump_stair();flag_mode=3;HAL_Delay(600);}
 
 								}
 								else if(flag_mode==2){

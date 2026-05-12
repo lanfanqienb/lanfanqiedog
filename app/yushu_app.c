@@ -9,9 +9,7 @@ double kd,flag_1=0,flag_2=0,b=0,b2=0,c=0,c2=0,d=0,d2=0;;
 double leg_int[8]={3.0336,1.7061,2.0626,0.2178,2.3067,3.6850,0.6433,5.5677};//
 double leg_middle[8]={-6.4249,-5.2640,9.2395,9.4794,11.8030,10.8468,-6.0914,-4.3599};//
 double leg_stand[8]={-9.6249,-8.4640,12.4395,12.6794,15.0030,14.0468,-9.2914,-7.5599};
-//9.23650265  10.4004
 float ff_torque[8]={0,0,0,0,0,0,0,0};  // 每条腿前馈力矩，0=平地，>0=斜坡支撑腿
-float slope_ff=0.0f;                    // 斜坡前馈值，调试时修改此值（单位N·m）
 
 /**************************************等待接收到所有电机回传数据**************************************/
 void motor_waiting(void)
@@ -24,12 +22,12 @@ void motor_waiting(void)
 /**************************************启动函数**************************************/
 void dog_start(void)
 {
-		leg0=leg_int[0];leg1=leg_int[1];leg2=leg_int[2];leg3=leg_int[3];//0.7370  ,4.6318
+		leg0=leg_int[0];leg1=leg_int[1];leg2=leg_int[2];leg3=leg_int[3];
 	  leg4=leg_int[4];leg5=leg_int[5];leg6=leg_int[6];leg7=leg_int[7];
 	  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
 	  leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
 	  
-	  leg0=leg_middle[0];leg1=leg_middle[1];leg2=leg_middle[2];leg3=leg_middle[3];//-8.5979,-3.2397
+	  leg0=leg_middle[0];leg1=leg_middle[1];leg2=leg_middle[2];leg3=leg_middle[3];
 	  leg4=leg_middle[4];leg5=leg_middle[5];leg6=leg_middle[6];leg7=leg_middle[7];
 	  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
 	  leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
@@ -334,8 +332,6 @@ void dog_squat(fp32 add,fp32 add2)
 			d2+=add;if(d2>=3.4f)d2=3.4f;if(d2>=3.4f)flag_2=4;}}
 }
 
-// ch3前进时，ch2右偏→右侧缩步（直走往右），ch2左偏→左侧缩步（直走往左），ch2归中→直走
-// 右侧腿: leg0,1（电机0,1）和 leg6,7（电机6,7）；左侧腿: leg2,3（电机2,3）和 leg4,5（电机4,5）
 void dog_squat_dir(fp32 add, fp32 add2)
 {
     // 双向拉伸：一侧缩步(→0.40) + 另一侧阔步(→1.40)，差值最大1.0，效果比单侧缩步翻倍
@@ -561,35 +557,8 @@ void dog_back_squat_out(void)
 	leg[4]=leg4+1.2f-i;leg[5]=leg5-1.2f+i;leg[6]=leg6-1.2f+i;leg[7]=leg7+1.2f-i;}
 }
 /**************************************兔子向前跳跃**************************************/
-
-void dog_bunny_jump_forward4(void)
+void dog_bunny_jump_force(void)//旧地面二阶跳
 {
-    kd = 0.4;
-  	for(float i=0;i<=3.7f;i+=0.00006f){
-		leg[0]=leg0+i;leg[1]=leg1+i;leg[2]=leg2-i;leg[3]=leg3-i;
-		leg[4]=leg4-i;leg[5]=leg5-i;leg[6]=leg6+i;leg[7]=leg7+i;}HAL_Delay(200);
-    for(float i=0;i<=2.7f;i+=0.00004f){
-		leg[0]=leg0+3.7+i;leg[1]=leg1+3.7-i;leg[2]=leg2-3.7-i*0.703f;leg[3]=leg3-3.7+i*0.703f;
-		leg[4]=leg4-3.7-i;leg[5]=leg5-3.7+i;leg[6]=leg6+3.7+i*0.703f;leg[7]=leg7+3.7-i*0.703f;}	
-//	  HAL_Delay(600);kd=18;HAL_Delay(20);
-	  HAL_Delay(20);kd=18;HAL_Delay(600);
-		
-		//四脚起跳
-	leg[0]=leg0+3.7+2.7f-16.8f;leg[1]=leg1+3.7-2.7f-16.8f;
-	leg[2]=leg2-3.7-1.9f+16.8f;leg[3]=leg3-3.7+1.9f+16.8f;
-	leg[4]=leg4-3.7-2.7f+16.8f;leg[5]=leg5-3.7+2.7f+16.8f;
-	leg[6]=leg6+3.7+1.9f-16.8f;leg[7]=leg7+3.7-1.9f-16.8f;
-	HAL_Delay(200);
-
-		//四脚收	
-	kd=0.8f;
-	leg[0]=leg0-2.7f;leg[1]=leg1+2.7f;leg[2]=leg2+2.7f;leg[3]=leg3-2.7f;
-	leg[4]=leg4+2.7f;leg[5]=leg5-2.7f;leg[6]=leg6-2.7f;leg[7]=leg7+2.7f;
-}
-
-void dog_bunny_jump_force(void)
-{
-    // ① 下蹲 —— 与forward4相同
     kd = 0.4f;
     for(float i=0; i<=3.7f; i+=0.00012f){
         leg[0]=leg0+i; leg[1]=leg1+i; leg[2]=leg2-i; leg[3]=leg3-i;
@@ -644,63 +613,28 @@ void dog_bunny_jump_force(void)
     leg[0]=leg0-2.7f; leg[1]=leg1+2.7f; leg[2]=leg2+2.7f; leg[3]=leg3-2.7f;
     leg[4]=leg4+2.7f; leg[5]=leg5-2.7f; leg[6]=leg6-2.7f; leg[7]=leg7+2.7f;
 }
-
-void dog_bunny_jump_force2(fp32 F,fp32 H)
+void dog_bunny_jump_forward(void)//旧台阶二阶跳
 {
-    // ① 下蹲 —— 与forward4相同
-    kd = 0.4f;
-    for(float i=0; i<=3.7f; i+=0.00012f){
-        leg[0]=leg0+i; leg[1]=leg1+i; leg[2]=leg2-i; leg[3]=leg3-i;
-        leg[4]=leg4-i; leg[5]=leg5-i; leg[6]=leg6+i; leg[7]=leg7+i;
-    }
-    HAL_Delay(200);
+    kd = 0.4;
+  	for(float i=0;i<=3.7f;i+=0.00012f){
+		leg[0]=leg0+i;leg[1]=leg1+i;leg[2]=leg2-i;leg[3]=leg3-i;
+		leg[4]=leg4-i;leg[5]=leg5-i;leg[6]=leg6+i;leg[7]=leg7+i;}HAL_Delay(200);
+    for(float i=0;i<=4.4f;i+=0.00008f){
+		leg[0]=leg0+3.7+i;leg[1]=leg1+3.7-i;leg[2]=leg2-3.7-i;leg[3]=leg3-3.7+i;
+		leg[4]=leg4-3.7-i;leg[5]=leg5-3.7+i;leg[6]=leg6+3.7+i;leg[7]=leg7+3.7-i;}	
+	  HAL_Delay(600);kd=18;HAL_Delay(20);
+		
+		//四脚起跳
+	leg[0]=leg0+3.7+4.4f-16.8f;leg[1]=leg1+3.7-4.4f-16.8f;
+	leg[2]=leg2-3.7-4.4f+16.8f;leg[3]=leg3-3.7+4.4f+16.8f;
+	leg[4]=leg4-3.7-4.4f+16.8f;leg[5]=leg5-3.7+4.4f+16.8f;
+	leg[6]=leg6+3.7+4.4f-16.8f;leg[7]=leg7+3.7-4.4f-16.8f;
+	HAL_Delay(200);
 
-    // ② 蓄力 —— 与forward4相同
-    for(float i=0; i<=2.7f; i+=0.00008f){
-        leg[0]=leg0+3.7f+i;         leg[1]=leg1+3.7f-i;
-        leg[2]=leg2-3.7f-i*0.703f;  leg[3]=leg3-3.7f+i*0.703f;
-        leg[4]=leg4-3.7f-i;         leg[5]=leg5-3.7f+i;
-        leg[6]=leg6+3.7f+i*0.703f;  leg[7]=leg7+3.7f-i*0.703f;
-    }
-    HAL_Delay(20);
-    kd = 10.0f;
-    HAL_Delay(600);
-
-    // ③ 起跳 —— 纯力矩控制
-    // 记录蓄力完成时各电机实际角度作为基准
-    float pos0=UT_motor_data[0].Pos; float pos1=UT_motor_data[1].Pos;
-    float pos2=UT_motor_data[2].Pos; float pos3=UT_motor_data[3].Pos;
-    float pos4=UT_motor_data[4].Pos; float pos5=UT_motor_data[5].Pos;
-    float pos6=UT_motor_data[6].Pos; float pos7=UT_motor_data[7].Pos;
-
-    // kd=0 纯力矩，施加伸展方向力矩12N·m
-    kd = 0.0f;
-    ff_torque[0]=-F; ff_torque[1]=-F;
-    ff_torque[2]= F; ff_torque[3]= F;
-    ff_torque[4]= F; ff_torque[5]= F;
-    ff_torque[6]=-F; ff_torque[7]=-F;//10.5f
-
-    // 等待：任一电机角度变化超过12.0rad(保护上限)，或超时200ms
-    uint32_t t0 = HAL_GetTick();
-    while((HAL_GetTick() - t0) < 200)
-    {
-        if( (pos0-UT_motor_data[0].Pos)>H || (pos1-UT_motor_data[1].Pos)>H ||
-            (UT_motor_data[2].Pos-pos2)>H || (UT_motor_data[3].Pos-pos3)>H ||
-            (UT_motor_data[4].Pos-pos4)>H || (UT_motor_data[5].Pos-pos5)>H ||
-            (pos6-UT_motor_data[6].Pos)>H || (pos7-UT_motor_data[7].Pos)>H )//12.0f
-        { break; }
-    }
-
-    // 清除力矩，短暂过渡
-    ff_torque[0]=ff_torque[1]=ff_torque[2]=ff_torque[3]=0.0f;
-    ff_torque[4]=ff_torque[5]=ff_torque[6]=ff_torque[7]=0.0f;
-    kd = 0.5f;
-    HAL_Delay(80);
-
-    // ④ 收腿 —— 与forward4相同
-    kd = 0.8f;
-    leg[0]=leg0-2.2f;leg[1]=leg1+2.2f;leg[2]=leg2+2.2f;leg[3]=leg3-2.2f;
-	  leg[4]=leg4+2.2f;leg[5]=leg5-2.2f;leg[6]=leg6-2.2f;leg[7]=leg7+2.2f;	
+		//四脚收	
+	kd=0.8f;
+	leg[0]=leg0-2.7f;leg[1]=leg1+2.7f;leg[2]=leg2+2.7f;leg[3]=leg3-2.7f;
+	leg[4]=leg4+2.7f;leg[5]=leg5-2.7f;leg[6]=leg6-2.7f;leg[7]=leg7+2.7f;	
 }
 
 void dog_bunny_jump_force4(fp32 F,fp32 H)
@@ -924,28 +858,120 @@ void dog_treble_jump_force2(void)
 		HAL_Delay(600);
 		dog_jump_force10(6.5f,(fp32[]){7.0f,7.0f,8.0f,8.0f,8.0f,8.0f,7.0f,7.0f});
 }	
-void dog_bunny_jump_forward2(void)//
+
+
+
+void dog_jump_stair(void)//台阶一阶跳
 {
     kd = 0.4;
   	for(float i=0;i<=3.7f;i+=0.00012f){
 		leg[0]=leg0+i;leg[1]=leg1+i;leg[2]=leg2-i;leg[3]=leg3-i;
 		leg[4]=leg4-i;leg[5]=leg5-i;leg[6]=leg6+i;leg[7]=leg7+i;}HAL_Delay(200);
-    for(float i=0;i<=4.4f;i+=0.00008f){
+    for(float i=0;i<=3.2f;i+=0.00010f){
 		leg[0]=leg0+3.7+i;leg[1]=leg1+3.7-i;leg[2]=leg2-3.7-i;leg[3]=leg3-3.7+i;
 		leg[4]=leg4-3.7-i;leg[5]=leg5-3.7+i;leg[6]=leg6+3.7+i;leg[7]=leg7+3.7-i;}	
-	  HAL_Delay(600);kd=18;HAL_Delay(20);
-		
+	  HAL_Delay(400);
+		kd=0.9;HAL_Delay(20);
 		//四脚起跳
-	leg[0]=leg0+3.7+4.4f-16.8f;leg[1]=leg1+3.7-4.4f-16.8f;
-	leg[2]=leg2-3.7-4.4f+16.8f;leg[3]=leg3-3.7+4.4f+16.8f;
-	leg[4]=leg4-3.7-4.4f+16.8f;leg[5]=leg5-3.7+4.4f+16.8f;
-	leg[6]=leg6+3.7+4.4f-16.8f;leg[7]=leg7+3.7-4.4f-16.8f;
+	leg[0]=leg0+3.7+3.2f-9.8f;leg[1]=leg1+3.7-3.2f-9.8f;
+	leg[2]=leg2-3.7-3.2f+9.8f;leg[3]=leg3-3.7+3.2f+9.8f;
+	leg[4]=leg4-3.7-3.2f+9.8f;leg[5]=leg5-3.7+3.2f+9.8f;
+	leg[6]=leg6+3.7+3.2f-9.8f;leg[7]=leg7+3.7-3.2f-9.8f;
 	HAL_Delay(200);
 
 		//四脚收	
 	kd=0.8f;
-	leg[0]=leg0-2.7f;leg[1]=leg1+2.7f;leg[2]=leg2+2.7f;leg[3]=leg3-2.7f;
-	leg[4]=leg4+2.7f;leg[5]=leg5-2.7f;leg[6]=leg6-2.7f;leg[7]=leg7+2.7f;	
+		leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
+  	leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;	
+}
+void dog_jump_stair2(void)//台阶二阶跳
+{
+    kd = 0.4;
+  	for(float i=0;i<=3.7f;i+=0.00012f){
+		leg[0]=leg0+i;leg[1]=leg1+i;leg[2]=leg2-i;leg[3]=leg3-i;
+		leg[4]=leg4-i;leg[5]=leg5-i;leg[6]=leg6+i;leg[7]=leg7+i;}HAL_Delay(200);
+    for(float i=0;i<=3.2f;i+=0.00010f){
+		leg[0]=leg0+3.7+i;leg[1]=leg1+3.7-i;leg[2]=leg2-3.7-i;leg[3]=leg3-3.7+i;
+		leg[4]=leg4-3.7-i;leg[5]=leg5-3.7+i;leg[6]=leg6+3.7+i;leg[7]=leg7+3.7-i;}	
+	  HAL_Delay(400);
+		kd=0.9;HAL_Delay(20);
+		//四脚起跳
+	leg[0]=leg0+3.7+3.2f-16.8f;leg[1]=leg1+3.7-3.2f-16.8f;
+	leg[2]=leg2-3.7-3.2f+16.8f;leg[3]=leg3-3.7+3.2f+16.8f;
+	leg[4]=leg4-3.7-3.2f+16.8f;leg[5]=leg5-3.7+3.2f+16.8f;
+	leg[6]=leg6+3.7+3.2f-16.8f;leg[7]=leg7+3.7-3.2f-16.8f;
+	HAL_Delay(200);
+
+		//四脚收	
+	kd=0.8f;
+		leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
+  	leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;	
+}
+void dog_jump_stairs(void)//台阶连续跳
+{
+			dog_jump_stair2();
+	   	HAL_Delay(200);
+      dog_jump_stair();
+}	
+void dog_jump_2stairs(void)
+{
+			dog_jump_stair();
+	    HAL_Delay(200);
+			dog_jump_stair();
+}	
+
+void dog_jump_floor(void)//地面一阶跳
+{
+    kd = 0.4;
+  	for(float i=0;i<=3.7f;i+=0.00012f){
+		leg[0]=leg0+i;leg[1]=leg1+i;leg[2]=leg2-i;leg[3]=leg3-i;
+		leg[4]=leg4-i;leg[5]=leg5-i;leg[6]=leg6+i;leg[7]=leg7+i;}HAL_Delay(200);
+    for(float i=0;i<=2.5f;i+=0.00008f){
+		leg[0]=leg0+3.7+i;leg[1]=leg1+3.7-i;leg[2]=leg2-3.7-i;leg[3]=leg3-3.7+i;
+		leg[4]=leg4-3.7-i;leg[5]=leg5-3.7+i;leg[6]=leg6+3.7+i;leg[7]=leg7+3.7-i;}	
+	  HAL_Delay(400);
+		kd=0.9;HAL_Delay(20);
+		//四脚起跳
+	leg[0]=leg0+3.7+2.5f-9.8f;leg[1]=leg1+3.7-2.5f-9.8f;
+	leg[2]=leg2-3.7-2.5f+9.8f;leg[3]=leg3-3.7+2.5f+9.8f;
+	leg[4]=leg4-3.7-2.5f+9.8f;leg[5]=leg5-3.7+2.5f+9.8f;
+	leg[6]=leg6+3.7+2.5f-9.8f;leg[7]=leg7+3.7-2.5f-9.8f;
+	HAL_Delay(200);
+
+		//四脚收	
+	kd=0.8f;
+
+		leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
+  	leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;	
+}
+void dog_jump_floor2(void)//地面二阶跳
+{
+    // ① 下蹲 —— 与forward4相同
+    kd = 0.4f;
+    for(float i=0; i<=3.7f; i+=0.00012f){
+        leg[0]=leg0+i; leg[1]=leg1+i; leg[2]=leg2-i; leg[3]=leg3-i;
+        leg[4]=leg4-i; leg[5]=leg5-i; leg[6]=leg6+i; leg[7]=leg7+i;
+    }
+    // ② 蓄力 —— 与forward4相同
+    for(float i=0; i<=2.7f; i+=0.00010f){
+        leg[0]=leg0+3.7f+i;         leg[1]=leg1+3.7f-i;
+        leg[2]=leg2-3.7f-i*0.703f;  leg[3]=leg3-3.7f+i*0.703f;
+        leg[4]=leg4-3.7f-i;         leg[5]=leg5-3.7f+i;
+        leg[6]=leg6+3.7f+i*0.703f;  leg[7]=leg7+3.7f-i*0.703f;
+    }
+   HAL_Delay(400);
+	 kd=0.9;HAL_Delay(20);
+   //四脚起跳
+	leg[0]=leg0+3.7+2.7f-14.8f;leg[1]=leg1+3.7-2.7f-14.8f;
+	leg[2]=leg2-3.7-2.7f*0.703f+14.8f;leg[3]=leg3-3.7+2.7f*0.703f+14.8f;
+	leg[4]=leg4-3.7-2.7f+14.8f;leg[5]=leg5-3.7+2.7f+12.8f;
+	leg[6]=leg6+3.7+2.7f*0.703f-14.8f;leg[7]=leg7+3.7-2.7f*0.703f-14.8f;
+	HAL_Delay(200);
+
+    // ④ 收腿 —— 与forward4相同
+    kd = 0.8f;
+    leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
+  	leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
 }
 
 void dog_bunny_jump_forward7(void)
@@ -974,141 +1000,6 @@ void dog_bunny_jump_forward7(void)
 		leg[4]=leg4+2.2f;leg[5]=leg5-2.2f;leg[6]=leg6-2.2f;leg[7]=leg7+2.2f;
 		
 }
-
-void dog_jump(void)
-{
-		 
-	  for(float i=0;i<=0.7f;i+=0.00006f){
-		leg[0]=leg0+i;leg[1]=leg1-i;leg[2]=leg2-i;leg[3]=leg3+i;
-		leg[4]=leg4-i;leg[5]=leg5+i;leg[6]=leg6+i;leg[7]=leg7-i;}HAL_Delay(200);
-	   
-	   for(fp32 i=0;i<=8.6f;i+=0.00008f)
-		 {
-				leg[0]=leg0+0.7f-i;leg[1]=leg1-0.7f-i;leg[2]=leg2-0.7f-i*0.13953f;leg[3]=leg3+0.7f-i*0.13953f;
-				leg[4]=leg4-0.7f+i;leg[5]=leg5+0.7f+i;leg[6]=leg6+0.7f+i*0.13953f;leg[7]=leg7-0.7f+i*0.13953f;
-     } kd = 0.5f;
-		 
-		kd=3;HAL_Delay(3000);
-		 
-		 //四脚起跳
-		leg[0]=leg0+0.7f-8.6f-3.0f;leg[1]=leg1+0.7f-8.6f-3.0f;
-		leg[2]=leg2-0.7f-1.2f+6.8f;leg[3]=leg3-0.7f-1.2f+6.8f;
-		leg[4]=leg4-0.7f+8.6f+3.0f;leg[5]=leg5-0.7f+8.6f+3.0f;
-		leg[6]=leg6+0.7f+1.2f-6.8f;leg[7]=leg7+0.7f+1.2f-6.8f;
-		HAL_Delay(200);
-		 
-		leg[0]=leg0-3.2f;leg[1]=leg1-3.2f;leg[2]=leg2+3.2f;leg[3]=leg3+3.2f;
-		leg[4]=leg4+3.2f;leg[5]=leg5+3.2f;leg[6]=leg6-3.2f;leg[7]=leg7-3.2f;	 
-}	
-
-void dog_jump2(fp32 W1,fp32 W2,fp32 H)
-{
-		fp32 b= W2/W1;
-    	
-	  for(float i=0;i<=W1;i+=0.00006f){
-		leg[0]=leg0+i*b;leg[1]=leg1-i*b;leg[2]=leg2-i;leg[3]=leg3+i;
-		leg[4]=leg4-i*b;leg[5]=leg5+i*b;leg[6]=leg6+i;leg[7]=leg7-i;}HAL_Delay(200);
-	   
-		 
-//		kd=2;
-		HAL_Delay(2000);
-		 
-		 //四脚起跳
-		leg[0]=leg0+W2-H;leg[1]=leg1-W2-H;
-		leg[2]=leg2-W1+H;leg[3]=leg3+W1+H;
-		leg[4]=leg4-W2+H;leg[5]=leg5+W2+H;
-		leg[6]=leg6+W1-H;leg[7]=leg7-W1-H;
-		HAL_Delay(200);
-		 
-//		leg[0]=leg0-1.2f;leg[1]=leg1+1.2f;leg[2]=leg2+1.2f;leg[3]=leg3-1.2f;
-//		leg[4]=leg4+1.2f;leg[5]=leg5-1.2f;leg[6]=leg6-1.2f;leg[7]=leg7+1.2f;	 
-//		leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-//		leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-}	
-
-void dog_jump3(void)
-{
-		 	   
-	   for(fp32 i=0;i<=8.6f;i+=0.00008f)
-		 {
-				leg[0]=leg0-i;leg[1]=leg1-i;leg[2]=leg2-i*0.13953f;leg[3]=leg3-i*0.13953f;
-				leg[4]=leg4+i;leg[5]=leg5+i;leg[6]=leg6+i*0.13953f;leg[7]=leg7+i*0.13953f;
-     } kd = 0.5f;
-		 
-		kd=3;HAL_Delay(3000);
-		 
-		 //四脚起跳
-		leg[0]=leg0-8.6f-3.0f;leg[1]=leg1-8.6f-3.0f;
-		leg[2]=leg2-1.2f+6.8f;leg[3]=leg3-1.2f+6.8f;
-		leg[4]=leg4+8.6f+3.0f;leg[5]=leg5+8.6f+3.0f;
-		leg[6]=leg6+1.2f-6.8f;leg[7]=leg7+1.2f-6.8f;
-		HAL_Delay(200);
-		 
-		leg[0]=leg0-3.2f-1.2f;leg[1]=leg1-3.2f+1.2f;leg[2]=leg2+3.2f+1.2f;leg[3]=leg3+3.2f-1.2f;
-		leg[4]=leg4+3.2f+1.2f;leg[5]=leg5+3.2f-1.2f;leg[6]=leg6-3.2f-1.2f-1.2f;leg[7]=leg7-3.2f+1.2f;	 
-}	
-
-void dog_jump4(fp32 W1,fp32 W2,fp32 F1,fp32 F2,fp32 H)
-{
-    // ① 下蹲 —— 与forward4相同
-    kd = 0.4f;
-//    for(float i=0; i<=3.7f; i+=0.00016f){
-//        leg[0]=leg0+i; leg[1]=leg1+i; leg[2]=leg2-i; leg[3]=leg3-i;
-//        leg[4]=leg4-i; leg[5]=leg5-i; leg[6]=leg6+i; leg[7]=leg7+i;
-//    }
-//    HAL_Delay(100);
-
-    // ② 蓄力 —— 与forward4相同
-    for(float i=0; i<= W1; i+=0.00012f){
-        leg[0]=leg0+i;         leg[1]=leg1-i;
-        leg[2]=leg2-i;         leg[3]=leg3+i;//前
-        leg[4]=leg4-i;         leg[5]=leg5+i;
-        leg[6]=leg6+i;         leg[7]=leg7-i;//前
-    }
-//    kd = 3.0f;
-//    HAL_Delay(400);
-    // ③ 起跳 —— 纯力矩控制
-    // 记录蓄力完成时各电机实际角度作为基准
-    float pos0=UT_motor_data[0].Pos; float pos1=UT_motor_data[1].Pos;
-    float pos2=UT_motor_data[2].Pos; float pos3=UT_motor_data[3].Pos;
-    float pos4=UT_motor_data[4].Pos; float pos5=UT_motor_data[5].Pos;
-    float pos6=UT_motor_data[6].Pos; float pos7=UT_motor_data[7].Pos;
-
-    // kd=0 纯力矩，施加伸展方向力矩12N·m
-    kd = 0.0f;
-    ff_torque[0]=-F2; ff_torque[1]=-F2;
-    ff_torque[2]= F1; ff_torque[3]= F1;
-    ff_torque[4]= F2; ff_torque[5]= F2;
-    ff_torque[6]=-F1; ff_torque[7]=-F1;//10.5f
-
-    // 等待：任一电机角度变化超过12.0rad(保护上限)，或超时200ms
-    uint32_t t0 = HAL_GetTick();
-    while((HAL_GetTick() - t0) < 200)
-    {
-        if( (pos0-UT_motor_data[0].Pos)>H || (pos1-UT_motor_data[1].Pos)>H ||
-            (UT_motor_data[2].Pos-pos2)>H || (UT_motor_data[3].Pos-pos3)>H ||
-            (UT_motor_data[4].Pos-pos4)>H || (UT_motor_data[5].Pos-pos5)>H ||
-            (pos6-UT_motor_data[6].Pos)>H || (pos7-UT_motor_data[7].Pos)>H )//12.0f
-        { break; }
-    }
-
-    // 清除力矩，短暂过渡
-    ff_torque[0]=ff_torque[1]=ff_torque[2]=ff_torque[3]=0.0f;
-    ff_torque[4]=ff_torque[5]=ff_torque[6]=ff_torque[7]=0.0f;
-    HAL_Delay(80);
-
-    // ④ 收腿 —— 与forward4相同
-    kd = 0.8f;
-    leg[0]=leg0-1.5f;leg[1]=leg1+1.5f;leg[2]=leg2+1.5f;leg[3]=leg3-1.5f;
-	  leg[4]=leg4+1.5f;leg[5]=leg5-1.5f;leg[6]=leg6-1.5f;leg[7]=leg7+1.5f;	
-		
-		HAL_Delay(600);
-	   for(float i=0; i<=1.5f; i+=0.00012f){
-        leg[0]=leg0-1.5f+i;leg[1]=leg1+1.5f-i;leg[2]=leg2+1.5f-i;leg[3]=leg3-1.5f+i;
-	      leg[4]=leg4+1.5f-i;leg[5]=leg5-1.5f+i;leg[6]=leg6-1.5f+i;leg[7]=leg7+1.5f-i;
-    }
-}
-
 /**************************************卡墙移动**************************************/
 void dog_rear_leg(void)
 {
@@ -1326,7 +1217,7 @@ void dog_right_rear_out(void)
 }
 
 /**************************************兔子向上跳跃**************************************/
-void dog_bunny_jump_up(void)
+void dog_bunny_jump_up(void)//前头
 {
     kd = 0.4;
   	for(float i=0;i<=3.7f;i+=0.00002f){
@@ -1357,27 +1248,17 @@ void dog_bunny_jump_up(void)
     leg[0]=leg0+3.7+8.0-18+17;leg[1]=leg1+3.7-8.0-16+15;leg[4]=leg4-3.7-8.0+18-17;leg[5]=leg5-3.7+8.0+16-15;
 
     kd=0.4f;HAL_Delay(300);
-
-			
-//		//后脚回，准备落地
-//		leg[0]=leg0+3.7-1.8+6+4;leg[1]=leg1+3.7+1.8-6-4;leg[4]=leg4-3.7+1.8-6-4;leg[5]=leg5-3.7-1.8+6+4;
-//		HAL_Delay(100);	
 }
-/**************************************后空翻**************************************/
-void dog_backflip(void)
+void dog_bunny_jump_up2(void)//后头
 {
 		kd = 0.4;
-    for(float i=0;i<=3.7f;i+=0.00002f){
+	  for(float i=0;i<=3.7f;i+=0.00002f){
 		leg[0]=leg0+i;leg[1]=leg1+i;leg[2]=leg2-i;leg[3]=leg3-i;
 		leg[4]=leg4-i;leg[5]=leg5-i;leg[6]=leg6+i;leg[7]=leg7+i;}HAL_Delay(200);
-		for(float i=0;i<=8.0f;i+=0.00002f){
-		leg[2]=leg0+3.7+i;leg[3]=leg1+3.7-i;
-		leg[6]=leg4-3.7-i;leg[7]=leg5-3.7+i;}
-		
-//		//后脚跳，站立			
-//		HAL_Delay(600);kd=18;HAL_Delay(20);
-//	  leg[2]=leg2-3.7+12;leg[3]=leg3-3.7+12;leg[6]=leg6+3.7-12;leg[7]=leg7+3.7-12;
+	
+	
 }
+
 /***********************************常驻微调前进***********************************/
 void dog_forward_bit_still_int(void)
 {
@@ -1828,189 +1709,6 @@ void dog_back_bit_out(void)
 	leg[0]=leg0+1.2f-i;leg[1]=leg1-1.2f*0.2f+i*0.2f;leg[2]=leg2-1.2f+i;leg[3]=leg3+1.2f*0.2f-i*0.2f;
 	leg[4]=leg4+1.2f-i;leg[5]=leg5-1.2f+i;leg[6]=leg6-1.2f+i;leg[7]=leg7+1.2f-i;}
 }
-
-
-/**************************************上台阶*************************																																																																																																																																																																																																																					*************///没用到
-void dog_stair_int(void)
-{
-//  for(fp32 i=0;i<=8.4f;i+=0.00006f)
-//	{
-//			leg0=leg_middle[0]+3.2-i;leg1=leg_middle[1]+3.2-i;leg2=leg_middle[2]-3.2+i;leg3=leg_middle[3]-3.2+i;
-//	    leg4=leg_middle[4]-3.2+i;leg5=leg_middle[5]-3.2+i;leg6=leg_middle[6]+3.2-i;leg7=leg_middle[7]+3.2-i;
-//		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-//			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-//	}
-//  
-//	for(fp32 i=0;i<=2.2f;i+=0.00006f)
-//	{
-//			leg0=leg_middle[0]+3.2-8.4+i;leg1=leg_middle[1]+3.2-8.4-i;leg2=leg_middle[2]-3.2+8.4-i;leg3=leg_middle[3]-3.2+8.4+i;
-//	    leg4=leg_middle[4]-3.2+8.4-i;leg5=leg_middle[5]-3.2+8.4+i;leg6=leg_middle[6]+3.2-8.4+i;leg7=leg_middle[7]+3.2-8.4-i;
-//		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-//			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-//	}
-  for(fp32 i=0;i<=10.6f;i+=0.00006f)
-	{
-			leg0=leg_middle[0]+3.2-i*0.5849f;leg1=leg_middle[1]+3.2-i;leg2=leg_middle[2]-3.2+i*0.5849f;leg3=leg_middle[3]-3.2+i;
-	    leg4=leg_middle[4]-3.2+i*0.5849f;leg5=leg_middle[5]-3.2+i;leg6=leg_middle[6]+3.2-i*0.5849f;leg7=leg_middle[7]+3.2-i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	kd = 0.8f;
-}
-
-void dog_stair_int_still(void)
-{
-			leg0=leg_middle[0]+3.2-8.4+2.2;leg1=leg_middle[1]+3.2-8.4-2.2;leg2=leg_middle[2]-3.2+8.4-2.2;leg3=leg_middle[3]-3.2+8.4+2.2;
-	    leg4=leg_middle[4]-3.2+8.4-2.2;leg5=leg_middle[5]-3.2+8.4+2.2;leg6=leg_middle[6]+3.2-8.4+2.2;leg7=leg_middle[7]+3.2-8.4-2.2;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	    kd = 0.8f;
-}
-void dog_stair(void)//史山
-{
-	for(fp32 i=0;i<=11.4f;i+=0.0005f)//收
-	{
-			//leg0=leg_middle[0]+3.2-8.4+2.2+i;leg1=leg_middle[1]+3.2-8.4-2.2+i;
-		  leg2=leg_middle[2]-3.2+8.4-2.2-i;leg3=leg_middle[3]-3.2+8.4+2.2-i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=7.1f;i+=0.0005f)//移
-	{
-			//leg0=leg_middle[0]+3.2-8.4+2.2+6.4-i;leg1=leg_middle[1]+3.2-8.4-2.2+6.4+i;
-		  leg2=leg_middle[2]-3.2+8.4-2.2-6.4+i;leg3=leg_middle[3]-3.2+8.4+2.2-6.4-i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=11.4f;i+=0.0005f)//出
-	{
-		
-			//leg0=leg_middle[0]+3.2-8.4+2.2+6.4-7.1-i;leg1=leg_middle[1]+3.2-8.4-2.2+6.4+7.1-i;
-		  leg2=leg_middle[2]-3.2+8.4-2.2-9.4+7.1+i;leg3=leg_middle[3]-3.2+8.4+2.2-9.4-7.1+i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-  for(fp32 i=0;i<=11.4f;i+=0.0005f)//收
-	{
-		  leg6=leg_middle[6]+3.2-8.4+2.2+i;leg7=leg_middle[7]+3.2-8.4-2.2+i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=7.1f;i+=0.0005f)//移
-	{
-		  leg6=leg_middle[6]+3.2-8.4+2.2+6.4-i;leg7=leg_middle[7]+3.2-8.4-2.2+6.4+i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=11.4f;i+=0.0005f)//出
-	{
-		  leg6=leg_middle[6]+3.2-8.4+2.2+9.4-7.1-i;leg7=leg_middle[7]+3.2-8.4-2.2+9.4+7.1-i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=6.4f;i+=0.0005f)//一起收
-	{
-		  leg2=leg_middle[2]-3.2+8.4-2.2+7.1-i;leg3=leg_middle[3]-3.2+8.4+2.2-7.1-i;
-		  leg6=leg_middle[6]+3.2-8.4+2.2-7.1+i;leg7=leg_middle[7]+3.2-8.4-2.2+7.1+i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=3.2f;i+=0.0001f)//一起出
-	{
-		  leg0=leg_middle[0]+3.2-8.4+2.2-i;leg1=leg_middle[1]+3.2-8.4-2.2-i;
-	    leg4=leg_middle[4]-3.2+8.4-2.2+i;leg5=leg_middle[5]-3.2+8.4+2.2+i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=7.1f;i+=0.0003f)//一起移
-	{
-		  leg2=leg_middle[2]-3.2+8.4-2.2+7.1-6.4-i;leg3=leg_middle[3]-3.2+8.4+2.2-7.1-6.4+i;
-		  leg6=leg_middle[6]+3.2-8.4+2.2-7.1+6.4+i;leg7=leg_middle[7]+3.2-8.4-2.2+7.1+6.4-i;
-		  leg0=leg_middle[0]+3.2-8.4+2.2-3.2+i*0.5f;leg1=leg_middle[1]+3.2-8.4-2.2-3.2-i*0.5f;
-	    leg4=leg_middle[4]-3.2+8.4-2.2+3.2-i*0.5f;leg5=leg_middle[5]-3.2+8.4+2.2+3.2+i*0.5f;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=13.8f;i+=0.0005f)//收
-	{
-		  leg0=leg_middle[0]+3.2-8.4+2.2-3.2+7.1*0.5+i;leg1=leg_middle[1]+3.2-8.4-2.2-3.2-7.1*0.5+i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=4.4f;i+=0.0005f)//移
-	{
-		  leg0=leg_middle[0]+3.2-8.4+2.2-3.2+7.1*0.5+13.8-i;leg1=leg_middle[1]+3.2-8.4-2.2-3.2-7.1*0.5+13.8+i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=2.8f;i+=0.0005f)//出
-	{
-		  leg0=leg_middle[0]+3.2-8.4+2.2-3.2+7.1*0.5+13.8-4.4-i;leg1=leg_middle[1]+3.2-8.4-2.2-3.2-7.1*0.5+13.8+4.4-i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}		  //leg0=leg_middle[0]+3.2-8.4+2.2-3.2+7.1*0.5+8.8-4.1-2.8;leg1=leg_middle[1]+3.2-8.4-2.2-3.2-7.1*0.5+8.8+4.1-2.8;
-	for(fp32 i=0;i<=13.8f;i+=0.0005f)//收
-	{
-	    leg4=leg_middle[4]-3.2+8.4-2.2+3.2-7.1*0.5-i;leg5=leg_middle[5]-3.2+8.4+2.2+3.2+7.1*0.5-i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=4.4f;i+=0.0005f)//移
-	{
-	    leg4=leg_middle[4]-3.2+8.4-2.2+3.2-7.1*0.5-13.8+i;leg5=leg_middle[5]-3.2+8.4+2.2+3.2+7.1*0.5-13.8-i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=2.8f;i+=0.0005f)//出
-	{
-	    leg4=leg_middle[4]-3.2+8.4-2.2+3.2-7.1*0.5-13.8+4.4+i;leg5=leg_middle[5]-3.2+8.4+2.2+3.2+7.1*0.5-13.8-4.4+i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-  for(fp32 i=0;i<=0.85f;i+=0.0005f)//
-	{
-		  leg0=leg_middle[0]+3.2-8.4+2.2-0.85+7.8+i;leg1=leg_middle[1]+3.2-8.4-2.2+0.85+7.8-i;
-	    leg4=leg_middle[4]-3.2+8.4-2.2+0.85-7.8-i;leg5=leg_middle[5]-3.2+8.4+2.2-0.85-7.8+i;		  
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=7.8f;i+=0.0005f)//
-	{
-		  leg0=leg_middle[0]+3.2-8.4+2.2+7.8-i;leg1=leg_middle[1]+3.2-8.4-2.2+7.8-i;
-	    leg4=leg_middle[4]-3.2+8.4-2.2-7.8+i;leg5=leg_middle[5]-3.2+8.4+2.2-7.8+i;
-	    leg2=leg_middle[2]-3.2+8.4-2.2-6.4+i*0.82f;leg3=leg_middle[3]-3.2+8.4+2.2-6.4+i*0.82f;
-		  leg6=leg_middle[6]+3.2-8.4+2.2+6.4-i*0.82f;leg7=leg_middle[7]+3.2-8.4-2.2+6.4-i*0.82f;
-		  
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	kd = 0.8f;
-}	
-void dog_stair_out(void)
-{
-//  for(fp32 i=0;i<=2.2f;i+=0.00006f)
-//	{
-//			leg0=leg_middle[0]+3.2-8.4+2.2-i;leg1=leg_middle[1]+3.2-8.4-2.2+i;leg2=leg_middle[2]-3.2+8.4-2.2+i;leg3=leg_middle[3]-3.2+8.4+2.2-i;
-//	    leg4=leg_middle[4]-3.2+8.4-2.2+i;leg5=leg_middle[5]-3.2+8.4+2.2-i;leg6=leg_middle[6]+3.2-8.4+2.2-i;leg7=leg_middle[7]+3.2-8.4-2.2+i;
-//		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-//			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-//	}
-//	for(fp32 i=0;i<=8.4f;i+=0.00006f)
-//	{
-//			leg0=leg_middle[0]+3.2-8.4+i;leg1=leg_middle[1]+3.2-8.4+i;leg2=leg_middle[2]-3.2+8.4-i;leg3=leg_middle[3]-3.2+8.4-i;
-//	    leg4=leg_middle[4]-3.2+8.4-i;leg5=leg_middle[5]-3.2+8.4-i;leg6=leg_middle[6]+3.2-8.4+i;leg7=leg_middle[7]+3.2-8.4+i;
-//		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-//			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-//	}
-	  for(fp32 i=0;i<=10.6f;i+=0.00006f)
-		{
-				leg0=leg_middle[0]+3.2-6.2+i*0.5849f;leg1=leg_middle[1]+3.2-8.4-2.2+i;leg2=leg_middle[2]-3.2+6.2-i*0.5849f;leg3=leg_middle[3]-3.2+8.4+2.2-i;
-				leg4=leg_middle[4]-3.2+6.2-i*0.5849f;leg5=leg_middle[5]-3.2+8.4+2.2-i;leg6=leg_middle[6]+3.2-6.2+i*0.5849f;leg7=leg_middle[7]+3.2-8.4-2.2+i;
-				leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-				leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-		}
-	kd = 0.5f;
-}
 /**************************************升高*************************																																																																																																																																																																																																																					*************///没用到
 void dog_n2high(void)
 {
@@ -2070,60 +1768,3 @@ void dog_squat2high(void)
   kd = 0.5f;
 }
 
-/**************************************木桥b*************************																																																																																																																																																																																																																					*************///没用到
-void dog_bridge(void)
-{	
-	for(fp32 i=0;i<=3.5f;i+=0.00048f)//收
-	{
-			leg0=leg_middle[0]+3.2-8.4+2.2+i;leg1=leg_middle[1]+3.2-8.4-2.2+i;
-		  leg2=leg_middle[2]-3.2+8.4-2.2-i;leg3=leg_middle[3]-3.2+8.4+2.2-i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=4.4f;i+=0.00048f)//向前移
-	{
-			leg0=leg_middle[0]+3.2-8.4+2.2+3.5-i;leg1=leg_middle[1]+3.2-8.4-2.2+3.5+i;
-		  leg2=leg_middle[2]-3.2+8.4-2.2-3.5+i;leg3=leg_middle[3]-3.2+8.4+2.2-3.5-i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=3.5f;i+=0.00048f)//伸
-	{
-			leg0=leg_middle[0]+3.2-8.4+2.2+3.5-4.4-i;leg1=leg_middle[1]+3.2-8.4-2.2+3.5+4.4-i;
-		  leg2=leg_middle[2]-3.2+8.4-2.2-3.5+4.4+i;leg3=leg_middle[3]-3.2+8.4+2.2-3.5-4.4+i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=3.5f;i+=0.00048f)//收
-	{
-			leg4=leg_middle[4]-3.2+8.4-2.2-i;leg5=leg_middle[5]-3.2+8.4+2.2-i;
-		  leg6=leg_middle[6]+3.2-8.4+2.2+i;leg7=leg_middle[7]+3.2-8.4-2.2+i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=4.4f;i+=0.00048f)//向前移
-	{
-			leg4=leg_middle[4]-3.2+8.4-2.2-3.5+i;leg5=leg_middle[5]-3.2+8.4+2.2-3.5-i;
-		  leg6=leg_middle[6]+3.2-8.4+2.2+3.5-i;leg7=leg_middle[7]+3.2-8.4-2.2+3.5+i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=3.5f;i+=0.00048f)//伸
-	{
-		  leg4=leg_middle[4]-3.2+8.4-2.2-3.5+4.4+i;leg5=leg_middle[5]-3.2+8.4+2.2-3.5-4.4+i;
-		  leg6=leg_middle[6]+3.2-8.4+2.2+3.5-4.4-i;leg7=leg_middle[7]+3.2-8.4-2.2+3.5+4.4-i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	for(fp32 i=0;i<=4.4f;i+=0.00048f)//向前移
-	{
-			leg0=leg_middle[0]+3.2-8.4+2.2-4.4+i;leg1=leg_middle[1]+3.2-8.4-2.2+4.4-i;
-		  leg2=leg_middle[2]-3.2+8.4-2.2+4.4-i;leg3=leg_middle[3]-3.2+8.4+2.2-4.4+i;
-		  leg4=leg_middle[4]-3.2+8.4-2.2+4.4-i;leg5=leg_middle[5]-3.2+8.4+2.2-4.4+i;
-		  leg6=leg_middle[6]+3.2-8.4+2.2-4.4+i;leg7=leg_middle[7]+3.2-8.4-2.2+4.4-i;
-		  leg[0]=leg0;leg[1]=leg1;leg[2]=leg2;leg[3]=leg3;
-			leg[4]=leg4;leg[5]=leg5;leg[6]=leg6;leg[7]=leg7;
-	}
-	
-	kd = 0.8f;
-}

@@ -136,10 +136,9 @@ Section Cross References
     main.o(i.main) refers to main.o(i.dog_small_still) for dog_small_still
     main.o(i.main) refers to yushu_app.o(i.dog_bunny_jump_up) for dog_bunny_jump_up
     main.o(i.main) refers to yushu_app.o(i.dog_bunny_jump_forward7) for dog_bunny_jump_forward7
-    main.o(i.main) refers to yushu_app.o(i.dog_bunny_jump_force) for dog_bunny_jump_force
-    main.o(i.main) refers to yushu_app.o(i.dog_bunny_jump_forward2) for dog_bunny_jump_forward2
-    main.o(i.main) refers to yushu_app.o(i.dog_jump) for dog_jump
-    main.o(i.main) refers to yushu_app.o(i.dog_jump2) for dog_jump2
+    main.o(i.main) refers to yushu_app.o(i.dog_jump_stairs) for dog_jump_stairs
+    main.o(i.main) refers to yushu_app.o(i.dog_jump_floor2) for dog_jump_floor2
+    main.o(i.main) refers to yushu_app.o(i.dog_jump_stair) for dog_jump_stair
     main.o(i.main) refers to yushu_app.o(i.dog_forward_rear_out) for dog_forward_rear_out
     main.o(i.main) refers to yushu_app.o(i.dog_left_rear_out) for dog_left_rear_out
     main.o(i.main) refers to yushu_app.o(i.dog_right_rear_out) for dog_right_rear_out
@@ -726,18 +725,6 @@ Section Cross References
     yushu_app.o(i.dog_back_squat_out) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
     yushu_app.o(i.dog_back_squat_out) refers to yushu_app.o(.data) for leg0
     yushu_app.o(i.dog_back_squat_out) refers to yushu_app.o(.bss) for leg
-    yushu_app.o(i.dog_backflip) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
-    yushu_app.o(i.dog_backflip) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
-    yushu_app.o(i.dog_backflip) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
-    yushu_app.o(i.dog_backflip) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
-    yushu_app.o(i.dog_backflip) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
-    yushu_app.o(i.dog_backflip) refers to yushu_app.o(.data) for kd
-    yushu_app.o(i.dog_backflip) refers to yushu_app.o(.bss) for leg
-    yushu_app.o(i.dog_bridge) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
-    yushu_app.o(i.dog_bridge) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
-    yushu_app.o(i.dog_bridge) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
-    yushu_app.o(i.dog_bridge) refers to yushu_app.o(.data) for leg_middle
-    yushu_app.o(i.dog_bridge) refers to yushu_app.o(.bss) for leg
     yushu_app.o(i.dog_bunny_jump_force) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
     yushu_app.o(i.dog_bunny_jump_force) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
     yushu_app.o(i.dog_bunny_jump_force) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
@@ -747,15 +734,6 @@ Section Cross References
     yushu_app.o(i.dog_bunny_jump_force) refers to yushu_app.o(.data) for kd
     yushu_app.o(i.dog_bunny_jump_force) refers to yushu_app.o(.bss) for leg
     yushu_app.o(i.dog_bunny_jump_force) refers to main.o(.bss) for UT_motor_data
-    yushu_app.o(i.dog_bunny_jump_force2) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
-    yushu_app.o(i.dog_bunny_jump_force2) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
-    yushu_app.o(i.dog_bunny_jump_force2) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
-    yushu_app.o(i.dog_bunny_jump_force2) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
-    yushu_app.o(i.dog_bunny_jump_force2) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
-    yushu_app.o(i.dog_bunny_jump_force2) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
-    yushu_app.o(i.dog_bunny_jump_force2) refers to yushu_app.o(.data) for kd
-    yushu_app.o(i.dog_bunny_jump_force2) refers to yushu_app.o(.bss) for leg
-    yushu_app.o(i.dog_bunny_jump_force2) refers to main.o(.bss) for UT_motor_data
     yushu_app.o(i.dog_bunny_jump_force4) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
     yushu_app.o(i.dog_bunny_jump_force4) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
     yushu_app.o(i.dog_bunny_jump_force4) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
@@ -774,20 +752,13 @@ Section Cross References
     yushu_app.o(i.dog_bunny_jump_force6) refers to yushu_app.o(.data) for kd
     yushu_app.o(i.dog_bunny_jump_force6) refers to yushu_app.o(.bss) for leg
     yushu_app.o(i.dog_bunny_jump_force6) refers to main.o(.bss) for UT_motor_data
-    yushu_app.o(i.dog_bunny_jump_forward2) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
-    yushu_app.o(i.dog_bunny_jump_forward2) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
-    yushu_app.o(i.dog_bunny_jump_forward2) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
-    yushu_app.o(i.dog_bunny_jump_forward2) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
-    yushu_app.o(i.dog_bunny_jump_forward2) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
-    yushu_app.o(i.dog_bunny_jump_forward2) refers to yushu_app.o(.data) for kd
-    yushu_app.o(i.dog_bunny_jump_forward2) refers to yushu_app.o(.bss) for leg
-    yushu_app.o(i.dog_bunny_jump_forward4) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
-    yushu_app.o(i.dog_bunny_jump_forward4) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
-    yushu_app.o(i.dog_bunny_jump_forward4) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
-    yushu_app.o(i.dog_bunny_jump_forward4) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
-    yushu_app.o(i.dog_bunny_jump_forward4) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
-    yushu_app.o(i.dog_bunny_jump_forward4) refers to yushu_app.o(.data) for kd
-    yushu_app.o(i.dog_bunny_jump_forward4) refers to yushu_app.o(.bss) for leg
+    yushu_app.o(i.dog_bunny_jump_forward) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
+    yushu_app.o(i.dog_bunny_jump_forward) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
+    yushu_app.o(i.dog_bunny_jump_forward) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
+    yushu_app.o(i.dog_bunny_jump_forward) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
+    yushu_app.o(i.dog_bunny_jump_forward) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
+    yushu_app.o(i.dog_bunny_jump_forward) refers to yushu_app.o(.data) for kd
+    yushu_app.o(i.dog_bunny_jump_forward) refers to yushu_app.o(.bss) for leg
     yushu_app.o(i.dog_bunny_jump_forward7) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
     yushu_app.o(i.dog_bunny_jump_forward7) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
     yushu_app.o(i.dog_bunny_jump_forward7) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
@@ -802,6 +773,12 @@ Section Cross References
     yushu_app.o(i.dog_bunny_jump_up) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
     yushu_app.o(i.dog_bunny_jump_up) refers to yushu_app.o(.data) for kd
     yushu_app.o(i.dog_bunny_jump_up) refers to yushu_app.o(.bss) for leg
+    yushu_app.o(i.dog_bunny_jump_up2) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
+    yushu_app.o(i.dog_bunny_jump_up2) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
+    yushu_app.o(i.dog_bunny_jump_up2) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
+    yushu_app.o(i.dog_bunny_jump_up2) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
+    yushu_app.o(i.dog_bunny_jump_up2) refers to yushu_app.o(.data) for kd
+    yushu_app.o(i.dog_bunny_jump_up2) refers to yushu_app.o(.bss) for leg
     yushu_app.o(i.dog_double_jump_force) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
     yushu_app.o(i.dog_double_jump_force) refers to yushu_app.o(i.dog_bunny_jump_force6) for dog_bunny_jump_force6
     yushu_app.o(i.dog_double_jump_force) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
@@ -928,36 +905,22 @@ Section Cross References
     yushu_app.o(i.dog_int) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
     yushu_app.o(i.dog_int) refers to yushu_app.o(.data) for leg_middle
     yushu_app.o(i.dog_int) refers to yushu_app.o(.bss) for leg
-    yushu_app.o(i.dog_jump) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
-    yushu_app.o(i.dog_jump) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
-    yushu_app.o(i.dog_jump) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
-    yushu_app.o(i.dog_jump) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
-    yushu_app.o(i.dog_jump) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
-    yushu_app.o(i.dog_jump) refers to yushu_app.o(.data) for leg0
-    yushu_app.o(i.dog_jump) refers to yushu_app.o(.bss) for leg
-    yushu_app.o(i.dog_jump2) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
-    yushu_app.o(i.dog_jump2) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
-    yushu_app.o(i.dog_jump2) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
-    yushu_app.o(i.dog_jump2) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
-    yushu_app.o(i.dog_jump2) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
-    yushu_app.o(i.dog_jump2) refers to yushu_app.o(.data) for leg0
-    yushu_app.o(i.dog_jump2) refers to yushu_app.o(.bss) for leg
-    yushu_app.o(i.dog_jump3) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
-    yushu_app.o(i.dog_jump3) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
-    yushu_app.o(i.dog_jump3) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
-    yushu_app.o(i.dog_jump3) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
-    yushu_app.o(i.dog_jump3) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
-    yushu_app.o(i.dog_jump3) refers to yushu_app.o(.data) for leg0
-    yushu_app.o(i.dog_jump3) refers to yushu_app.o(.bss) for leg
-    yushu_app.o(i.dog_jump4) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
-    yushu_app.o(i.dog_jump4) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
-    yushu_app.o(i.dog_jump4) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
-    yushu_app.o(i.dog_jump4) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
-    yushu_app.o(i.dog_jump4) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
-    yushu_app.o(i.dog_jump4) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
-    yushu_app.o(i.dog_jump4) refers to yushu_app.o(.data) for kd
-    yushu_app.o(i.dog_jump4) refers to yushu_app.o(.bss) for leg
-    yushu_app.o(i.dog_jump4) refers to main.o(.bss) for UT_motor_data
+    yushu_app.o(i.dog_jump_2stairs) refers to yushu_app.o(i.dog_jump_stair) for dog_jump_stair
+    yushu_app.o(i.dog_jump_2stairs) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
+    yushu_app.o(i.dog_jump_floor) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
+    yushu_app.o(i.dog_jump_floor) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
+    yushu_app.o(i.dog_jump_floor) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
+    yushu_app.o(i.dog_jump_floor) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
+    yushu_app.o(i.dog_jump_floor) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
+    yushu_app.o(i.dog_jump_floor) refers to yushu_app.o(.data) for kd
+    yushu_app.o(i.dog_jump_floor) refers to yushu_app.o(.bss) for leg
+    yushu_app.o(i.dog_jump_floor2) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
+    yushu_app.o(i.dog_jump_floor2) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
+    yushu_app.o(i.dog_jump_floor2) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
+    yushu_app.o(i.dog_jump_floor2) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
+    yushu_app.o(i.dog_jump_floor2) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
+    yushu_app.o(i.dog_jump_floor2) refers to yushu_app.o(.data) for kd
+    yushu_app.o(i.dog_jump_floor2) refers to yushu_app.o(.bss) for leg
     yushu_app.o(i.dog_jump_force10) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
     yushu_app.o(i.dog_jump_force10) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
     yushu_app.o(i.dog_jump_force10) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
@@ -967,6 +930,23 @@ Section Cross References
     yushu_app.o(i.dog_jump_force10) refers to yushu_app.o(.data) for kd
     yushu_app.o(i.dog_jump_force10) refers to yushu_app.o(.bss) for leg
     yushu_app.o(i.dog_jump_force10) refers to main.o(.bss) for UT_motor_data
+    yushu_app.o(i.dog_jump_stair) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
+    yushu_app.o(i.dog_jump_stair) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
+    yushu_app.o(i.dog_jump_stair) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
+    yushu_app.o(i.dog_jump_stair) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
+    yushu_app.o(i.dog_jump_stair) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
+    yushu_app.o(i.dog_jump_stair) refers to yushu_app.o(.data) for kd
+    yushu_app.o(i.dog_jump_stair) refers to yushu_app.o(.bss) for leg
+    yushu_app.o(i.dog_jump_stair2) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
+    yushu_app.o(i.dog_jump_stair2) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
+    yushu_app.o(i.dog_jump_stair2) refers to daddsub_clz.o(x$fpl$drsb) for __aeabi_drsub
+    yushu_app.o(i.dog_jump_stair2) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
+    yushu_app.o(i.dog_jump_stair2) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
+    yushu_app.o(i.dog_jump_stair2) refers to yushu_app.o(.data) for kd
+    yushu_app.o(i.dog_jump_stair2) refers to yushu_app.o(.bss) for leg
+    yushu_app.o(i.dog_jump_stairs) refers to yushu_app.o(i.dog_jump_stair2) for dog_jump_stair2
+    yushu_app.o(i.dog_jump_stairs) refers to stm32f4xx_hal.o(i.HAL_Delay) for HAL_Delay
+    yushu_app.o(i.dog_jump_stairs) refers to yushu_app.o(i.dog_jump_stair) for dog_jump_stair
     yushu_app.o(i.dog_left_bit) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
     yushu_app.o(i.dog_left_bit) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
     yushu_app.o(i.dog_left_bit) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
@@ -1214,25 +1194,6 @@ Section Cross References
     yushu_app.o(i.dog_squat_out) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
     yushu_app.o(i.dog_squat_out) refers to yushu_app.o(.data) for leg_middle
     yushu_app.o(i.dog_squat_out) refers to yushu_app.o(.bss) for leg
-    yushu_app.o(i.dog_stair) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
-    yushu_app.o(i.dog_stair) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
-    yushu_app.o(i.dog_stair) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
-    yushu_app.o(i.dog_stair) refers to yushu_app.o(.data) for leg_middle
-    yushu_app.o(i.dog_stair) refers to yushu_app.o(.bss) for leg
-    yushu_app.o(i.dog_stair_int) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
-    yushu_app.o(i.dog_stair_int) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
-    yushu_app.o(i.dog_stair_int) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
-    yushu_app.o(i.dog_stair_int) refers to yushu_app.o(.data) for leg_middle
-    yushu_app.o(i.dog_stair_int) refers to yushu_app.o(.bss) for leg
-    yushu_app.o(i.dog_stair_int_still) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
-    yushu_app.o(i.dog_stair_int_still) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
-    yushu_app.o(i.dog_stair_int_still) refers to yushu_app.o(.data) for leg_middle
-    yushu_app.o(i.dog_stair_int_still) refers to yushu_app.o(.bss) for leg
-    yushu_app.o(i.dog_stair_out) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
-    yushu_app.o(i.dog_stair_out) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
-    yushu_app.o(i.dog_stair_out) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
-    yushu_app.o(i.dog_stair_out) refers to yushu_app.o(.data) for leg_middle
-    yushu_app.o(i.dog_stair_out) refers to yushu_app.o(.bss) for leg
     yushu_app.o(i.dog_start) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
     yushu_app.o(i.dog_start) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
     yushu_app.o(i.dog_start) refers to yushu_app.o(.data) for leg_int
@@ -2477,12 +2438,11 @@ Removing Unused input sections from the image.
     Removing yushu_app.o(i.dog_back_squat), (3320 bytes).
     Removing yushu_app.o(i.dog_back_squat_int), (432 bytes).
     Removing yushu_app.o(i.dog_back_squat_out), (552 bytes).
-    Removing yushu_app.o(i.dog_backflip), (664 bytes).
-    Removing yushu_app.o(i.dog_bridge), (5904 bytes).
-    Removing yushu_app.o(i.dog_bunny_jump_force2), (1604 bytes).
+    Removing yushu_app.o(i.dog_bunny_jump_force), (1652 bytes).
     Removing yushu_app.o(i.dog_bunny_jump_force4), (1580 bytes).
     Removing yushu_app.o(i.dog_bunny_jump_force6), (1776 bytes).
-    Removing yushu_app.o(i.dog_bunny_jump_forward4), (1748 bytes).
+    Removing yushu_app.o(i.dog_bunny_jump_forward), (1704 bytes).
+    Removing yushu_app.o(i.dog_bunny_jump_up2), (412 bytes).
     Removing yushu_app.o(i.dog_double_jump_force), (64 bytes).
     Removing yushu_app.o(i.dog_forward_bit), (3320 bytes).
     Removing yushu_app.o(i.dog_forward_bit_dir), (4920 bytes).
@@ -2495,8 +2455,8 @@ Removing Unused input sections from the image.
     Removing yushu_app.o(i.dog_high2squat), (692 bytes).
     Removing yushu_app.o(i.dog_high_still), (588 bytes).
     Removing yushu_app.o(i.dog_int), (444 bytes).
-    Removing yushu_app.o(i.dog_jump3), (1244 bytes).
-    Removing yushu_app.o(i.dog_jump4), (1552 bytes).
+    Removing yushu_app.o(i.dog_jump_2stairs), (18 bytes).
+    Removing yushu_app.o(i.dog_jump_floor), (1564 bytes).
     Removing yushu_app.o(i.dog_left_bit), (3320 bytes).
     Removing yushu_app.o(i.dog_left_bit_int), (432 bytes).
     Removing yushu_app.o(i.dog_left_bit_out), (552 bytes).
@@ -2513,10 +2473,6 @@ Removing Unused input sections from the image.
     Removing yushu_app.o(i.dog_squat), (3320 bytes).
     Removing yushu_app.o(i.dog_squat2high), (636 bytes).
     Removing yushu_app.o(i.dog_squat_dir), (4916 bytes).
-    Removing yushu_app.o(i.dog_stair), (11344 bytes).
-    Removing yushu_app.o(i.dog_stair_int), (736 bytes).
-    Removing yushu_app.o(i.dog_stair_int_still), (724 bytes).
-    Removing yushu_app.o(i.dog_stair_out), (952 bytes).
     Removing yushu_app.o(i.dog_treble_jump_force), (92 bytes).
     Removing yushu_app.o(i.motor_waiting), (132 bytes).
     Removing dwt_timing.o(.rev16_text), (4 bytes).
@@ -2574,7 +2530,7 @@ Removing Unused input sections from the image.
     Removing oled.o(i.OLED_UpdateArea), (124 bytes).
     Removing oled.o(i.OLED_pnpoly), (140 bytes).
 
-548 unused section(s) (total 127231 bytes) removed from the image.
+543 unused section(s) (total 106109 bytes) removed from the image.
 
 ==============================================================================
 
@@ -3166,149 +3122,149 @@ Image Symbol Table
     i.dog_back_mid                           0x08008c44   Section        0  yushu_app.o(i.dog_back_mid)
     i.dog_back_mid_int                       0x08009938   Section        0  yushu_app.o(i.dog_back_mid_int)
     i.dog_back_mid_out                       0x08009ae4   Section        0  yushu_app.o(i.dog_back_mid_out)
-    i.dog_bunny_jump_force                   0x08009d08   Section        0  yushu_app.o(i.dog_bunny_jump_force)
-    i.dog_bunny_jump_forward2                0x0800a37c   Section        0  yushu_app.o(i.dog_bunny_jump_forward2)
-    i.dog_bunny_jump_forward7                0x0800aa24   Section        0  yushu_app.o(i.dog_bunny_jump_forward7)
-    i.dog_bunny_jump_up                      0x0800b0c4   Section        0  yushu_app.o(i.dog_bunny_jump_up)
-    i.dog_double_jump_force2                 0x0800b930   Section        0  yushu_app.o(i.dog_double_jump_force2)
-    i.dog_forward_bit_still                  0x0800b970   Section        0  yushu_app.o(i.dog_forward_bit_still)
-    i.dog_forward_bit_still_int              0x0800c658   Section        0  yushu_app.o(i.dog_forward_bit_still_int)
-    i.dog_forward_bit_still_out              0x0800c808   Section        0  yushu_app.o(i.dog_forward_bit_still_out)
-    i.dog_forward_mid                        0x0800ca30   Section        0  yushu_app.o(i.dog_forward_mid)
-    i.dog_forward_mid_int                    0x0800d724   Section        0  yushu_app.o(i.dog_forward_mid_int)
-    i.dog_forward_mid_out                    0x0800d8d0   Section        0  yushu_app.o(i.dog_forward_mid_out)
-    i.dog_forward_rear                       0x0800daf4   Section        0  yushu_app.o(i.dog_forward_rear)
-    i.dog_forward_rear_int                   0x0800e358   Section        0  yushu_app.o(i.dog_forward_rear_int)
-    i.dog_forward_rear_out                   0x0800e45c   Section        0  yushu_app.o(i.dog_forward_rear_out)
-    i.dog_jump                               0x0800e59c   Section        0  yushu_app.o(i.dog_jump)
-    i.dog_jump2                              0x0800ec58   Section        0  yushu_app.o(i.dog_jump2)
-    i.dog_jump_force10                       0x0800eff0   Section        0  yushu_app.o(i.dog_jump_force10)
-    i.dog_left_bit_still                     0x0800f8d4   Section        0  yushu_app.o(i.dog_left_bit_still)
-    i.dog_left_bit_still_int                 0x080105bc   Section        0  yushu_app.o(i.dog_left_bit_still_int)
-    i.dog_left_bit_still_out                 0x0801076c   Section        0  yushu_app.o(i.dog_left_bit_still_out)
-    i.dog_left_mid                           0x08010994   Section        0  yushu_app.o(i.dog_left_mid)
-    i.dog_left_mid_int                       0x0801168c   Section        0  yushu_app.o(i.dog_left_mid_int)
-    i.dog_left_mid_out                       0x0801183c   Section        0  yushu_app.o(i.dog_left_mid_out)
-    i.dog_left_rear                          0x08011a64   Section        0  yushu_app.o(i.dog_left_rear)
-    i.dog_left_rear_int                      0x080122c8   Section        0  yushu_app.o(i.dog_left_rear_int)
-    i.dog_left_rear_out                      0x080123cc   Section        0  yushu_app.o(i.dog_left_rear_out)
-    i.dog_rear_flip                          0x0801250c   Section        0  yushu_app.o(i.dog_rear_flip)
-    i.dog_rear_leg                           0x080127f0   Section        0  yushu_app.o(i.dog_rear_leg)
-    i.dog_rear_mid                           0x08012ad4   Section        0  yushu_app.o(i.dog_rear_mid)
-    i.dog_rear_mid_int                       0x08013334   Section        0  yushu_app.o(i.dog_rear_mid_int)
-    i.dog_rear_mid_out                       0x08013434   Section        0  yushu_app.o(i.dog_rear_mid_out)
-    i.dog_right_bit_still                    0x08013570   Section        0  yushu_app.o(i.dog_right_bit_still)
-    i.dog_right_bit_still_int                0x08014258   Section        0  yushu_app.o(i.dog_right_bit_still_int)
-    i.dog_right_bit_still_out                0x08014408   Section        0  yushu_app.o(i.dog_right_bit_still_out)
-    i.dog_right_mid                          0x08014630   Section        0  yushu_app.o(i.dog_right_mid)
-    i.dog_right_mid_int                      0x08015328   Section        0  yushu_app.o(i.dog_right_mid_int)
-    i.dog_right_mid_out                      0x080154d8   Section        0  yushu_app.o(i.dog_right_mid_out)
-    i.dog_right_rear                         0x08015700   Section        0  yushu_app.o(i.dog_right_rear)
-    i.dog_right_rear_int                     0x08015f64   Section        0  yushu_app.o(i.dog_right_rear_int)
-    i.dog_right_rear_out                     0x08016068   Section        0  yushu_app.o(i.dog_right_rear_out)
-    i.dog_small_still                        0x080161a8   Section        0  main.o(i.dog_small_still)
-    i.dog_small_still2                       0x08016304   Section        0  main.o(i.dog_small_still2)
-    i.dog_squat_int                          0x080164ac   Section        0  yushu_app.o(i.dog_squat_int)
-    i.dog_squat_int_still                    0x08016760   Section        0  yushu_app.o(i.dog_squat_int_still)
-    i.dog_squat_out                          0x080169ac   Section        0  yushu_app.o(i.dog_squat_out)
-    i.dog_start                              0x08016c60   Section        0  yushu_app.o(i.dog_start)
-    i.dog_treble_jump_force2                 0x08016fa0   Section        0  yushu_app.o(i.dog_treble_jump_force2)
-    i.main                                   0x08016ffc   Section        0  main.o(i.main)
-    i.rt_ringbuffer_data_len                 0x0801805c   Section        0  ringbuffer.o(i.rt_ringbuffer_data_len)
-    i.rt_ringbuffer_init                     0x08018098   Section        0  ringbuffer.o(i.rt_ringbuffer_init)
-    i.rt_ringbuffer_put                      0x0801812c   Section        0  ringbuffer.o(i.rt_ringbuffer_put)
-    i.rt_ringbuffer_status                   0x0801821c   Section        0  ringbuffer.o(i.rt_ringbuffer_status)
-    rt_ringbuffer_status                     0x0801821d   Thumb Code    42  ringbuffer.o(i.rt_ringbuffer_status)
-    i.sample_foot_pos                        0x08018248   Section        0  walk.o(i.sample_foot_pos)
-    sample_foot_pos                          0x08018249   Thumb Code    80  walk.o(i.sample_foot_pos)
-    i.sqrtf                                  0x080182a0   Section        0  sqrtf.o(i.sqrtf)
-    i.stance_traj                            0x080182e0   Section        0  walk.o(i.stance_traj)
-    stance_traj                              0x080182e1   Thumb Code   116  walk.o(i.stance_traj)
-    i.swing_traj                             0x08018358   Section        0  walk.o(i.swing_traj)
-    swing_traj                               0x08018359   Thumb Code   204  walk.o(i.swing_traj)
-    i.uart_init                              0x0801842c   Section        0  usart_app.o(i.uart_init)
-    i.unitree_CAN_Send                       0x08018468   Section        0  gld_can.o(i.unitree_CAN_Send)
-    i.unitree_CAN_receive                    0x08018528   Section        0  gld_can.o(i.unitree_CAN_receive)
-    i.unitree_setpara                        0x0801866c   Section        0  gld_can.o(i.unitree_setpara)
-    i.walk_enter                             0x08018688   Section        0  walk.o(i.walk_enter)
-    i.walk_run                               0x080186c0   Section        0  walk.o(i.walk_run)
-    locale$$code                             0x08018900   Section       44  lc_numeric_c.o(locale$$code)
-    locale$$code                             0x0801892c   Section       44  lc_ctype_c.o(locale$$code)
-    x$fpl$d2f                                0x08018958   Section       98  d2f.o(x$fpl$d2f)
-    $v0                                      0x08018958   Number         0  d2f.o(x$fpl$d2f)
-    x$fpl$dadd                               0x080189bc   Section      336  daddsub_clz.o(x$fpl$dadd)
-    $v0                                      0x080189bc   Number         0  daddsub_clz.o(x$fpl$dadd)
-    _dadd1                                   0x080189cd   Thumb Code     0  daddsub_clz.o(x$fpl$dadd)
-    x$fpl$dcmpinf                            0x08018b0c   Section       24  dcmpi.o(x$fpl$dcmpinf)
-    $v0                                      0x08018b0c   Number         0  dcmpi.o(x$fpl$dcmpinf)
-    x$fpl$deqf                               0x08018b24   Section      120  deqf.o(x$fpl$deqf)
-    $v0                                      0x08018b24   Number         0  deqf.o(x$fpl$deqf)
-    x$fpl$dleqf                              0x08018b9c   Section      120  dleqf.o(x$fpl$dleqf)
-    $v0                                      0x08018b9c   Number         0  dleqf.o(x$fpl$dleqf)
-    x$fpl$dmul                               0x08018c14   Section      340  dmul.o(x$fpl$dmul)
-    $v0                                      0x08018c14   Number         0  dmul.o(x$fpl$dmul)
-    x$fpl$dnaninf                            0x08018d68   Section      156  dnaninf.o(x$fpl$dnaninf)
-    $v0                                      0x08018d68   Number         0  dnaninf.o(x$fpl$dnaninf)
-    x$fpl$dretinf                            0x08018e04   Section       12  dretinf.o(x$fpl$dretinf)
-    $v0                                      0x08018e04   Number         0  dretinf.o(x$fpl$dretinf)
-    x$fpl$drleqf                             0x08018e10   Section      108  drleqf.o(x$fpl$drleqf)
-    $v0                                      0x08018e10   Number         0  drleqf.o(x$fpl$drleqf)
-    x$fpl$drsb                               0x08018e7c   Section       22  daddsub_clz.o(x$fpl$drsb)
-    $v0                                      0x08018e7c   Number         0  daddsub_clz.o(x$fpl$drsb)
-    x$fpl$dsub                               0x08018e94   Section      468  daddsub_clz.o(x$fpl$dsub)
-    $v0                                      0x08018e94   Number         0  daddsub_clz.o(x$fpl$dsub)
-    _dsub1                                   0x08018ea5   Thumb Code     0  daddsub_clz.o(x$fpl$dsub)
-    x$fpl$f2d                                0x08019068   Section       86  f2d.o(x$fpl$f2d)
-    $v0                                      0x08019068   Number         0  f2d.o(x$fpl$f2d)
-    x$fpl$fnaninf                            0x080190be   Section      140  fnaninf.o(x$fpl$fnaninf)
-    $v0                                      0x080190be   Number         0  fnaninf.o(x$fpl$fnaninf)
-    x$fpl$fpinit                             0x0801914a   Section       10  fpinit.o(x$fpl$fpinit)
-    $v0                                      0x0801914a   Number         0  fpinit.o(x$fpl$fpinit)
-    x$fpl$frem                               0x08019154   Section      244  frem_clz.o(x$fpl$frem)
-    $v0                                      0x08019154   Number         0  frem_clz.o(x$fpl$frem)
-    x$fpl$fretinf                            0x08019248   Section       10  fretinf.o(x$fpl$fretinf)
-    $v0                                      0x08019248   Number         0  fretinf.o(x$fpl$fretinf)
-    x$fpl$printf1                            0x08019252   Section        4  printf1.o(x$fpl$printf1)
-    $v0                                      0x08019252   Number         0  printf1.o(x$fpl$printf1)
-    x$fpl$printf2                            0x08019256   Section        4  printf2.o(x$fpl$printf2)
-    $v0                                      0x08019256   Number         0  printf2.o(x$fpl$printf2)
-    x$fpl$usenofp                            0x0801925a   Section        0  usenofp.o(x$fpl$usenofp)
-    .constdata                               0x0801925c   Section       32  main.o(.constdata)
-    .constdata                               0x0801927c   Section        8  stm32f4xx_hal_dma.o(.constdata)
-    flagBitshiftOffset                       0x0801927c   Data           8  stm32f4xx_hal_dma.o(.constdata)
-    .constdata                               0x08019284   Section       24  system_stm32f4xx.o(.constdata)
-    .constdata                               0x0801929c   Section      320  yushu_app.o(.constdata)
-    .constdata                               0x080193dc   Section       96  dog.o(.constdata)
-    can_map                                  0x080193dc   Data          32  dog.o(.constdata)
-    can_map                                  0x080193fc   Data          32  dog.o(.constdata)
-    can_map                                  0x0801941c   Data          32  dog.o(.constdata)
-    .constdata                               0x0801943c   Section     2349  oled_data.o(.constdata)
-    .constdata                               0x08019d6c   Section        8  _printf_wctomb.o(.constdata)
-    initial_mbstate                          0x08019d6c   Data           8  _printf_wctomb.o(.constdata)
-    .constdata                               0x08019d74   Section       40  _printf_hex_int_ll_ptr.o(.constdata)
-    uc_hextab                                0x08019d74   Data          20  _printf_hex_int_ll_ptr.o(.constdata)
-    lc_hextab                                0x08019d88   Data          20  _printf_hex_int_ll_ptr.o(.constdata)
-    .constdata                               0x08019d9c   Section       17  __printf_flags_ss_wp.o(.constdata)
-    maptable                                 0x08019d9c   Data          17  __printf_flags_ss_wp.o(.constdata)
-    .constdata                               0x08019db0   Section       32  rredf.o(.constdata)
-    twooverpi                                0x08019db0   Data          32  rredf.o(.constdata)
-    .constdata                               0x08019dd0   Section       38  _printf_fp_hex.o(.constdata)
-    lc_hextab                                0x08019dd0   Data          19  _printf_fp_hex.o(.constdata)
-    uc_hextab                                0x08019de3   Data          19  _printf_fp_hex.o(.constdata)
-    .constdata                               0x08019df8   Section      148  bigflt0.o(.constdata)
-    tenpwrs_x                                0x08019df8   Data          60  bigflt0.o(.constdata)
-    tenpwrs_i                                0x08019e34   Data          64  bigflt0.o(.constdata)
-    locale$$data                             0x08019eac   Section       28  lc_numeric_c.o(locale$$data)
-    __lcnum_c_name                           0x08019eb0   Data           2  lc_numeric_c.o(locale$$data)
-    __lcnum_c_start                          0x08019eb8   Data           0  lc_numeric_c.o(locale$$data)
-    __lcnum_c_point                          0x08019ec4   Data           0  lc_numeric_c.o(locale$$data)
-    __lcnum_c_thousands                      0x08019ec6   Data           0  lc_numeric_c.o(locale$$data)
-    __lcnum_c_grouping                       0x08019ec7   Data           0  lc_numeric_c.o(locale$$data)
-    locale$$data                             0x08019ec8   Section      272  lc_ctype_c.o(locale$$data)
-    __lcnum_c_end                            0x08019ec8   Data           0  lc_numeric_c.o(locale$$data)
-    __lcctype_c_name                         0x08019ecc   Data           2  lc_ctype_c.o(locale$$data)
-    __lcctype_c_start                        0x08019ed4   Data           0  lc_ctype_c.o(locale$$data)
-    __lcctype_c_end                          0x08019fd8   Data           0  lc_ctype_c.o(locale$$data)
+    i.dog_bunny_jump_forward7                0x08009d08   Section        0  yushu_app.o(i.dog_bunny_jump_forward7)
+    i.dog_bunny_jump_up                      0x0800a3a8   Section        0  yushu_app.o(i.dog_bunny_jump_up)
+    i.dog_double_jump_force2                 0x0800ac14   Section        0  yushu_app.o(i.dog_double_jump_force2)
+    i.dog_forward_bit_still                  0x0800ac54   Section        0  yushu_app.o(i.dog_forward_bit_still)
+    i.dog_forward_bit_still_int              0x0800b93c   Section        0  yushu_app.o(i.dog_forward_bit_still_int)
+    i.dog_forward_bit_still_out              0x0800baec   Section        0  yushu_app.o(i.dog_forward_bit_still_out)
+    i.dog_forward_mid                        0x0800bd14   Section        0  yushu_app.o(i.dog_forward_mid)
+    i.dog_forward_mid_int                    0x0800ca08   Section        0  yushu_app.o(i.dog_forward_mid_int)
+    i.dog_forward_mid_out                    0x0800cbb4   Section        0  yushu_app.o(i.dog_forward_mid_out)
+    i.dog_forward_rear                       0x0800cdd8   Section        0  yushu_app.o(i.dog_forward_rear)
+    i.dog_forward_rear_int                   0x0800d63c   Section        0  yushu_app.o(i.dog_forward_rear_int)
+    i.dog_forward_rear_out                   0x0800d740   Section        0  yushu_app.o(i.dog_forward_rear_out)
+    i.dog_jump_floor2                        0x0800d880   Section        0  yushu_app.o(i.dog_jump_floor2)
+    i.dog_jump_force10                       0x0800dee0   Section        0  yushu_app.o(i.dog_jump_force10)
+    i.dog_jump_stair                         0x0800e7c4   Section        0  yushu_app.o(i.dog_jump_stair)
+    i.dog_jump_stair2                        0x0800ede4   Section        0  yushu_app.o(i.dog_jump_stair2)
+    i.dog_jump_stairs                        0x0800f404   Section        0  yushu_app.o(i.dog_jump_stairs)
+    i.dog_left_bit_still                     0x0800f418   Section        0  yushu_app.o(i.dog_left_bit_still)
+    i.dog_left_bit_still_int                 0x08010100   Section        0  yushu_app.o(i.dog_left_bit_still_int)
+    i.dog_left_bit_still_out                 0x080102b0   Section        0  yushu_app.o(i.dog_left_bit_still_out)
+    i.dog_left_mid                           0x080104d8   Section        0  yushu_app.o(i.dog_left_mid)
+    i.dog_left_mid_int                       0x080111d0   Section        0  yushu_app.o(i.dog_left_mid_int)
+    i.dog_left_mid_out                       0x08011380   Section        0  yushu_app.o(i.dog_left_mid_out)
+    i.dog_left_rear                          0x080115a8   Section        0  yushu_app.o(i.dog_left_rear)
+    i.dog_left_rear_int                      0x08011e0c   Section        0  yushu_app.o(i.dog_left_rear_int)
+    i.dog_left_rear_out                      0x08011f10   Section        0  yushu_app.o(i.dog_left_rear_out)
+    i.dog_rear_flip                          0x08012050   Section        0  yushu_app.o(i.dog_rear_flip)
+    i.dog_rear_leg                           0x08012334   Section        0  yushu_app.o(i.dog_rear_leg)
+    i.dog_rear_mid                           0x08012618   Section        0  yushu_app.o(i.dog_rear_mid)
+    i.dog_rear_mid_int                       0x08012e78   Section        0  yushu_app.o(i.dog_rear_mid_int)
+    i.dog_rear_mid_out                       0x08012f78   Section        0  yushu_app.o(i.dog_rear_mid_out)
+    i.dog_right_bit_still                    0x080130b4   Section        0  yushu_app.o(i.dog_right_bit_still)
+    i.dog_right_bit_still_int                0x08013d9c   Section        0  yushu_app.o(i.dog_right_bit_still_int)
+    i.dog_right_bit_still_out                0x08013f4c   Section        0  yushu_app.o(i.dog_right_bit_still_out)
+    i.dog_right_mid                          0x08014174   Section        0  yushu_app.o(i.dog_right_mid)
+    i.dog_right_mid_int                      0x08014e6c   Section        0  yushu_app.o(i.dog_right_mid_int)
+    i.dog_right_mid_out                      0x0801501c   Section        0  yushu_app.o(i.dog_right_mid_out)
+    i.dog_right_rear                         0x08015244   Section        0  yushu_app.o(i.dog_right_rear)
+    i.dog_right_rear_int                     0x08015aa8   Section        0  yushu_app.o(i.dog_right_rear_int)
+    i.dog_right_rear_out                     0x08015bac   Section        0  yushu_app.o(i.dog_right_rear_out)
+    i.dog_small_still                        0x08015cec   Section        0  main.o(i.dog_small_still)
+    i.dog_small_still2                       0x08015e48   Section        0  main.o(i.dog_small_still2)
+    i.dog_squat_int                          0x08015ff0   Section        0  yushu_app.o(i.dog_squat_int)
+    i.dog_squat_int_still                    0x080162a4   Section        0  yushu_app.o(i.dog_squat_int_still)
+    i.dog_squat_out                          0x080164f0   Section        0  yushu_app.o(i.dog_squat_out)
+    i.dog_start                              0x080167a4   Section        0  yushu_app.o(i.dog_start)
+    i.dog_treble_jump_force2                 0x08016ae4   Section        0  yushu_app.o(i.dog_treble_jump_force2)
+    i.main                                   0x08016b40   Section        0  main.o(i.main)
+    i.rt_ringbuffer_data_len                 0x08017b70   Section        0  ringbuffer.o(i.rt_ringbuffer_data_len)
+    i.rt_ringbuffer_init                     0x08017bac   Section        0  ringbuffer.o(i.rt_ringbuffer_init)
+    i.rt_ringbuffer_put                      0x08017c40   Section        0  ringbuffer.o(i.rt_ringbuffer_put)
+    i.rt_ringbuffer_status                   0x08017d30   Section        0  ringbuffer.o(i.rt_ringbuffer_status)
+    rt_ringbuffer_status                     0x08017d31   Thumb Code    42  ringbuffer.o(i.rt_ringbuffer_status)
+    i.sample_foot_pos                        0x08017d5c   Section        0  walk.o(i.sample_foot_pos)
+    sample_foot_pos                          0x08017d5d   Thumb Code    80  walk.o(i.sample_foot_pos)
+    i.sqrtf                                  0x08017db4   Section        0  sqrtf.o(i.sqrtf)
+    i.stance_traj                            0x08017df4   Section        0  walk.o(i.stance_traj)
+    stance_traj                              0x08017df5   Thumb Code   116  walk.o(i.stance_traj)
+    i.swing_traj                             0x08017e6c   Section        0  walk.o(i.swing_traj)
+    swing_traj                               0x08017e6d   Thumb Code   204  walk.o(i.swing_traj)
+    i.uart_init                              0x08017f40   Section        0  usart_app.o(i.uart_init)
+    i.unitree_CAN_Send                       0x08017f7c   Section        0  gld_can.o(i.unitree_CAN_Send)
+    i.unitree_CAN_receive                    0x0801803c   Section        0  gld_can.o(i.unitree_CAN_receive)
+    i.unitree_setpara                        0x08018180   Section        0  gld_can.o(i.unitree_setpara)
+    i.walk_enter                             0x0801819c   Section        0  walk.o(i.walk_enter)
+    i.walk_run                               0x080181d4   Section        0  walk.o(i.walk_run)
+    locale$$code                             0x08018414   Section       44  lc_numeric_c.o(locale$$code)
+    locale$$code                             0x08018440   Section       44  lc_ctype_c.o(locale$$code)
+    x$fpl$d2f                                0x0801846c   Section       98  d2f.o(x$fpl$d2f)
+    $v0                                      0x0801846c   Number         0  d2f.o(x$fpl$d2f)
+    x$fpl$dadd                               0x080184d0   Section      336  daddsub_clz.o(x$fpl$dadd)
+    $v0                                      0x080184d0   Number         0  daddsub_clz.o(x$fpl$dadd)
+    _dadd1                                   0x080184e1   Thumb Code     0  daddsub_clz.o(x$fpl$dadd)
+    x$fpl$dcmpinf                            0x08018620   Section       24  dcmpi.o(x$fpl$dcmpinf)
+    $v0                                      0x08018620   Number         0  dcmpi.o(x$fpl$dcmpinf)
+    x$fpl$deqf                               0x08018638   Section      120  deqf.o(x$fpl$deqf)
+    $v0                                      0x08018638   Number         0  deqf.o(x$fpl$deqf)
+    x$fpl$dleqf                              0x080186b0   Section      120  dleqf.o(x$fpl$dleqf)
+    $v0                                      0x080186b0   Number         0  dleqf.o(x$fpl$dleqf)
+    x$fpl$dmul                               0x08018728   Section      340  dmul.o(x$fpl$dmul)
+    $v0                                      0x08018728   Number         0  dmul.o(x$fpl$dmul)
+    x$fpl$dnaninf                            0x0801887c   Section      156  dnaninf.o(x$fpl$dnaninf)
+    $v0                                      0x0801887c   Number         0  dnaninf.o(x$fpl$dnaninf)
+    x$fpl$dretinf                            0x08018918   Section       12  dretinf.o(x$fpl$dretinf)
+    $v0                                      0x08018918   Number         0  dretinf.o(x$fpl$dretinf)
+    x$fpl$drleqf                             0x08018924   Section      108  drleqf.o(x$fpl$drleqf)
+    $v0                                      0x08018924   Number         0  drleqf.o(x$fpl$drleqf)
+    x$fpl$drsb                               0x08018990   Section       22  daddsub_clz.o(x$fpl$drsb)
+    $v0                                      0x08018990   Number         0  daddsub_clz.o(x$fpl$drsb)
+    x$fpl$dsub                               0x080189a8   Section      468  daddsub_clz.o(x$fpl$dsub)
+    $v0                                      0x080189a8   Number         0  daddsub_clz.o(x$fpl$dsub)
+    _dsub1                                   0x080189b9   Thumb Code     0  daddsub_clz.o(x$fpl$dsub)
+    x$fpl$f2d                                0x08018b7c   Section       86  f2d.o(x$fpl$f2d)
+    $v0                                      0x08018b7c   Number         0  f2d.o(x$fpl$f2d)
+    x$fpl$fnaninf                            0x08018bd2   Section      140  fnaninf.o(x$fpl$fnaninf)
+    $v0                                      0x08018bd2   Number         0  fnaninf.o(x$fpl$fnaninf)
+    x$fpl$fpinit                             0x08018c5e   Section       10  fpinit.o(x$fpl$fpinit)
+    $v0                                      0x08018c5e   Number         0  fpinit.o(x$fpl$fpinit)
+    x$fpl$frem                               0x08018c68   Section      244  frem_clz.o(x$fpl$frem)
+    $v0                                      0x08018c68   Number         0  frem_clz.o(x$fpl$frem)
+    x$fpl$fretinf                            0x08018d5c   Section       10  fretinf.o(x$fpl$fretinf)
+    $v0                                      0x08018d5c   Number         0  fretinf.o(x$fpl$fretinf)
+    x$fpl$printf1                            0x08018d66   Section        4  printf1.o(x$fpl$printf1)
+    $v0                                      0x08018d66   Number         0  printf1.o(x$fpl$printf1)
+    x$fpl$printf2                            0x08018d6a   Section        4  printf2.o(x$fpl$printf2)
+    $v0                                      0x08018d6a   Number         0  printf2.o(x$fpl$printf2)
+    x$fpl$usenofp                            0x08018d6e   Section        0  usenofp.o(x$fpl$usenofp)
+    .constdata                               0x08018d70   Section       32  main.o(.constdata)
+    .constdata                               0x08018d90   Section        8  stm32f4xx_hal_dma.o(.constdata)
+    flagBitshiftOffset                       0x08018d90   Data           8  stm32f4xx_hal_dma.o(.constdata)
+    .constdata                               0x08018d98   Section       24  system_stm32f4xx.o(.constdata)
+    .constdata                               0x08018db0   Section      320  yushu_app.o(.constdata)
+    .constdata                               0x08018ef0   Section       96  dog.o(.constdata)
+    can_map                                  0x08018ef0   Data          32  dog.o(.constdata)
+    can_map                                  0x08018f10   Data          32  dog.o(.constdata)
+    can_map                                  0x08018f30   Data          32  dog.o(.constdata)
+    .constdata                               0x08018f50   Section     2349  oled_data.o(.constdata)
+    .constdata                               0x08019880   Section        8  _printf_wctomb.o(.constdata)
+    initial_mbstate                          0x08019880   Data           8  _printf_wctomb.o(.constdata)
+    .constdata                               0x08019888   Section       40  _printf_hex_int_ll_ptr.o(.constdata)
+    uc_hextab                                0x08019888   Data          20  _printf_hex_int_ll_ptr.o(.constdata)
+    lc_hextab                                0x0801989c   Data          20  _printf_hex_int_ll_ptr.o(.constdata)
+    .constdata                               0x080198b0   Section       17  __printf_flags_ss_wp.o(.constdata)
+    maptable                                 0x080198b0   Data          17  __printf_flags_ss_wp.o(.constdata)
+    .constdata                               0x080198c4   Section       32  rredf.o(.constdata)
+    twooverpi                                0x080198c4   Data          32  rredf.o(.constdata)
+    .constdata                               0x080198e4   Section       38  _printf_fp_hex.o(.constdata)
+    lc_hextab                                0x080198e4   Data          19  _printf_fp_hex.o(.constdata)
+    uc_hextab                                0x080198f7   Data          19  _printf_fp_hex.o(.constdata)
+    .constdata                               0x0801990c   Section      148  bigflt0.o(.constdata)
+    tenpwrs_x                                0x0801990c   Data          60  bigflt0.o(.constdata)
+    tenpwrs_i                                0x08019948   Data          64  bigflt0.o(.constdata)
+    locale$$data                             0x080199c0   Section       28  lc_numeric_c.o(locale$$data)
+    __lcnum_c_name                           0x080199c4   Data           2  lc_numeric_c.o(locale$$data)
+    __lcnum_c_start                          0x080199cc   Data           0  lc_numeric_c.o(locale$$data)
+    __lcnum_c_point                          0x080199d8   Data           0  lc_numeric_c.o(locale$$data)
+    __lcnum_c_thousands                      0x080199da   Data           0  lc_numeric_c.o(locale$$data)
+    __lcnum_c_grouping                       0x080199db   Data           0  lc_numeric_c.o(locale$$data)
+    locale$$data                             0x080199dc   Section      272  lc_ctype_c.o(locale$$data)
+    __lcnum_c_end                            0x080199dc   Data           0  lc_numeric_c.o(locale$$data)
+    __lcctype_c_name                         0x080199e0   Data           2  lc_ctype_c.o(locale$$data)
+    __lcctype_c_start                        0x080199e8   Data           0  lc_ctype_c.o(locale$$data)
+    __lcctype_c_end                          0x08019aec   Data           0  lc_ctype_c.o(locale$$data)
     .data                                    0x20000000   Section      117  main.o(.data)
     oled_tick                                0x20000070   Data           4  main.o(.data)
     mode_walk_last                           0x20000074   Data           1  main.o(.data)
@@ -3316,16 +3272,16 @@ Image Symbol Table
     HAL_RCC_CAN1_CLK_ENABLED                 0x20000078   Data           4  can.o(.data)
     .data                                    0x2000007c   Section        9  stm32f4xx_hal.o(.data)
     .data                                    0x20000088   Section        4  system_stm32f4xx.o(.data)
-    .data                                    0x20000090   Section      340  yushu_app.o(.data)
-    .data                                    0x200001e4   Section       12  dwt_timing.o(.data)
-    dwt_inited                               0x200001e4   Data           1  dwt_timing.o(.data)
-    last_cyccnt                              0x200001e8   Data           4  dwt_timing.o(.data)
-    time_sec                                 0x200001ec   Data           4  dwt_timing.o(.data)
-    .data                                    0x200001f0   Section       76  walk.o(.data)
-    tick_start                               0x20000230   Data           4  walk.o(.data)
-    t_last                                   0x20000234   Data           4  walk.o(.data)
-    leg_swing                                0x20000238   Data           4  walk.o(.data)
-    .data                                    0x2000023c   Section       19  gld_can.o(.data)
+    .data                                    0x20000090   Section      336  yushu_app.o(.data)
+    .data                                    0x200001e0   Section       12  dwt_timing.o(.data)
+    dwt_inited                               0x200001e0   Data           1  dwt_timing.o(.data)
+    last_cyccnt                              0x200001e4   Data           4  dwt_timing.o(.data)
+    time_sec                                 0x200001e8   Data           4  dwt_timing.o(.data)
+    .data                                    0x200001ec   Section       76  walk.o(.data)
+    tick_start                               0x2000022c   Data           4  walk.o(.data)
+    t_last                                   0x20000230   Data           4  walk.o(.data)
+    leg_swing                                0x20000234   Data           4  walk.o(.data)
+    .data                                    0x20000238   Section       19  gld_can.o(.data)
     .bss                                     0x20000250   Section     1040  main.o(.bss)
     .bss                                     0x20000660   Section       80  can.o(.bss)
     .bss                                     0x200006b0   Section      144  tim.o(.bss)
@@ -3775,105 +3731,105 @@ Image Symbol Table
     dog_back_mid                             0x08008c45   Thumb Code  3246  yushu_app.o(i.dog_back_mid)
     dog_back_mid_int                         0x08009939   Thumb Code   366  yushu_app.o(i.dog_back_mid_int)
     dog_back_mid_out                         0x08009ae5   Thumb Code   484  yushu_app.o(i.dog_back_mid_out)
-    dog_bunny_jump_force                     0x08009d09   Thumb Code  1582  yushu_app.o(i.dog_bunny_jump_force)
-    dog_bunny_jump_forward2                  0x0800a37d   Thumb Code  1646  yushu_app.o(i.dog_bunny_jump_forward2)
-    dog_bunny_jump_forward7                  0x0800aa25   Thumb Code  1646  yushu_app.o(i.dog_bunny_jump_forward7)
-    dog_bunny_jump_up                        0x0800b0c5   Thumb Code  2060  yushu_app.o(i.dog_bunny_jump_up)
-    dog_double_jump_force2                   0x0800b931   Thumb Code    58  yushu_app.o(i.dog_double_jump_force2)
-    dog_forward_bit_still                    0x0800b971   Thumb Code  3242  yushu_app.o(i.dog_forward_bit_still)
-    dog_forward_bit_still_int                0x0800c659   Thumb Code   366  yushu_app.o(i.dog_forward_bit_still_int)
-    dog_forward_bit_still_out                0x0800c809   Thumb Code   484  yushu_app.o(i.dog_forward_bit_still_out)
-    dog_forward_mid                          0x0800ca31   Thumb Code  3246  yushu_app.o(i.dog_forward_mid)
-    dog_forward_mid_int                      0x0800d725   Thumb Code   366  yushu_app.o(i.dog_forward_mid_int)
-    dog_forward_mid_out                      0x0800d8d1   Thumb Code   484  yushu_app.o(i.dog_forward_mid_out)
-    dog_forward_rear                         0x0800daf5   Thumb Code  2112  yushu_app.o(i.dog_forward_rear)
-    dog_forward_rear_int                     0x0800e359   Thumb Code   212  yushu_app.o(i.dog_forward_rear_int)
-    dog_forward_rear_out                     0x0800e45d   Thumb Code   266  yushu_app.o(i.dog_forward_rear_out)
-    dog_jump                                 0x0800e59d   Thumb Code  1680  yushu_app.o(i.dog_jump)
-    dog_jump2                                0x0800ec59   Thumb Code   874  yushu_app.o(i.dog_jump2)
-    dog_jump_force10                         0x0800eff1   Thumb Code  2270  yushu_app.o(i.dog_jump_force10)
-    dog_left_bit_still                       0x0800f8d5   Thumb Code  3242  yushu_app.o(i.dog_left_bit_still)
-    dog_left_bit_still_int                   0x080105bd   Thumb Code   366  yushu_app.o(i.dog_left_bit_still_int)
-    dog_left_bit_still_out                   0x0801076d   Thumb Code   484  yushu_app.o(i.dog_left_bit_still_out)
-    dog_left_mid                             0x08010995   Thumb Code  3250  yushu_app.o(i.dog_left_mid)
-    dog_left_mid_int                         0x0801168d   Thumb Code   366  yushu_app.o(i.dog_left_mid_int)
-    dog_left_mid_out                         0x0801183d   Thumb Code   484  yushu_app.o(i.dog_left_mid_out)
-    dog_left_rear                            0x08011a65   Thumb Code  2112  yushu_app.o(i.dog_left_rear)
-    dog_left_rear_int                        0x080122c9   Thumb Code   212  yushu_app.o(i.dog_left_rear_int)
-    dog_left_rear_out                        0x080123cd   Thumb Code   266  yushu_app.o(i.dog_left_rear_out)
-    dog_rear_flip                            0x0801250d   Thumb Code   646  yushu_app.o(i.dog_rear_flip)
-    dog_rear_leg                             0x080127f1   Thumb Code   646  yushu_app.o(i.dog_rear_leg)
-    dog_rear_mid                             0x08012ad5   Thumb Code  2108  yushu_app.o(i.dog_rear_mid)
-    dog_rear_mid_int                         0x08013335   Thumb Code   212  yushu_app.o(i.dog_rear_mid_int)
-    dog_rear_mid_out                         0x08013435   Thumb Code   266  yushu_app.o(i.dog_rear_mid_out)
-    dog_right_bit_still                      0x08013571   Thumb Code  3242  yushu_app.o(i.dog_right_bit_still)
-    dog_right_bit_still_int                  0x08014259   Thumb Code   366  yushu_app.o(i.dog_right_bit_still_int)
-    dog_right_bit_still_out                  0x08014409   Thumb Code   484  yushu_app.o(i.dog_right_bit_still_out)
-    dog_right_mid                            0x08014631   Thumb Code  3250  yushu_app.o(i.dog_right_mid)
-    dog_right_mid_int                        0x08015329   Thumb Code   366  yushu_app.o(i.dog_right_mid_int)
-    dog_right_mid_out                        0x080154d9   Thumb Code   484  yushu_app.o(i.dog_right_mid_out)
-    dog_right_rear                           0x08015701   Thumb Code  2112  yushu_app.o(i.dog_right_rear)
-    dog_right_rear_int                       0x08015f65   Thumb Code   212  yushu_app.o(i.dog_right_rear_int)
-    dog_right_rear_out                       0x08016069   Thumb Code   266  yushu_app.o(i.dog_right_rear_out)
-    dog_small_still                          0x080161a9   Thumb Code   328  main.o(i.dog_small_still)
-    dog_small_still2                         0x08016305   Thumb Code   392  main.o(i.dog_small_still2)
-    dog_squat_int                            0x080164ad   Thumb Code   620  yushu_app.o(i.dog_squat_int)
-    dog_squat_int_still                      0x08016761   Thumb Code   518  yushu_app.o(i.dog_squat_int_still)
-    dog_squat_out                            0x080169ad   Thumb Code   620  yushu_app.o(i.dog_squat_out)
-    dog_start                                0x08016c61   Thumb Code   766  yushu_app.o(i.dog_start)
-    dog_treble_jump_force2                   0x08016fa1   Thumb Code    88  yushu_app.o(i.dog_treble_jump_force2)
-    main                                     0x08016ffd   Thumb Code  4156  main.o(i.main)
-    rt_ringbuffer_data_len                   0x0801805d   Thumb Code    60  ringbuffer.o(i.rt_ringbuffer_data_len)
-    rt_ringbuffer_init                       0x08018099   Thumb Code    84  ringbuffer.o(i.rt_ringbuffer_init)
-    rt_ringbuffer_put                        0x0801812d   Thumb Code   182  ringbuffer.o(i.rt_ringbuffer_put)
-    sqrtf                                    0x080182a1   Thumb Code    62  sqrtf.o(i.sqrtf)
-    uart_init                                0x0801842d   Thumb Code    40  usart_app.o(i.uart_init)
-    unitree_CAN_Send                         0x08018469   Thumb Code   182  gld_can.o(i.unitree_CAN_Send)
-    unitree_CAN_receive                      0x08018529   Thumb Code   312  gld_can.o(i.unitree_CAN_receive)
-    unitree_setpara                          0x0801866d   Thumb Code    26  gld_can.o(i.unitree_setpara)
-    walk_enter                               0x08018689   Thumb Code    42  walk.o(i.walk_enter)
-    walk_run                                 0x080186c1   Thumb Code   548  walk.o(i.walk_run)
-    _get_lc_numeric                          0x08018901   Thumb Code    44  lc_numeric_c.o(locale$$code)
-    _get_lc_ctype                            0x0801892d   Thumb Code    44  lc_ctype_c.o(locale$$code)
-    __aeabi_d2f                              0x08018959   Thumb Code     0  d2f.o(x$fpl$d2f)
-    _d2f                                     0x08018959   Thumb Code    98  d2f.o(x$fpl$d2f)
-    __aeabi_dadd                             0x080189bd   Thumb Code     0  daddsub_clz.o(x$fpl$dadd)
-    _dadd                                    0x080189bd   Thumb Code   332  daddsub_clz.o(x$fpl$dadd)
-    __fpl_dcmp_Inf                           0x08018b0d   Thumb Code    24  dcmpi.o(x$fpl$dcmpinf)
-    __aeabi_cdcmpeq                          0x08018b25   Thumb Code     0  deqf.o(x$fpl$deqf)
-    _dcmpeq                                  0x08018b25   Thumb Code   120  deqf.o(x$fpl$deqf)
-    __aeabi_cdcmple                          0x08018b9d   Thumb Code     0  dleqf.o(x$fpl$dleqf)
-    _dcmple                                  0x08018b9d   Thumb Code   120  dleqf.o(x$fpl$dleqf)
-    __fpl_dcmple_InfNaN                      0x08018bff   Thumb Code     0  dleqf.o(x$fpl$dleqf)
-    __aeabi_dmul                             0x08018c15   Thumb Code     0  dmul.o(x$fpl$dmul)
-    _dmul                                    0x08018c15   Thumb Code   332  dmul.o(x$fpl$dmul)
-    __fpl_dnaninf                            0x08018d69   Thumb Code   156  dnaninf.o(x$fpl$dnaninf)
-    __fpl_dretinf                            0x08018e05   Thumb Code    12  dretinf.o(x$fpl$dretinf)
-    __aeabi_cdrcmple                         0x08018e11   Thumb Code     0  drleqf.o(x$fpl$drleqf)
-    _drcmple                                 0x08018e11   Thumb Code   108  drleqf.o(x$fpl$drleqf)
-    __aeabi_drsub                            0x08018e7d   Thumb Code     0  daddsub_clz.o(x$fpl$drsb)
-    _drsb                                    0x08018e7d   Thumb Code    22  daddsub_clz.o(x$fpl$drsb)
-    __aeabi_dsub                             0x08018e95   Thumb Code     0  daddsub_clz.o(x$fpl$dsub)
-    _dsub                                    0x08018e95   Thumb Code   464  daddsub_clz.o(x$fpl$dsub)
-    __aeabi_f2d                              0x08019069   Thumb Code     0  f2d.o(x$fpl$f2d)
-    _f2d                                     0x08019069   Thumb Code    86  f2d.o(x$fpl$f2d)
-    __fpl_fnaninf                            0x080190bf   Thumb Code   140  fnaninf.o(x$fpl$fnaninf)
-    _fp_init                                 0x0801914b   Thumb Code    10  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x08019153   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x08019153   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    _frem                                    0x08019155   Thumb Code   240  frem_clz.o(x$fpl$frem)
-    __fpl_fretinf                            0x08019249   Thumb Code    10  fretinf.o(x$fpl$fretinf)
-    _printf_fp_dec                           0x08019253   Thumb Code     4  printf1.o(x$fpl$printf1)
-    _printf_fp_hex                           0x08019257   Thumb Code     4  printf2.o(x$fpl$printf2)
-    __I$use$fp                               0x0801925a   Number         0  usenofp.o(x$fpl$usenofp)
-    AHBPrescTable                            0x08019284   Data          16  system_stm32f4xx.o(.constdata)
-    APBPrescTable                            0x08019294   Data           8  system_stm32f4xx.o(.constdata)
-    OLED_F8x16                               0x0801943c   Data        1520  oled_data.o(.constdata)
-    OLED_F6x8                                0x08019a2c   Data         570  oled_data.o(.constdata)
-    OLED_CF16x16                             0x08019c66   Data         259  oled_data.o(.constdata)
-    Region$$Table$$Base                      0x08019e8c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08019eac   Number         0  anon$$obj.o(Region$$Table)
-    __ctype                                  0x08019ed5   Data           0  lc_ctype_c.o(locale$$data)
+    dog_bunny_jump_forward7                  0x08009d09   Thumb Code  1646  yushu_app.o(i.dog_bunny_jump_forward7)
+    dog_bunny_jump_up                        0x0800a3a9   Thumb Code  2060  yushu_app.o(i.dog_bunny_jump_up)
+    dog_double_jump_force2                   0x0800ac15   Thumb Code    58  yushu_app.o(i.dog_double_jump_force2)
+    dog_forward_bit_still                    0x0800ac55   Thumb Code  3242  yushu_app.o(i.dog_forward_bit_still)
+    dog_forward_bit_still_int                0x0800b93d   Thumb Code   366  yushu_app.o(i.dog_forward_bit_still_int)
+    dog_forward_bit_still_out                0x0800baed   Thumb Code   484  yushu_app.o(i.dog_forward_bit_still_out)
+    dog_forward_mid                          0x0800bd15   Thumb Code  3246  yushu_app.o(i.dog_forward_mid)
+    dog_forward_mid_int                      0x0800ca09   Thumb Code   366  yushu_app.o(i.dog_forward_mid_int)
+    dog_forward_mid_out                      0x0800cbb5   Thumb Code   484  yushu_app.o(i.dog_forward_mid_out)
+    dog_forward_rear                         0x0800cdd9   Thumb Code  2112  yushu_app.o(i.dog_forward_rear)
+    dog_forward_rear_int                     0x0800d63d   Thumb Code   212  yushu_app.o(i.dog_forward_rear_int)
+    dog_forward_rear_out                     0x0800d741   Thumb Code   266  yushu_app.o(i.dog_forward_rear_out)
+    dog_jump_floor2                          0x0800d881   Thumb Code  1576  yushu_app.o(i.dog_jump_floor2)
+    dog_jump_force10                         0x0800dee1   Thumb Code  2270  yushu_app.o(i.dog_jump_force10)
+    dog_jump_stair                           0x0800e7c5   Thumb Code  1520  yushu_app.o(i.dog_jump_stair)
+    dog_jump_stair2                          0x0800ede5   Thumb Code  1520  yushu_app.o(i.dog_jump_stair2)
+    dog_jump_stairs                          0x0800f405   Thumb Code    18  yushu_app.o(i.dog_jump_stairs)
+    dog_left_bit_still                       0x0800f419   Thumb Code  3242  yushu_app.o(i.dog_left_bit_still)
+    dog_left_bit_still_int                   0x08010101   Thumb Code   366  yushu_app.o(i.dog_left_bit_still_int)
+    dog_left_bit_still_out                   0x080102b1   Thumb Code   484  yushu_app.o(i.dog_left_bit_still_out)
+    dog_left_mid                             0x080104d9   Thumb Code  3250  yushu_app.o(i.dog_left_mid)
+    dog_left_mid_int                         0x080111d1   Thumb Code   366  yushu_app.o(i.dog_left_mid_int)
+    dog_left_mid_out                         0x08011381   Thumb Code   484  yushu_app.o(i.dog_left_mid_out)
+    dog_left_rear                            0x080115a9   Thumb Code  2112  yushu_app.o(i.dog_left_rear)
+    dog_left_rear_int                        0x08011e0d   Thumb Code   212  yushu_app.o(i.dog_left_rear_int)
+    dog_left_rear_out                        0x08011f11   Thumb Code   266  yushu_app.o(i.dog_left_rear_out)
+    dog_rear_flip                            0x08012051   Thumb Code   646  yushu_app.o(i.dog_rear_flip)
+    dog_rear_leg                             0x08012335   Thumb Code   646  yushu_app.o(i.dog_rear_leg)
+    dog_rear_mid                             0x08012619   Thumb Code  2108  yushu_app.o(i.dog_rear_mid)
+    dog_rear_mid_int                         0x08012e79   Thumb Code   212  yushu_app.o(i.dog_rear_mid_int)
+    dog_rear_mid_out                         0x08012f79   Thumb Code   266  yushu_app.o(i.dog_rear_mid_out)
+    dog_right_bit_still                      0x080130b5   Thumb Code  3242  yushu_app.o(i.dog_right_bit_still)
+    dog_right_bit_still_int                  0x08013d9d   Thumb Code   366  yushu_app.o(i.dog_right_bit_still_int)
+    dog_right_bit_still_out                  0x08013f4d   Thumb Code   484  yushu_app.o(i.dog_right_bit_still_out)
+    dog_right_mid                            0x08014175   Thumb Code  3250  yushu_app.o(i.dog_right_mid)
+    dog_right_mid_int                        0x08014e6d   Thumb Code   366  yushu_app.o(i.dog_right_mid_int)
+    dog_right_mid_out                        0x0801501d   Thumb Code   484  yushu_app.o(i.dog_right_mid_out)
+    dog_right_rear                           0x08015245   Thumb Code  2112  yushu_app.o(i.dog_right_rear)
+    dog_right_rear_int                       0x08015aa9   Thumb Code   212  yushu_app.o(i.dog_right_rear_int)
+    dog_right_rear_out                       0x08015bad   Thumb Code   266  yushu_app.o(i.dog_right_rear_out)
+    dog_small_still                          0x08015ced   Thumb Code   328  main.o(i.dog_small_still)
+    dog_small_still2                         0x08015e49   Thumb Code   392  main.o(i.dog_small_still2)
+    dog_squat_int                            0x08015ff1   Thumb Code   620  yushu_app.o(i.dog_squat_int)
+    dog_squat_int_still                      0x080162a5   Thumb Code   518  yushu_app.o(i.dog_squat_int_still)
+    dog_squat_out                            0x080164f1   Thumb Code   620  yushu_app.o(i.dog_squat_out)
+    dog_start                                0x080167a5   Thumb Code   766  yushu_app.o(i.dog_start)
+    dog_treble_jump_force2                   0x08016ae5   Thumb Code    88  yushu_app.o(i.dog_treble_jump_force2)
+    main                                     0x08016b41   Thumb Code  4110  main.o(i.main)
+    rt_ringbuffer_data_len                   0x08017b71   Thumb Code    60  ringbuffer.o(i.rt_ringbuffer_data_len)
+    rt_ringbuffer_init                       0x08017bad   Thumb Code    84  ringbuffer.o(i.rt_ringbuffer_init)
+    rt_ringbuffer_put                        0x08017c41   Thumb Code   182  ringbuffer.o(i.rt_ringbuffer_put)
+    sqrtf                                    0x08017db5   Thumb Code    62  sqrtf.o(i.sqrtf)
+    uart_init                                0x08017f41   Thumb Code    40  usart_app.o(i.uart_init)
+    unitree_CAN_Send                         0x08017f7d   Thumb Code   182  gld_can.o(i.unitree_CAN_Send)
+    unitree_CAN_receive                      0x0801803d   Thumb Code   312  gld_can.o(i.unitree_CAN_receive)
+    unitree_setpara                          0x08018181   Thumb Code    26  gld_can.o(i.unitree_setpara)
+    walk_enter                               0x0801819d   Thumb Code    42  walk.o(i.walk_enter)
+    walk_run                                 0x080181d5   Thumb Code   548  walk.o(i.walk_run)
+    _get_lc_numeric                          0x08018415   Thumb Code    44  lc_numeric_c.o(locale$$code)
+    _get_lc_ctype                            0x08018441   Thumb Code    44  lc_ctype_c.o(locale$$code)
+    __aeabi_d2f                              0x0801846d   Thumb Code     0  d2f.o(x$fpl$d2f)
+    _d2f                                     0x0801846d   Thumb Code    98  d2f.o(x$fpl$d2f)
+    __aeabi_dadd                             0x080184d1   Thumb Code     0  daddsub_clz.o(x$fpl$dadd)
+    _dadd                                    0x080184d1   Thumb Code   332  daddsub_clz.o(x$fpl$dadd)
+    __fpl_dcmp_Inf                           0x08018621   Thumb Code    24  dcmpi.o(x$fpl$dcmpinf)
+    __aeabi_cdcmpeq                          0x08018639   Thumb Code     0  deqf.o(x$fpl$deqf)
+    _dcmpeq                                  0x08018639   Thumb Code   120  deqf.o(x$fpl$deqf)
+    __aeabi_cdcmple                          0x080186b1   Thumb Code     0  dleqf.o(x$fpl$dleqf)
+    _dcmple                                  0x080186b1   Thumb Code   120  dleqf.o(x$fpl$dleqf)
+    __fpl_dcmple_InfNaN                      0x08018713   Thumb Code     0  dleqf.o(x$fpl$dleqf)
+    __aeabi_dmul                             0x08018729   Thumb Code     0  dmul.o(x$fpl$dmul)
+    _dmul                                    0x08018729   Thumb Code   332  dmul.o(x$fpl$dmul)
+    __fpl_dnaninf                            0x0801887d   Thumb Code   156  dnaninf.o(x$fpl$dnaninf)
+    __fpl_dretinf                            0x08018919   Thumb Code    12  dretinf.o(x$fpl$dretinf)
+    __aeabi_cdrcmple                         0x08018925   Thumb Code     0  drleqf.o(x$fpl$drleqf)
+    _drcmple                                 0x08018925   Thumb Code   108  drleqf.o(x$fpl$drleqf)
+    __aeabi_drsub                            0x08018991   Thumb Code     0  daddsub_clz.o(x$fpl$drsb)
+    _drsb                                    0x08018991   Thumb Code    22  daddsub_clz.o(x$fpl$drsb)
+    __aeabi_dsub                             0x080189a9   Thumb Code     0  daddsub_clz.o(x$fpl$dsub)
+    _dsub                                    0x080189a9   Thumb Code   464  daddsub_clz.o(x$fpl$dsub)
+    __aeabi_f2d                              0x08018b7d   Thumb Code     0  f2d.o(x$fpl$f2d)
+    _f2d                                     0x08018b7d   Thumb Code    86  f2d.o(x$fpl$f2d)
+    __fpl_fnaninf                            0x08018bd3   Thumb Code   140  fnaninf.o(x$fpl$fnaninf)
+    _fp_init                                 0x08018c5f   Thumb Code    10  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x08018c67   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x08018c67   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    _frem                                    0x08018c69   Thumb Code   240  frem_clz.o(x$fpl$frem)
+    __fpl_fretinf                            0x08018d5d   Thumb Code    10  fretinf.o(x$fpl$fretinf)
+    _printf_fp_dec                           0x08018d67   Thumb Code     4  printf1.o(x$fpl$printf1)
+    _printf_fp_hex                           0x08018d6b   Thumb Code     4  printf2.o(x$fpl$printf2)
+    __I$use$fp                               0x08018d6e   Number         0  usenofp.o(x$fpl$usenofp)
+    AHBPrescTable                            0x08018d98   Data          16  system_stm32f4xx.o(.constdata)
+    APBPrescTable                            0x08018da8   Data           8  system_stm32f4xx.o(.constdata)
+    OLED_F8x16                               0x08018f50   Data        1520  oled_data.o(.constdata)
+    OLED_F6x8                                0x08019540   Data         570  oled_data.o(.constdata)
+    OLED_CF16x16                             0x0801977a   Data         259  oled_data.o(.constdata)
+    Region$$Table$$Base                      0x080199a0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080199c0   Number         0  anon$$obj.o(Region$$Table)
+    __ctype                                  0x080199e9   Data           0  lc_ctype_c.o(locale$$data)
     FLAH                                     0x20000000   Data           1  main.o(.data)
     foo                                      0x20000004   Data           4  main.o(.data)
     flag1                                    0x20000008   Data           1  main.o(.data)
@@ -3910,13 +3866,12 @@ Image Symbol Table
     leg_int                                  0x20000120   Data          64  yushu_app.o(.data)
     leg_middle                               0x20000160   Data          64  yushu_app.o(.data)
     leg_stand                                0x200001a0   Data          64  yushu_app.o(.data)
-    slope_ff                                 0x200001e0   Data           4  yushu_app.o(.data)
-    walk_param                               0x200001f0   Data          64  walk.o(.data)
-    CAN1_ID                                  0x2000023c   Data           1  gld_can.o(.data)
-    CAN2_ID                                  0x2000023d   Data           1  gld_can.o(.data)
-    unitree_can_send_data                    0x2000023e   Data           8  gld_can.o(.data)
-    unitree_can_send_kkdata                  0x20000246   Data           8  gld_can.o(.data)
-    unitree_CAN_ID                           0x2000024e   Data           1  gld_can.o(.data)
+    walk_param                               0x200001ec   Data          64  walk.o(.data)
+    CAN1_ID                                  0x20000238   Data           1  gld_can.o(.data)
+    CAN2_ID                                  0x20000239   Data           1  gld_can.o(.data)
+    unitree_can_send_data                    0x2000023a   Data           8  gld_can.o(.data)
+    unitree_can_send_kkdata                  0x20000242   Data           8  gld_can.o(.data)
+    unitree_CAN_ID                           0x2000024a   Data           1  gld_can.o(.data)
     RC_Ctl                                   0x20000250   Data          22  main.o(.bss)
     sbus_rx_buffer                           0x20000266   Data          18  main.o(.bss)
     send                                     0x20000278   Data          40  main.o(.bss)
@@ -3948,472 +3903,473 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0001a228, Max: 0x00100000, ABSOLUTE, COMPRESSED[0x0001a0e4])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00019d38, Max: 0x00100000, ABSOLUTE, COMPRESSED[0x00019bf4])
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00019fd8, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00019aec, Max: 0x00100000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x00000188   Data   RO            3    RESET               startup_stm32f407xx.o
-    0x08000188   0x08000188   0x00000008   Code   RO         5155  * !!!main             c_w.l(__main.o)
-    0x08000190   0x08000190   0x00000034   Code   RO         5701    !!!scatter          c_w.l(__scatter.o)
-    0x080001c4   0x080001c4   0x0000005a   Code   RO         5699    !!dczerorl2         c_w.l(__dczerorl2.o)
+    0x08000188   0x08000188   0x00000008   Code   RO         4994  * !!!main             c_w.l(__main.o)
+    0x08000190   0x08000190   0x00000034   Code   RO         5540    !!!scatter          c_w.l(__scatter.o)
+    0x080001c4   0x080001c4   0x0000005a   Code   RO         5538    !!dczerorl2         c_w.l(__dczerorl2.o)
     0x0800021e   0x0800021e   0x00000002   PAD
-    0x08000220   0x08000220   0x0000001c   Code   RO         5703    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x0800023c   0x0800023c   0x00000000   Code   RO         5379    .ARM.Collect$$_printf_percent$$00000000  c_w.l(_printf_percent.o)
-    0x0800023c   0x0800023c   0x00000006   Code   RO         5368    .ARM.Collect$$_printf_percent$$00000001  c_w.l(_printf_n.o)
-    0x08000242   0x08000242   0x00000006   Code   RO         5370    .ARM.Collect$$_printf_percent$$00000002  c_w.l(_printf_p.o)
-    0x08000248   0x08000248   0x00000006   Code   RO         5375    .ARM.Collect$$_printf_percent$$00000003  c_w.l(_printf_f.o)
-    0x0800024e   0x0800024e   0x00000006   Code   RO         5376    .ARM.Collect$$_printf_percent$$00000004  c_w.l(_printf_e.o)
-    0x08000254   0x08000254   0x00000006   Code   RO         5377    .ARM.Collect$$_printf_percent$$00000005  c_w.l(_printf_g.o)
-    0x0800025a   0x0800025a   0x00000006   Code   RO         5378    .ARM.Collect$$_printf_percent$$00000006  c_w.l(_printf_a.o)
-    0x08000260   0x08000260   0x0000000a   Code   RO         5383    .ARM.Collect$$_printf_percent$$00000007  c_w.l(_printf_ll.o)
-    0x0800026a   0x0800026a   0x00000006   Code   RO         5372    .ARM.Collect$$_printf_percent$$00000008  c_w.l(_printf_i.o)
-    0x08000270   0x08000270   0x00000006   Code   RO         5373    .ARM.Collect$$_printf_percent$$00000009  c_w.l(_printf_d.o)
-    0x08000276   0x08000276   0x00000006   Code   RO         5374    .ARM.Collect$$_printf_percent$$0000000A  c_w.l(_printf_u.o)
-    0x0800027c   0x0800027c   0x00000006   Code   RO         5371    .ARM.Collect$$_printf_percent$$0000000B  c_w.l(_printf_o.o)
-    0x08000282   0x08000282   0x00000006   Code   RO         5369    .ARM.Collect$$_printf_percent$$0000000C  c_w.l(_printf_x.o)
-    0x08000288   0x08000288   0x00000006   Code   RO         5380    .ARM.Collect$$_printf_percent$$0000000D  c_w.l(_printf_lli.o)
-    0x0800028e   0x0800028e   0x00000006   Code   RO         5381    .ARM.Collect$$_printf_percent$$0000000E  c_w.l(_printf_lld.o)
-    0x08000294   0x08000294   0x00000006   Code   RO         5382    .ARM.Collect$$_printf_percent$$0000000F  c_w.l(_printf_llu.o)
-    0x0800029a   0x0800029a   0x00000006   Code   RO         5387    .ARM.Collect$$_printf_percent$$00000010  c_w.l(_printf_llo.o)
-    0x080002a0   0x080002a0   0x00000006   Code   RO         5388    .ARM.Collect$$_printf_percent$$00000011  c_w.l(_printf_llx.o)
-    0x080002a6   0x080002a6   0x0000000a   Code   RO         5384    .ARM.Collect$$_printf_percent$$00000012  c_w.l(_printf_l.o)
-    0x080002b0   0x080002b0   0x00000006   Code   RO         5366    .ARM.Collect$$_printf_percent$$00000013  c_w.l(_printf_c.o)
-    0x080002b6   0x080002b6   0x00000006   Code   RO         5367    .ARM.Collect$$_printf_percent$$00000014  c_w.l(_printf_s.o)
-    0x080002bc   0x080002bc   0x00000006   Code   RO         5385    .ARM.Collect$$_printf_percent$$00000015  c_w.l(_printf_lc.o)
-    0x080002c2   0x080002c2   0x00000006   Code   RO         5386    .ARM.Collect$$_printf_percent$$00000016  c_w.l(_printf_ls.o)
-    0x080002c8   0x080002c8   0x00000004   Code   RO         5505    .ARM.Collect$$_printf_percent$$00000017  c_w.l(_printf_percent_end.o)
-    0x080002cc   0x080002cc   0x00000002   Code   RO         5578    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x080002ce   0x080002ce   0x00000004   Code   RO         5592    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
-    0x080002d2   0x080002d2   0x00000000   Code   RO         5595    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x080002d2   0x080002d2   0x00000000   Code   RO         5598    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
-    0x080002d2   0x080002d2   0x00000000   Code   RO         5600    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x080002d2   0x080002d2   0x00000000   Code   RO         5602    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x080002d2   0x080002d2   0x00000006   Code   RO         5603    .ARM.Collect$$libinit$$0000000F  c_w.l(libinit2.o)
-    0x080002d8   0x080002d8   0x00000000   Code   RO         5605    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
-    0x080002d8   0x080002d8   0x0000000c   Code   RO         5606    .ARM.Collect$$libinit$$00000012  c_w.l(libinit2.o)
-    0x080002e4   0x080002e4   0x00000000   Code   RO         5607    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x080002e4   0x080002e4   0x00000000   Code   RO         5609    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x080002e4   0x080002e4   0x0000000a   Code   RO         5610    .ARM.Collect$$libinit$$00000016  c_w.l(libinit2.o)
-    0x080002ee   0x080002ee   0x00000000   Code   RO         5611    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x080002ee   0x080002ee   0x00000000   Code   RO         5613    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x080002ee   0x080002ee   0x00000000   Code   RO         5615    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x080002ee   0x080002ee   0x00000000   Code   RO         5617    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x080002ee   0x080002ee   0x00000000   Code   RO         5619    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x080002ee   0x080002ee   0x00000000   Code   RO         5621    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x080002ee   0x080002ee   0x00000000   Code   RO         5623    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x080002ee   0x080002ee   0x00000000   Code   RO         5625    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x080002ee   0x080002ee   0x00000000   Code   RO         5629    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
-    0x080002ee   0x080002ee   0x00000000   Code   RO         5631    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x080002ee   0x080002ee   0x00000000   Code   RO         5633    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x080002ee   0x080002ee   0x00000000   Code   RO         5635    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x080002ee   0x080002ee   0x00000002   Code   RO         5636    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
-    0x080002f0   0x080002f0   0x00000002   Code   RO         5670    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x080002f2   0x080002f2   0x00000000   Code   RO         5680    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
-    0x080002f2   0x080002f2   0x00000000   Code   RO         5682    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
-    0x080002f2   0x080002f2   0x00000000   Code   RO         5684    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
-    0x080002f2   0x080002f2   0x00000000   Code   RO         5687    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
-    0x080002f2   0x080002f2   0x00000000   Code   RO         5690    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
-    0x080002f2   0x080002f2   0x00000000   Code   RO         5692    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
-    0x080002f2   0x080002f2   0x00000000   Code   RO         5695    .ARM.Collect$$libshutdown$$00000011  c_w.l(libshutdown2.o)
-    0x080002f2   0x080002f2   0x00000002   Code   RO         5696    .ARM.Collect$$libshutdown$$00000012  c_w.l(libshutdown2.o)
-    0x080002f4   0x080002f4   0x00000000   Code   RO         5289    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x080002f4   0x080002f4   0x00000000   Code   RO         5469    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x080002f4   0x080002f4   0x00000006   Code   RO         5481    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
-    0x080002fa   0x080002fa   0x00000000   Code   RO         5471    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x080002fa   0x080002fa   0x00000004   Code   RO         5472    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x080002fe   0x080002fe   0x00000000   Code   RO         5474    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x080002fe   0x080002fe   0x00000008   Code   RO         5475    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x08000306   0x08000306   0x00000002   Code   RO         5581    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x08000308   0x08000308   0x00000000   Code   RO         5638    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x08000308   0x08000308   0x00000004   Code   RO         5639    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x0800030c   0x0800030c   0x00000006   Code   RO         5640    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x08000220   0x08000220   0x0000001c   Code   RO         5542    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x0800023c   0x0800023c   0x00000000   Code   RO         5218    .ARM.Collect$$_printf_percent$$00000000  c_w.l(_printf_percent.o)
+    0x0800023c   0x0800023c   0x00000006   Code   RO         5207    .ARM.Collect$$_printf_percent$$00000001  c_w.l(_printf_n.o)
+    0x08000242   0x08000242   0x00000006   Code   RO         5209    .ARM.Collect$$_printf_percent$$00000002  c_w.l(_printf_p.o)
+    0x08000248   0x08000248   0x00000006   Code   RO         5214    .ARM.Collect$$_printf_percent$$00000003  c_w.l(_printf_f.o)
+    0x0800024e   0x0800024e   0x00000006   Code   RO         5215    .ARM.Collect$$_printf_percent$$00000004  c_w.l(_printf_e.o)
+    0x08000254   0x08000254   0x00000006   Code   RO         5216    .ARM.Collect$$_printf_percent$$00000005  c_w.l(_printf_g.o)
+    0x0800025a   0x0800025a   0x00000006   Code   RO         5217    .ARM.Collect$$_printf_percent$$00000006  c_w.l(_printf_a.o)
+    0x08000260   0x08000260   0x0000000a   Code   RO         5222    .ARM.Collect$$_printf_percent$$00000007  c_w.l(_printf_ll.o)
+    0x0800026a   0x0800026a   0x00000006   Code   RO         5211    .ARM.Collect$$_printf_percent$$00000008  c_w.l(_printf_i.o)
+    0x08000270   0x08000270   0x00000006   Code   RO         5212    .ARM.Collect$$_printf_percent$$00000009  c_w.l(_printf_d.o)
+    0x08000276   0x08000276   0x00000006   Code   RO         5213    .ARM.Collect$$_printf_percent$$0000000A  c_w.l(_printf_u.o)
+    0x0800027c   0x0800027c   0x00000006   Code   RO         5210    .ARM.Collect$$_printf_percent$$0000000B  c_w.l(_printf_o.o)
+    0x08000282   0x08000282   0x00000006   Code   RO         5208    .ARM.Collect$$_printf_percent$$0000000C  c_w.l(_printf_x.o)
+    0x08000288   0x08000288   0x00000006   Code   RO         5219    .ARM.Collect$$_printf_percent$$0000000D  c_w.l(_printf_lli.o)
+    0x0800028e   0x0800028e   0x00000006   Code   RO         5220    .ARM.Collect$$_printf_percent$$0000000E  c_w.l(_printf_lld.o)
+    0x08000294   0x08000294   0x00000006   Code   RO         5221    .ARM.Collect$$_printf_percent$$0000000F  c_w.l(_printf_llu.o)
+    0x0800029a   0x0800029a   0x00000006   Code   RO         5226    .ARM.Collect$$_printf_percent$$00000010  c_w.l(_printf_llo.o)
+    0x080002a0   0x080002a0   0x00000006   Code   RO         5227    .ARM.Collect$$_printf_percent$$00000011  c_w.l(_printf_llx.o)
+    0x080002a6   0x080002a6   0x0000000a   Code   RO         5223    .ARM.Collect$$_printf_percent$$00000012  c_w.l(_printf_l.o)
+    0x080002b0   0x080002b0   0x00000006   Code   RO         5205    .ARM.Collect$$_printf_percent$$00000013  c_w.l(_printf_c.o)
+    0x080002b6   0x080002b6   0x00000006   Code   RO         5206    .ARM.Collect$$_printf_percent$$00000014  c_w.l(_printf_s.o)
+    0x080002bc   0x080002bc   0x00000006   Code   RO         5224    .ARM.Collect$$_printf_percent$$00000015  c_w.l(_printf_lc.o)
+    0x080002c2   0x080002c2   0x00000006   Code   RO         5225    .ARM.Collect$$_printf_percent$$00000016  c_w.l(_printf_ls.o)
+    0x080002c8   0x080002c8   0x00000004   Code   RO         5344    .ARM.Collect$$_printf_percent$$00000017  c_w.l(_printf_percent_end.o)
+    0x080002cc   0x080002cc   0x00000002   Code   RO         5417    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x080002ce   0x080002ce   0x00000004   Code   RO         5431    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
+    0x080002d2   0x080002d2   0x00000000   Code   RO         5434    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x080002d2   0x080002d2   0x00000000   Code   RO         5437    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x080002d2   0x080002d2   0x00000000   Code   RO         5439    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x080002d2   0x080002d2   0x00000000   Code   RO         5441    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x080002d2   0x080002d2   0x00000006   Code   RO         5442    .ARM.Collect$$libinit$$0000000F  c_w.l(libinit2.o)
+    0x080002d8   0x080002d8   0x00000000   Code   RO         5444    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x080002d8   0x080002d8   0x0000000c   Code   RO         5445    .ARM.Collect$$libinit$$00000012  c_w.l(libinit2.o)
+    0x080002e4   0x080002e4   0x00000000   Code   RO         5446    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x080002e4   0x080002e4   0x00000000   Code   RO         5448    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x080002e4   0x080002e4   0x0000000a   Code   RO         5449    .ARM.Collect$$libinit$$00000016  c_w.l(libinit2.o)
+    0x080002ee   0x080002ee   0x00000000   Code   RO         5450    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x080002ee   0x080002ee   0x00000000   Code   RO         5452    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x080002ee   0x080002ee   0x00000000   Code   RO         5454    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x080002ee   0x080002ee   0x00000000   Code   RO         5456    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x080002ee   0x080002ee   0x00000000   Code   RO         5458    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x080002ee   0x080002ee   0x00000000   Code   RO         5460    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x080002ee   0x080002ee   0x00000000   Code   RO         5462    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x080002ee   0x080002ee   0x00000000   Code   RO         5464    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x080002ee   0x080002ee   0x00000000   Code   RO         5468    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x080002ee   0x080002ee   0x00000000   Code   RO         5470    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x080002ee   0x080002ee   0x00000000   Code   RO         5472    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x080002ee   0x080002ee   0x00000000   Code   RO         5474    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x080002ee   0x080002ee   0x00000002   Code   RO         5475    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x080002f0   0x080002f0   0x00000002   Code   RO         5509    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x080002f2   0x080002f2   0x00000000   Code   RO         5519    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x080002f2   0x080002f2   0x00000000   Code   RO         5521    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x080002f2   0x080002f2   0x00000000   Code   RO         5523    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
+    0x080002f2   0x080002f2   0x00000000   Code   RO         5526    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
+    0x080002f2   0x080002f2   0x00000000   Code   RO         5529    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x080002f2   0x080002f2   0x00000000   Code   RO         5531    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
+    0x080002f2   0x080002f2   0x00000000   Code   RO         5534    .ARM.Collect$$libshutdown$$00000011  c_w.l(libshutdown2.o)
+    0x080002f2   0x080002f2   0x00000002   Code   RO         5535    .ARM.Collect$$libshutdown$$00000012  c_w.l(libshutdown2.o)
+    0x080002f4   0x080002f4   0x00000000   Code   RO         5128    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x080002f4   0x080002f4   0x00000000   Code   RO         5308    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x080002f4   0x080002f4   0x00000006   Code   RO         5320    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x080002fa   0x080002fa   0x00000000   Code   RO         5310    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x080002fa   0x080002fa   0x00000004   Code   RO         5311    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x080002fe   0x080002fe   0x00000000   Code   RO         5313    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x080002fe   0x080002fe   0x00000008   Code   RO         5314    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x08000306   0x08000306   0x00000002   Code   RO         5420    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x08000308   0x08000308   0x00000000   Code   RO         5477    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x08000308   0x08000308   0x00000004   Code   RO         5478    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x0800030c   0x0800030c   0x00000006   Code   RO         5479    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x08000312   0x08000312   0x00000002   PAD
     0x08000314   0x08000314   0x00000040   Code   RO            4    .text               startup_stm32f407xx.o
-    0x08000354   0x08000354   0x000000ee   Code   RO         5137    .text               c_w.l(lludivv7m.o)
+    0x08000354   0x08000354   0x000000ee   Code   RO         4976    .text               c_w.l(lludivv7m.o)
     0x08000442   0x08000442   0x00000002   PAD
-    0x08000444   0x08000444   0x00000024   Code   RO         5139    .text               c_w.l(vsprintf.o)
-    0x08000468   0x08000468   0x00000080   Code   RO         5143    .text               c_w.l(assert.o)
-    0x080004e8   0x080004e8   0x0000008a   Code   RO         5145    .text               c_w.l(rt_memcpy_v6.o)
-    0x08000572   0x08000572   0x00000064   Code   RO         5147    .text               c_w.l(rt_memcpy_w.o)
-    0x080005d6   0x080005d6   0x0000004e   Code   RO         5149    .text               c_w.l(rt_memclr_w.o)
-    0x08000624   0x08000624   0x00000080   Code   RO         5151    .text               c_w.l(strcmpv7m.o)
-    0x080006a4   0x080006a4   0x00000006   Code   RO         5153    .text               c_w.l(heapauxi.o)
-    0x080006aa   0x080006aa   0x00000016   Code   RO         5294    .text               c_w.l(_rserrno.o)
-    0x080006c0   0x080006c0   0x0000004e   Code   RO         5298    .text               c_w.l(_printf_pad.o)
-    0x0800070e   0x0800070e   0x00000024   Code   RO         5300    .text               c_w.l(_printf_truncate.o)
-    0x08000732   0x08000732   0x00000052   Code   RO         5302    .text               c_w.l(_printf_str.o)
-    0x08000784   0x08000784   0x00000078   Code   RO         5304    .text               c_w.l(_printf_dec.o)
-    0x080007fc   0x080007fc   0x00000028   Code   RO         5306    .text               c_w.l(_printf_charcount.o)
-    0x08000824   0x08000824   0x00000030   Code   RO         5308    .text               c_w.l(_printf_char_common.o)
-    0x08000854   0x08000854   0x0000000a   Code   RO         5310    .text               c_w.l(_sputc.o)
+    0x08000444   0x08000444   0x00000024   Code   RO         4978    .text               c_w.l(vsprintf.o)
+    0x08000468   0x08000468   0x00000080   Code   RO         4982    .text               c_w.l(assert.o)
+    0x080004e8   0x080004e8   0x0000008a   Code   RO         4984    .text               c_w.l(rt_memcpy_v6.o)
+    0x08000572   0x08000572   0x00000064   Code   RO         4986    .text               c_w.l(rt_memcpy_w.o)
+    0x080005d6   0x080005d6   0x0000004e   Code   RO         4988    .text               c_w.l(rt_memclr_w.o)
+    0x08000624   0x08000624   0x00000080   Code   RO         4990    .text               c_w.l(strcmpv7m.o)
+    0x080006a4   0x080006a4   0x00000006   Code   RO         4992    .text               c_w.l(heapauxi.o)
+    0x080006aa   0x080006aa   0x00000016   Code   RO         5133    .text               c_w.l(_rserrno.o)
+    0x080006c0   0x080006c0   0x0000004e   Code   RO         5137    .text               c_w.l(_printf_pad.o)
+    0x0800070e   0x0800070e   0x00000024   Code   RO         5139    .text               c_w.l(_printf_truncate.o)
+    0x08000732   0x08000732   0x00000052   Code   RO         5141    .text               c_w.l(_printf_str.o)
+    0x08000784   0x08000784   0x00000078   Code   RO         5143    .text               c_w.l(_printf_dec.o)
+    0x080007fc   0x080007fc   0x00000028   Code   RO         5145    .text               c_w.l(_printf_charcount.o)
+    0x08000824   0x08000824   0x00000030   Code   RO         5147    .text               c_w.l(_printf_char_common.o)
+    0x08000854   0x08000854   0x0000000a   Code   RO         5149    .text               c_w.l(_sputc.o)
     0x0800085e   0x0800085e   0x00000002   PAD
-    0x08000860   0x08000860   0x000000bc   Code   RO         5314    .text               c_w.l(_printf_wctomb.o)
-    0x0800091c   0x0800091c   0x0000007c   Code   RO         5317    .text               c_w.l(_printf_longlong_dec.o)
-    0x08000998   0x08000998   0x00000070   Code   RO         5323    .text               c_w.l(_printf_oct_int_ll.o)
-    0x08000a08   0x08000a08   0x00000094   Code   RO         5343    .text               c_w.l(_printf_hex_int_ll_ptr.o)
-    0x08000a9c   0x08000a9c   0x00000188   Code   RO         5363    .text               c_w.l(__printf_flags_ss_wp.o)
-    0x08000c24   0x08000c24   0x00000016   Code   RO         5389    .text               c_w.l(abort.o)
-    0x08000c3a   0x08000c3a   0x00000014   Code   RO         5391    .text               c_w.l(assert_puts.o)
-    0x08000c4e   0x08000c4e   0x0000000e   Code   RO         5464    .text               c_w.l(sys_wrch.o)
-    0x08000c5c   0x08000c5c   0x0000000c   Code   RO         5466    .text               c_w.l(sys_exit.o)
-    0x08000c68   0x08000c68   0x00000008   Code   RO         5488    .text               c_w.l(rt_errno_addr_intlibspace.o)
-    0x08000c70   0x08000c70   0x0000008a   Code   RO         5490    .text               c_w.l(lludiv10.o)
-    0x08000cfa   0x08000cfa   0x000000b2   Code   RO         5492    .text               c_w.l(_printf_intcommon.o)
-    0x08000dac   0x08000dac   0x0000041e   Code   RO         5494    .text               c_w.l(_printf_fp_dec.o)
+    0x08000860   0x08000860   0x000000bc   Code   RO         5153    .text               c_w.l(_printf_wctomb.o)
+    0x0800091c   0x0800091c   0x0000007c   Code   RO         5156    .text               c_w.l(_printf_longlong_dec.o)
+    0x08000998   0x08000998   0x00000070   Code   RO         5162    .text               c_w.l(_printf_oct_int_ll.o)
+    0x08000a08   0x08000a08   0x00000094   Code   RO         5182    .text               c_w.l(_printf_hex_int_ll_ptr.o)
+    0x08000a9c   0x08000a9c   0x00000188   Code   RO         5202    .text               c_w.l(__printf_flags_ss_wp.o)
+    0x08000c24   0x08000c24   0x00000016   Code   RO         5228    .text               c_w.l(abort.o)
+    0x08000c3a   0x08000c3a   0x00000014   Code   RO         5230    .text               c_w.l(assert_puts.o)
+    0x08000c4e   0x08000c4e   0x0000000e   Code   RO         5303    .text               c_w.l(sys_wrch.o)
+    0x08000c5c   0x08000c5c   0x0000000c   Code   RO         5305    .text               c_w.l(sys_exit.o)
+    0x08000c68   0x08000c68   0x00000008   Code   RO         5327    .text               c_w.l(rt_errno_addr_intlibspace.o)
+    0x08000c70   0x08000c70   0x0000008a   Code   RO         5329    .text               c_w.l(lludiv10.o)
+    0x08000cfa   0x08000cfa   0x000000b2   Code   RO         5331    .text               c_w.l(_printf_intcommon.o)
+    0x08000dac   0x08000dac   0x0000041e   Code   RO         5333    .text               c_w.l(_printf_fp_dec.o)
     0x080011ca   0x080011ca   0x00000002   PAD
-    0x080011cc   0x080011cc   0x000002fc   Code   RO         5496    .text               c_w.l(_printf_fp_hex.o)
-    0x080014c8   0x080014c8   0x0000002c   Code   RO         5501    .text               c_w.l(_printf_char.o)
-    0x080014f4   0x080014f4   0x0000002c   Code   RO         5503    .text               c_w.l(_printf_wchar.o)
-    0x08001520   0x08001520   0x00000040   Code   RO         5506    .text               c_w.l(_wcrtomb.o)
-    0x08001560   0x08001560   0x0000000e   Code   RO         5508    .text               c_w.l(defsig_abrt_outer.o)
+    0x080011cc   0x080011cc   0x000002fc   Code   RO         5335    .text               c_w.l(_printf_fp_hex.o)
+    0x080014c8   0x080014c8   0x0000002c   Code   RO         5340    .text               c_w.l(_printf_char.o)
+    0x080014f4   0x080014f4   0x0000002c   Code   RO         5342    .text               c_w.l(_printf_wchar.o)
+    0x08001520   0x08001520   0x00000040   Code   RO         5345    .text               c_w.l(_wcrtomb.o)
+    0x08001560   0x08001560   0x0000000e   Code   RO         5347    .text               c_w.l(defsig_abrt_outer.o)
     0x0800156e   0x0800156e   0x00000002   PAD
-    0x08001570   0x08001570   0x00000008   Code   RO         5516    .text               c_w.l(libspace.o)
-    0x08001578   0x08001578   0x00000002   Code   RO         5519    .text               c_w.l(use_no_semi.o)
-    0x0800157a   0x0800157a   0x00000000   Code   RO         5521    .text               c_w.l(indicate_semi.o)
-    0x0800157a   0x0800157a   0x0000004a   Code   RO         5522    .text               c_w.l(sys_stackheap_outer.o)
-    0x080015c4   0x080015c4   0x00000010   Code   RO         5524    .text               c_w.l(rt_ctype_table.o)
-    0x080015d4   0x080015d4   0x00000008   Code   RO         5531    .text               c_w.l(rt_locale_intlibspace.o)
-    0x080015dc   0x080015dc   0x00000080   Code   RO         5533    .text               c_w.l(_printf_fp_infnan.o)
-    0x0800165c   0x0800165c   0x000000e4   Code   RO         5535    .text               c_w.l(bigflt0.o)
-    0x08001740   0x08001740   0x00000012   Code   RO         5563    .text               c_w.l(exit.o)
-    0x08001752   0x08001752   0x0000000a   Code   RO         5565    .text               c_w.l(defsig_exit.o)
-    0x0800175c   0x0800175c   0x00000030   Code   RO         5567    .text               c_w.l(defsig_abrt_inner.o)
-    0x0800178c   0x0800178c   0x00000032   Code   RO         5588    .text               c_w.l(defsig_general.o)
-    0x080017be   0x080017be   0x0000003e   Code   RO         5538    CL$$btod_d2e        c_w.l(btod.o)
-    0x080017fc   0x080017fc   0x00000046   Code   RO         5540    CL$$btod_d2e_denorm_low  c_w.l(btod.o)
-    0x08001842   0x08001842   0x00000060   Code   RO         5539    CL$$btod_d2e_norm_op1  c_w.l(btod.o)
-    0x080018a2   0x080018a2   0x00000338   Code   RO         5548    CL$$btod_div_common  c_w.l(btod.o)
-    0x08001bda   0x08001bda   0x000000dc   Code   RO         5545    CL$$btod_e2e        c_w.l(btod.o)
-    0x08001cb6   0x08001cb6   0x0000002a   Code   RO         5542    CL$$btod_ediv       c_w.l(btod.o)
-    0x08001ce0   0x08001ce0   0x0000002a   Code   RO         5541    CL$$btod_emul       c_w.l(btod.o)
-    0x08001d0a   0x08001d0a   0x00000244   Code   RO         5547    CL$$btod_mult_common  c_w.l(btod.o)
-    0x08001f4e   0x08001f4e   0x00000004   Code   RO          588    i.BusFault_Handler  stm32f4xx_it.o
+    0x08001570   0x08001570   0x00000008   Code   RO         5355    .text               c_w.l(libspace.o)
+    0x08001578   0x08001578   0x00000002   Code   RO         5358    .text               c_w.l(use_no_semi.o)
+    0x0800157a   0x0800157a   0x00000000   Code   RO         5360    .text               c_w.l(indicate_semi.o)
+    0x0800157a   0x0800157a   0x0000004a   Code   RO         5361    .text               c_w.l(sys_stackheap_outer.o)
+    0x080015c4   0x080015c4   0x00000010   Code   RO         5363    .text               c_w.l(rt_ctype_table.o)
+    0x080015d4   0x080015d4   0x00000008   Code   RO         5370    .text               c_w.l(rt_locale_intlibspace.o)
+    0x080015dc   0x080015dc   0x00000080   Code   RO         5372    .text               c_w.l(_printf_fp_infnan.o)
+    0x0800165c   0x0800165c   0x000000e4   Code   RO         5374    .text               c_w.l(bigflt0.o)
+    0x08001740   0x08001740   0x00000012   Code   RO         5402    .text               c_w.l(exit.o)
+    0x08001752   0x08001752   0x0000000a   Code   RO         5404    .text               c_w.l(defsig_exit.o)
+    0x0800175c   0x0800175c   0x00000030   Code   RO         5406    .text               c_w.l(defsig_abrt_inner.o)
+    0x0800178c   0x0800178c   0x00000032   Code   RO         5427    .text               c_w.l(defsig_general.o)
+    0x080017be   0x080017be   0x0000003e   Code   RO         5377    CL$$btod_d2e        c_w.l(btod.o)
+    0x080017fc   0x080017fc   0x00000046   Code   RO         5379    CL$$btod_d2e_denorm_low  c_w.l(btod.o)
+    0x08001842   0x08001842   0x00000060   Code   RO         5378    CL$$btod_d2e_norm_op1  c_w.l(btod.o)
+    0x080018a2   0x080018a2   0x00000338   Code   RO         5387    CL$$btod_div_common  c_w.l(btod.o)
+    0x08001bda   0x08001bda   0x000000dc   Code   RO         5384    CL$$btod_e2e        c_w.l(btod.o)
+    0x08001cb6   0x08001cb6   0x0000002a   Code   RO         5381    CL$$btod_ediv       c_w.l(btod.o)
+    0x08001ce0   0x08001ce0   0x0000002a   Code   RO         5380    CL$$btod_emul       c_w.l(btod.o)
+    0x08001d0a   0x08001d0a   0x00000244   Code   RO         5386    CL$$btod_mult_common  c_w.l(btod.o)
+    0x08001f4e   0x08001f4e   0x00000004   Code   RO          477    i.BusFault_Handler  stm32f4xx_it.o
     0x08001f52   0x08001f52   0x00000002   PAD
-    0x08001f54   0x08001f54   0x00000010   Code   RO          589    i.CAN1_RX0_IRQHandler  stm32f4xx_it.o
-    0x08001f64   0x08001f64   0x00000010   Code   RO          590    i.CAN1_RX1_IRQHandler  stm32f4xx_it.o
-    0x08001f74   0x08001f74   0x00000010   Code   RO          591    i.CAN2_RX0_IRQHandler  stm32f4xx_it.o
-    0x08001f84   0x08001f84   0x00000010   Code   RO          592    i.CAN2_RX1_IRQHandler  stm32f4xx_it.o
-    0x08001f94   0x08001f94   0x000001e4   Code   RO         4523    i.CAN_modify_data   gld_can.o
-    0x08002178   0x08002178   0x00000058   Code   RO         4674    i.Changer_int       for_out.o
-    0x080021d0   0x080021d0   0x00000010   Code   RO          593    i.DMA1_Stream5_IRQHandler  stm32f4xx_it.o
-    0x080021e0   0x080021e0   0x00000010   Code   RO          594    i.DMA2_Stream1_IRQHandler  stm32f4xx_it.o
-    0x080021f0   0x080021f0   0x00000010   Code   RO          595    i.DMA2_Stream5_IRQHandler  stm32f4xx_it.o
-    0x08002200   0x08002200   0x00000034   Code   RO         1502    i.DMA_CalcBaseAndBitshift  stm32f4xx_hal_dma.o
-    0x08002234   0x08002234   0x000000aa   Code   RO         1503    i.DMA_CheckFifoParam  stm32f4xx_hal_dma.o
-    0x080022de   0x080022de   0x0000002c   Code   RO         1504    i.DMA_SetConfig     stm32f4xx_hal_dma.o
+    0x08001f54   0x08001f54   0x00000010   Code   RO          478    i.CAN1_RX0_IRQHandler  stm32f4xx_it.o
+    0x08001f64   0x08001f64   0x00000010   Code   RO          479    i.CAN1_RX1_IRQHandler  stm32f4xx_it.o
+    0x08001f74   0x08001f74   0x00000010   Code   RO          480    i.CAN2_RX0_IRQHandler  stm32f4xx_it.o
+    0x08001f84   0x08001f84   0x00000010   Code   RO          481    i.CAN2_RX1_IRQHandler  stm32f4xx_it.o
+    0x08001f94   0x08001f94   0x000001e4   Code   RO         4362    i.CAN_modify_data   gld_can.o
+    0x08002178   0x08002178   0x00000058   Code   RO         4513    i.Changer_int       for_out.o
+    0x080021d0   0x080021d0   0x00000010   Code   RO          482    i.DMA1_Stream5_IRQHandler  stm32f4xx_it.o
+    0x080021e0   0x080021e0   0x00000010   Code   RO          483    i.DMA2_Stream1_IRQHandler  stm32f4xx_it.o
+    0x080021f0   0x080021f0   0x00000010   Code   RO          484    i.DMA2_Stream5_IRQHandler  stm32f4xx_it.o
+    0x08002200   0x08002200   0x00000034   Code   RO         1385    i.DMA_CalcBaseAndBitshift  stm32f4xx_hal_dma.o
+    0x08002234   0x08002234   0x000000aa   Code   RO         1386    i.DMA_CheckFifoParam  stm32f4xx_hal_dma.o
+    0x080022de   0x080022de   0x0000002c   Code   RO         1387    i.DMA_SetConfig     stm32f4xx_hal_dma.o
     0x0800230a   0x0800230a   0x00000002   PAD
-    0x0800230c   0x0800230c   0x00000054   Code   RO         4378    i.DWT_GetTick       dwt_timing.o
-    0x08002360   0x08002360   0x0000004c   Code   RO         4379    i.DWT_Init          dwt_timing.o
-    0x080023ac   0x080023ac   0x00000002   Code   RO          596    i.DebugMon_Handler  stm32f4xx_it.o
+    0x0800230c   0x0800230c   0x00000054   Code   RO         4223    i.DWT_GetTick       dwt_timing.o
+    0x08002360   0x08002360   0x0000004c   Code   RO         4224    i.DWT_Init          dwt_timing.o
+    0x080023ac   0x080023ac   0x00000002   Code   RO          485    i.DebugMon_Handler  stm32f4xx_it.o
     0x080023ae   0x080023ae   0x00000006   Code   RO           13    i.Error_Handler     main.o
-    0x080023b4   0x080023b4   0x000000b8   Code   RO         4785    i.FC_Init           dog.o
-    0x0800246c   0x0800246c   0x0000010c   Code   RO         4786    i.FC_Kinematic_Inversion  dog.o
-    0x08002578   0x08002578   0x000002a4   Code   RO         4787    i.FC_Kinematic_Solution  dog.o
-    0x0800281c   0x0800281c   0x00000080   Code   RO         4788    i.FC_Motor_To_Joint  dog.o
-    0x0800289c   0x0800289c   0x00000052   Code   RO         4789    i.FC_PD_Control     dog.o
+    0x080023b4   0x080023b4   0x000000b8   Code   RO         4624    i.FC_Init           dog.o
+    0x0800246c   0x0800246c   0x0000010c   Code   RO         4625    i.FC_Kinematic_Inversion  dog.o
+    0x08002578   0x08002578   0x000002a4   Code   RO         4626    i.FC_Kinematic_Solution  dog.o
+    0x0800281c   0x0800281c   0x00000080   Code   RO         4627    i.FC_Motor_To_Joint  dog.o
+    0x0800289c   0x0800289c   0x00000052   Code   RO         4628    i.FC_PD_Control     dog.o
     0x080028ee   0x080028ee   0x00000002   PAD
-    0x080028f0   0x080028f0   0x00000374   Code   RO         4791    i.FC_Send_Pos_Slot  dog.o
-    0x08002c64   0x08002c64   0x000000b0   Code   RO         4792    i.FC_Send_Torque    dog.o
-    0x08002d14   0x08002d14   0x0000003c   Code   RO         4793    i.FC_Update_Leg     dog.o
-    0x08002d50   0x08002d50   0x0000017c   Code   RO         4794    i.FC_VMC_Jacobi     dog.o
-    0x08002ecc   0x08002ecc   0x0000002a   Code   RO          765    i.HAL_CAN_ActivateNotification  stm32f4xx_hal_can.o
-    0x08002ef6   0x08002ef6   0x0000014a   Code   RO          766    i.HAL_CAN_AddTxMessage  stm32f4xx_hal_can.o
-    0x08003040   0x08003040   0x00000124   Code   RO          767    i.HAL_CAN_ConfigFilter  stm32f4xx_hal_can.o
-    0x08003164   0x08003164   0x00000002   Code   RO          770    i.HAL_CAN_ErrorCallback  stm32f4xx_hal_can.o
-    0x08003166   0x08003166   0x00000194   Code   RO          773    i.HAL_CAN_GetRxMessage  stm32f4xx_hal_can.o
-    0x080032fa   0x080032fa   0x0000024e   Code   RO          777    i.HAL_CAN_IRQHandler  stm32f4xx_hal_can.o
-    0x08003548   0x08003548   0x00000174   Code   RO          778    i.HAL_CAN_Init      stm32f4xx_hal_can.o
-    0x080036bc   0x080036bc   0x00000180   Code   RO          414    i.HAL_CAN_MspInit   can.o
-    0x0800383c   0x0800383c   0x00000002   Code   RO          785    i.HAL_CAN_RxFifo0FullCallback  stm32f4xx_hal_can.o
+    0x080028f0   0x080028f0   0x00000374   Code   RO         4630    i.FC_Send_Pos_Slot  dog.o
+    0x08002c64   0x08002c64   0x000000b0   Code   RO         4631    i.FC_Send_Torque    dog.o
+    0x08002d14   0x08002d14   0x0000003c   Code   RO         4632    i.FC_Update_Leg     dog.o
+    0x08002d50   0x08002d50   0x0000017c   Code   RO         4633    i.FC_VMC_Jacobi     dog.o
+    0x08002ecc   0x08002ecc   0x0000002a   Code   RO          648    i.HAL_CAN_ActivateNotification  stm32f4xx_hal_can.o
+    0x08002ef6   0x08002ef6   0x0000014a   Code   RO          649    i.HAL_CAN_AddTxMessage  stm32f4xx_hal_can.o
+    0x08003040   0x08003040   0x00000124   Code   RO          650    i.HAL_CAN_ConfigFilter  stm32f4xx_hal_can.o
+    0x08003164   0x08003164   0x00000002   Code   RO          653    i.HAL_CAN_ErrorCallback  stm32f4xx_hal_can.o
+    0x08003166   0x08003166   0x00000194   Code   RO          656    i.HAL_CAN_GetRxMessage  stm32f4xx_hal_can.o
+    0x080032fa   0x080032fa   0x0000024e   Code   RO          660    i.HAL_CAN_IRQHandler  stm32f4xx_hal_can.o
+    0x08003548   0x08003548   0x00000174   Code   RO          661    i.HAL_CAN_Init      stm32f4xx_hal_can.o
+    0x080036bc   0x080036bc   0x00000180   Code   RO          303    i.HAL_CAN_MspInit   can.o
+    0x0800383c   0x0800383c   0x00000002   Code   RO          668    i.HAL_CAN_RxFifo0FullCallback  stm32f4xx_hal_can.o
     0x0800383e   0x0800383e   0x00000002   PAD
-    0x08003840   0x08003840   0x00000100   Code   RO         4524    i.HAL_CAN_RxFifo0MsgPendingCallback  gld_can.o
-    0x08003940   0x08003940   0x00000002   Code   RO          787    i.HAL_CAN_RxFifo1FullCallback  stm32f4xx_hal_can.o
-    0x08003942   0x08003942   0x00000002   Code   RO          788    i.HAL_CAN_RxFifo1MsgPendingCallback  stm32f4xx_hal_can.o
-    0x08003944   0x08003944   0x00000002   Code   RO          789    i.HAL_CAN_SleepCallback  stm32f4xx_hal_can.o
-    0x08003946   0x08003946   0x0000005e   Code   RO          790    i.HAL_CAN_Start     stm32f4xx_hal_can.o
-    0x080039a4   0x080039a4   0x00000002   Code   RO          792    i.HAL_CAN_TxMailbox0AbortCallback  stm32f4xx_hal_can.o
-    0x080039a6   0x080039a6   0x00000002   Code   RO          793    i.HAL_CAN_TxMailbox0CompleteCallback  stm32f4xx_hal_can.o
-    0x080039a8   0x080039a8   0x00000002   Code   RO          794    i.HAL_CAN_TxMailbox1AbortCallback  stm32f4xx_hal_can.o
-    0x080039aa   0x080039aa   0x00000002   Code   RO          795    i.HAL_CAN_TxMailbox1CompleteCallback  stm32f4xx_hal_can.o
-    0x080039ac   0x080039ac   0x00000002   Code   RO          796    i.HAL_CAN_TxMailbox2AbortCallback  stm32f4xx_hal_can.o
-    0x080039ae   0x080039ae   0x00000002   Code   RO          797    i.HAL_CAN_TxMailbox2CompleteCallback  stm32f4xx_hal_can.o
-    0x080039b0   0x080039b0   0x00000002   Code   RO          799    i.HAL_CAN_WakeUpFromRxMsgCallback  stm32f4xx_hal_can.o
-    0x080039b2   0x080039b2   0x000000ac   Code   RO         1505    i.HAL_DMA_Abort     stm32f4xx_hal_dma.o
-    0x08003a5e   0x08003a5e   0x00000028   Code   RO         1506    i.HAL_DMA_Abort_IT  stm32f4xx_hal_dma.o
+    0x08003840   0x08003840   0x00000100   Code   RO         4363    i.HAL_CAN_RxFifo0MsgPendingCallback  gld_can.o
+    0x08003940   0x08003940   0x00000002   Code   RO          670    i.HAL_CAN_RxFifo1FullCallback  stm32f4xx_hal_can.o
+    0x08003942   0x08003942   0x00000002   Code   RO          671    i.HAL_CAN_RxFifo1MsgPendingCallback  stm32f4xx_hal_can.o
+    0x08003944   0x08003944   0x00000002   Code   RO          672    i.HAL_CAN_SleepCallback  stm32f4xx_hal_can.o
+    0x08003946   0x08003946   0x0000005e   Code   RO          673    i.HAL_CAN_Start     stm32f4xx_hal_can.o
+    0x080039a4   0x080039a4   0x00000002   Code   RO          675    i.HAL_CAN_TxMailbox0AbortCallback  stm32f4xx_hal_can.o
+    0x080039a6   0x080039a6   0x00000002   Code   RO          676    i.HAL_CAN_TxMailbox0CompleteCallback  stm32f4xx_hal_can.o
+    0x080039a8   0x080039a8   0x00000002   Code   RO          677    i.HAL_CAN_TxMailbox1AbortCallback  stm32f4xx_hal_can.o
+    0x080039aa   0x080039aa   0x00000002   Code   RO          678    i.HAL_CAN_TxMailbox1CompleteCallback  stm32f4xx_hal_can.o
+    0x080039ac   0x080039ac   0x00000002   Code   RO          679    i.HAL_CAN_TxMailbox2AbortCallback  stm32f4xx_hal_can.o
+    0x080039ae   0x080039ae   0x00000002   Code   RO          680    i.HAL_CAN_TxMailbox2CompleteCallback  stm32f4xx_hal_can.o
+    0x080039b0   0x080039b0   0x00000002   Code   RO          682    i.HAL_CAN_WakeUpFromRxMsgCallback  stm32f4xx_hal_can.o
+    0x080039b2   0x080039b2   0x000000ac   Code   RO         1388    i.HAL_DMA_Abort     stm32f4xx_hal_dma.o
+    0x08003a5e   0x08003a5e   0x00000028   Code   RO         1389    i.HAL_DMA_Abort_IT  stm32f4xx_hal_dma.o
     0x08003a86   0x08003a86   0x00000002   PAD
-    0x08003a88   0x08003a88   0x00000240   Code   RO         1510    i.HAL_DMA_IRQHandler  stm32f4xx_hal_dma.o
-    0x08003cc8   0x08003cc8   0x000000ec   Code   RO         1511    i.HAL_DMA_Init      stm32f4xx_hal_dma.o
-    0x08003db4   0x08003db4   0x00000092   Code   RO         1515    i.HAL_DMA_Start_IT  stm32f4xx_hal_dma.o
+    0x08003a88   0x08003a88   0x00000240   Code   RO         1393    i.HAL_DMA_IRQHandler  stm32f4xx_hal_dma.o
+    0x08003cc8   0x08003cc8   0x000000ec   Code   RO         1394    i.HAL_DMA_Init      stm32f4xx_hal_dma.o
+    0x08003db4   0x08003db4   0x00000092   Code   RO         1398    i.HAL_DMA_Start_IT  stm32f4xx_hal_dma.o
     0x08003e46   0x08003e46   0x00000002   PAD
-    0x08003e48   0x08003e48   0x00000028   Code   RO         1947    i.HAL_Delay         stm32f4xx_hal.o
-    0x08003e70   0x08003e70   0x000001f4   Code   RO         1398    i.HAL_GPIO_Init     stm32f4xx_hal_gpio.o
-    0x08004064   0x08004064   0x0000000c   Code   RO         1402    i.HAL_GPIO_WritePin  stm32f4xx_hal_gpio.o
-    0x08004070   0x08004070   0x0000000c   Code   RO         1953    i.HAL_GetTick       stm32f4xx_hal.o
-    0x0800407c   0x0800407c   0x00000018   Code   RO         1959    i.HAL_IncTick       stm32f4xx_hal.o
-    0x08004094   0x08004094   0x0000003c   Code   RO         1960    i.HAL_Init          stm32f4xx_hal.o
-    0x080040d0   0x080040d0   0x0000004c   Code   RO         1961    i.HAL_InitTick      stm32f4xx_hal.o
-    0x0800411c   0x0800411c   0x00000048   Code   RO          740    i.HAL_MspInit       stm32f4xx_hal_msp.o
-    0x08004164   0x08004164   0x00000028   Code   RO         1790    i.HAL_NVIC_EnableIRQ  stm32f4xx_hal_cortex.o
-    0x0800418c   0x0800418c   0x0000007c   Code   RO         1796    i.HAL_NVIC_SetPriority  stm32f4xx_hal_cortex.o
-    0x08004208   0x08004208   0x00000028   Code   RO         1797    i.HAL_NVIC_SetPriorityGrouping  stm32f4xx_hal_cortex.o
-    0x08004230   0x08004230   0x00000184   Code   RO          999    i.HAL_RCC_ClockConfig  stm32f4xx_hal_rcc.o
-    0x080043b4   0x080043b4   0x0000000c   Code   RO         1004    i.HAL_RCC_GetHCLKFreq  stm32f4xx_hal_rcc.o
-    0x080043c0   0x080043c0   0x00000020   Code   RO         1006    i.HAL_RCC_GetPCLK1Freq  stm32f4xx_hal_rcc.o
-    0x080043e0   0x080043e0   0x00000020   Code   RO         1007    i.HAL_RCC_GetPCLK2Freq  stm32f4xx_hal_rcc.o
-    0x08004400   0x08004400   0x000000b0   Code   RO         1008    i.HAL_RCC_GetSysClockFreq  stm32f4xx_hal_rcc.o
-    0x080044b0   0x080044b0   0x0000049c   Code   RO         1011    i.HAL_RCC_OscConfig  stm32f4xx_hal_rcc.o
-    0x0800494c   0x0800494c   0x00000034   Code   RO         1801    i.HAL_SYSTICK_Config  stm32f4xx_hal_cortex.o
-    0x08004980   0x08004980   0x00000002   Code   RO         2915    i.HAL_TIMEx_BreakCallback  stm32f4xx_hal_tim_ex.o
-    0x08004982   0x08004982   0x00000002   Code   RO         2916    i.HAL_TIMEx_CommutCallback  stm32f4xx_hal_tim_ex.o
-    0x08004984   0x08004984   0x000000b4   Code   RO         2934    i.HAL_TIMEx_MasterConfigSynchronization  stm32f4xx_hal_tim_ex.o
-    0x08004a38   0x08004a38   0x00000066   Code   RO         2200    i.HAL_TIM_Base_Init  stm32f4xx_hal_tim.o
+    0x08003e48   0x08003e48   0x00000028   Code   RO         1830    i.HAL_Delay         stm32f4xx_hal.o
+    0x08003e70   0x08003e70   0x000001f4   Code   RO         1281    i.HAL_GPIO_Init     stm32f4xx_hal_gpio.o
+    0x08004064   0x08004064   0x0000000c   Code   RO         1285    i.HAL_GPIO_WritePin  stm32f4xx_hal_gpio.o
+    0x08004070   0x08004070   0x0000000c   Code   RO         1836    i.HAL_GetTick       stm32f4xx_hal.o
+    0x0800407c   0x0800407c   0x00000018   Code   RO         1842    i.HAL_IncTick       stm32f4xx_hal.o
+    0x08004094   0x08004094   0x0000003c   Code   RO         1843    i.HAL_Init          stm32f4xx_hal.o
+    0x080040d0   0x080040d0   0x0000004c   Code   RO         1844    i.HAL_InitTick      stm32f4xx_hal.o
+    0x0800411c   0x0800411c   0x00000048   Code   RO          623    i.HAL_MspInit       stm32f4xx_hal_msp.o
+    0x08004164   0x08004164   0x00000028   Code   RO         1673    i.HAL_NVIC_EnableIRQ  stm32f4xx_hal_cortex.o
+    0x0800418c   0x0800418c   0x0000007c   Code   RO         1679    i.HAL_NVIC_SetPriority  stm32f4xx_hal_cortex.o
+    0x08004208   0x08004208   0x00000028   Code   RO         1680    i.HAL_NVIC_SetPriorityGrouping  stm32f4xx_hal_cortex.o
+    0x08004230   0x08004230   0x00000184   Code   RO          882    i.HAL_RCC_ClockConfig  stm32f4xx_hal_rcc.o
+    0x080043b4   0x080043b4   0x0000000c   Code   RO          887    i.HAL_RCC_GetHCLKFreq  stm32f4xx_hal_rcc.o
+    0x080043c0   0x080043c0   0x00000020   Code   RO          889    i.HAL_RCC_GetPCLK1Freq  stm32f4xx_hal_rcc.o
+    0x080043e0   0x080043e0   0x00000020   Code   RO          890    i.HAL_RCC_GetPCLK2Freq  stm32f4xx_hal_rcc.o
+    0x08004400   0x08004400   0x000000b0   Code   RO          891    i.HAL_RCC_GetSysClockFreq  stm32f4xx_hal_rcc.o
+    0x080044b0   0x080044b0   0x0000049c   Code   RO          894    i.HAL_RCC_OscConfig  stm32f4xx_hal_rcc.o
+    0x0800494c   0x0800494c   0x00000034   Code   RO         1684    i.HAL_SYSTICK_Config  stm32f4xx_hal_cortex.o
+    0x08004980   0x08004980   0x00000002   Code   RO         2798    i.HAL_TIMEx_BreakCallback  stm32f4xx_hal_tim_ex.o
+    0x08004982   0x08004982   0x00000002   Code   RO         2799    i.HAL_TIMEx_CommutCallback  stm32f4xx_hal_tim_ex.o
+    0x08004984   0x08004984   0x000000b4   Code   RO         2817    i.HAL_TIMEx_MasterConfigSynchronization  stm32f4xx_hal_tim_ex.o
+    0x08004a38   0x08004a38   0x00000066   Code   RO         2083    i.HAL_TIM_Base_Init  stm32f4xx_hal_tim.o
     0x08004a9e   0x08004a9e   0x00000002   PAD
-    0x08004aa0   0x08004aa0   0x00000074   Code   RO          487    i.HAL_TIM_Base_MspInit  tim.o
-    0x08004b14   0x08004b14   0x000000a8   Code   RO         2205    i.HAL_TIM_Base_Start_IT  stm32f4xx_hal_tim.o
-    0x08004bbc   0x08004bbc   0x00000002   Code   RO         2234    i.HAL_TIM_IC_CaptureCallback  stm32f4xx_hal_tim.o
-    0x08004bbe   0x08004bbe   0x0000016c   Code   RO         2248    i.HAL_TIM_IRQHandler  stm32f4xx_hal_tim.o
-    0x08004d2a   0x08004d2a   0x00000002   Code   RO         2251    i.HAL_TIM_OC_DelayElapsedCallback  stm32f4xx_hal_tim.o
-    0x08004d2c   0x08004d2c   0x00000002   Code   RO         2278    i.HAL_TIM_PWM_PulseFinishedCallback  stm32f4xx_hal_tim.o
+    0x08004aa0   0x08004aa0   0x00000074   Code   RO          376    i.HAL_TIM_Base_MspInit  tim.o
+    0x08004b14   0x08004b14   0x000000a8   Code   RO         2088    i.HAL_TIM_Base_Start_IT  stm32f4xx_hal_tim.o
+    0x08004bbc   0x08004bbc   0x00000002   Code   RO         2117    i.HAL_TIM_IC_CaptureCallback  stm32f4xx_hal_tim.o
+    0x08004bbe   0x08004bbe   0x0000016c   Code   RO         2131    i.HAL_TIM_IRQHandler  stm32f4xx_hal_tim.o
+    0x08004d2a   0x08004d2a   0x00000002   Code   RO         2134    i.HAL_TIM_OC_DelayElapsedCallback  stm32f4xx_hal_tim.o
+    0x08004d2c   0x08004d2c   0x00000002   Code   RO         2161    i.HAL_TIM_PWM_PulseFinishedCallback  stm32f4xx_hal_tim.o
     0x08004d2e   0x08004d2e   0x00000002   PAD
     0x08004d30   0x08004d30   0x000005a8   Code   RO           14    i.HAL_TIM_PeriodElapsedCallback  main.o
-    0x080052d8   0x080052d8   0x00000002   Code   RO         2291    i.HAL_TIM_TriggerCallback  stm32f4xx_hal_tim.o
-    0x080052da   0x080052da   0x00000072   Code   RO         3192    i.HAL_UARTEx_ReceiveToIdle_DMA  stm32f4xx_hal_uart.o
-    0x0800534c   0x0800534c   0x00000058   Code   RO         3675    i.HAL_UARTEx_RxEventCallback  usart_app.o
-    0x080053a4   0x080053a4   0x0000008a   Code   RO         3206    i.HAL_UART_DMAStop  stm32f4xx_hal_uart.o
+    0x080052d8   0x080052d8   0x00000002   Code   RO         2174    i.HAL_TIM_TriggerCallback  stm32f4xx_hal_tim.o
+    0x080052da   0x080052da   0x00000072   Code   RO         3075    i.HAL_UARTEx_ReceiveToIdle_DMA  stm32f4xx_hal_uart.o
+    0x0800534c   0x0800534c   0x00000058   Code   RO         3550    i.HAL_UARTEx_RxEventCallback  usart_app.o
+    0x080053a4   0x080053a4   0x0000008a   Code   RO         3089    i.HAL_UART_DMAStop  stm32f4xx_hal_uart.o
     0x0800542e   0x0800542e   0x00000002   PAD
     0x08005430   0x08005430   0x00000024   Code   RO           15    i.HAL_UART_ErrorCallback  main.o
-    0x08005454   0x08005454   0x000002e8   Code   RO         3211    i.HAL_UART_IRQHandler  stm32f4xx_hal_uart.o
-    0x0800573c   0x0800573c   0x00000076   Code   RO         3212    i.HAL_UART_Init     stm32f4xx_hal_uart.o
+    0x08005454   0x08005454   0x000002e8   Code   RO         3094    i.HAL_UART_IRQHandler  stm32f4xx_hal_uart.o
+    0x0800573c   0x0800573c   0x00000076   Code   RO         3095    i.HAL_UART_Init     stm32f4xx_hal_uart.o
     0x080057b2   0x080057b2   0x00000002   PAD
-    0x080057b4   0x080057b4   0x000002b0   Code   RO          535    i.HAL_UART_MspInit  usart.o
-    0x08005a64   0x08005a64   0x0000002c   Code   RO         3216    i.HAL_UART_Receive_DMA  stm32f4xx_hal_uart.o
+    0x080057b4   0x080057b4   0x000002b0   Code   RO          424    i.HAL_UART_MspInit  usart.o
+    0x08005a64   0x08005a64   0x0000002c   Code   RO         3099    i.HAL_UART_Receive_DMA  stm32f4xx_hal_uart.o
     0x08005a90   0x08005a90   0x000000dc   Code   RO           16    i.HAL_UART_RxCpltCallback  main.o
-    0x08005b6c   0x08005b6c   0x00000002   Code   RO         3219    i.HAL_UART_RxHalfCpltCallback  stm32f4xx_hal_uart.o
-    0x08005b6e   0x08005b6e   0x00000002   Code   RO         3223    i.HAL_UART_TxCpltCallback  stm32f4xx_hal_uart.o
-    0x08005b70   0x08005b70   0x00000004   Code   RO          597    i.HardFault_Handler  stm32f4xx_it.o
-    0x08005b74   0x08005b74   0x00000044   Code   RO          415    i.MX_CAN1_Init      can.o
-    0x08005bb8   0x08005bb8   0x00000044   Code   RO          416    i.MX_CAN2_Init      can.o
-    0x08005bfc   0x08005bfc   0x00000078   Code   RO          462    i.MX_DMA_Init       dma.o
+    0x08005b6c   0x08005b6c   0x00000002   Code   RO         3102    i.HAL_UART_RxHalfCpltCallback  stm32f4xx_hal_uart.o
+    0x08005b6e   0x08005b6e   0x00000002   Code   RO         3106    i.HAL_UART_TxCpltCallback  stm32f4xx_hal_uart.o
+    0x08005b70   0x08005b70   0x00000004   Code   RO          486    i.HardFault_Handler  stm32f4xx_it.o
+    0x08005b74   0x08005b74   0x00000044   Code   RO          304    i.MX_CAN1_Init      can.o
+    0x08005bb8   0x08005bb8   0x00000044   Code   RO          305    i.MX_CAN2_Init      can.o
+    0x08005bfc   0x08005bfc   0x00000078   Code   RO          351    i.MX_DMA_Init       dma.o
     0x08005c74   0x08005c74   0x000000d4   Code   RO          274    i.MX_GPIO_Init      gpio.o
-    0x08005d48   0x08005d48   0x0000004c   Code   RO          488    i.MX_TIM6_Init      tim.o
-    0x08005d94   0x08005d94   0x0000004c   Code   RO          489    i.MX_TIM7_Init      tim.o
-    0x08005de0   0x08005de0   0x00000040   Code   RO          536    i.MX_USART1_UART_Init  usart.o
-    0x08005e20   0x08005e20   0x00000038   Code   RO          537    i.MX_USART2_UART_Init  usart.o
-    0x08005e58   0x08005e58   0x00000038   Code   RO          538    i.MX_USART6_UART_Init  usart.o
-    0x08005e90   0x08005e90   0x00000004   Code   RO          598    i.MemManage_Handler  stm32f4xx_it.o
-    0x08005e94   0x08005e94   0x00000004   Code   RO          599    i.NMI_Handler       stm32f4xx_it.o
-    0x08005e98   0x08005e98   0x00000028   Code   RO         4877    i.OLED_Clear        oled.o
-    0x08005ec0   0x08005ec0   0x00000090   Code   RO         4878    i.OLED_ClearArea    oled.o
-    0x08005f50   0x08005f50   0x00000028   Code   RO         4886    i.OLED_GPIO_Init    oled.o
-    0x08005f78   0x08005f78   0x0000003e   Code   RO         4888    i.OLED_I2C_SendByte  oled.o
-    0x08005fb6   0x08005fb6   0x0000001c   Code   RO         4889    i.OLED_I2C_Start    oled.o
-    0x08005fd2   0x08005fd2   0x00000016   Code   RO         4890    i.OLED_I2C_Stop     oled.o
-    0x08005fe8   0x08005fe8   0x0000009a   Code   RO         4891    i.OLED_Init         oled.o
-    0x08006082   0x08006082   0x00000032   Code   RO         4894    i.OLED_Printf       oled.o
-    0x080060b4   0x080060b4   0x00000022   Code   RO         4897    i.OLED_SetCursor    oled.o
+    0x08005d48   0x08005d48   0x0000004c   Code   RO          377    i.MX_TIM6_Init      tim.o
+    0x08005d94   0x08005d94   0x0000004c   Code   RO          378    i.MX_TIM7_Init      tim.o
+    0x08005de0   0x08005de0   0x00000040   Code   RO          425    i.MX_USART1_UART_Init  usart.o
+    0x08005e20   0x08005e20   0x00000038   Code   RO          426    i.MX_USART2_UART_Init  usart.o
+    0x08005e58   0x08005e58   0x00000038   Code   RO          427    i.MX_USART6_UART_Init  usart.o
+    0x08005e90   0x08005e90   0x00000004   Code   RO          487    i.MemManage_Handler  stm32f4xx_it.o
+    0x08005e94   0x08005e94   0x00000004   Code   RO          488    i.NMI_Handler       stm32f4xx_it.o
+    0x08005e98   0x08005e98   0x00000028   Code   RO         4716    i.OLED_Clear        oled.o
+    0x08005ec0   0x08005ec0   0x00000090   Code   RO         4717    i.OLED_ClearArea    oled.o
+    0x08005f50   0x08005f50   0x00000028   Code   RO         4725    i.OLED_GPIO_Init    oled.o
+    0x08005f78   0x08005f78   0x0000003e   Code   RO         4727    i.OLED_I2C_SendByte  oled.o
+    0x08005fb6   0x08005fb6   0x0000001c   Code   RO         4728    i.OLED_I2C_Start    oled.o
+    0x08005fd2   0x08005fd2   0x00000016   Code   RO         4729    i.OLED_I2C_Stop     oled.o
+    0x08005fe8   0x08005fe8   0x0000009a   Code   RO         4730    i.OLED_Init         oled.o
+    0x08006082   0x08006082   0x00000032   Code   RO         4733    i.OLED_Printf       oled.o
+    0x080060b4   0x080060b4   0x00000022   Code   RO         4736    i.OLED_SetCursor    oled.o
     0x080060d6   0x080060d6   0x00000002   PAD
-    0x080060d8   0x080060d8   0x00000054   Code   RO         4899    i.OLED_ShowChar     oled.o
-    0x0800612c   0x0800612c   0x000000fc   Code   RO         4902    i.OLED_ShowImage    oled.o
-    0x08006228   0x08006228   0x000001c4   Code   RO         4905    i.OLED_ShowString   oled.o
-    0x080063ec   0x080063ec   0x00000028   Code   RO         4906    i.OLED_Update       oled.o
-    0x08006414   0x08006414   0x00000028   Code   RO         4908    i.OLED_W_SCL        oled.o
-    0x0800643c   0x0800643c   0x00000028   Code   RO         4909    i.OLED_W_SDA        oled.o
-    0x08006464   0x08006464   0x00000020   Code   RO         4910    i.OLED_WriteCommand  oled.o
-    0x08006484   0x08006484   0x0000002e   Code   RO         4911    i.OLED_WriteData    oled.o
-    0x080064b2   0x080064b2   0x00000002   Code   RO          600    i.PendSV_Handler    stm32f4xx_it.o
-    0x080064b4   0x080064b4   0x00000002   Code   RO          601    i.SVC_Handler       stm32f4xx_it.o
-    0x080064b6   0x080064b6   0x00000008   Code   RO          602    i.SysTick_Handler   stm32f4xx_it.o
+    0x080060d8   0x080060d8   0x00000054   Code   RO         4738    i.OLED_ShowChar     oled.o
+    0x0800612c   0x0800612c   0x000000fc   Code   RO         4741    i.OLED_ShowImage    oled.o
+    0x08006228   0x08006228   0x000001c4   Code   RO         4744    i.OLED_ShowString   oled.o
+    0x080063ec   0x080063ec   0x00000028   Code   RO         4745    i.OLED_Update       oled.o
+    0x08006414   0x08006414   0x00000028   Code   RO         4747    i.OLED_W_SCL        oled.o
+    0x0800643c   0x0800643c   0x00000028   Code   RO         4748    i.OLED_W_SDA        oled.o
+    0x08006464   0x08006464   0x00000020   Code   RO         4749    i.OLED_WriteCommand  oled.o
+    0x08006484   0x08006484   0x0000002e   Code   RO         4750    i.OLED_WriteData    oled.o
+    0x080064b2   0x080064b2   0x00000002   Code   RO          489    i.PendSV_Handler    stm32f4xx_it.o
+    0x080064b4   0x080064b4   0x00000002   Code   RO          490    i.SVC_Handler       stm32f4xx_it.o
+    0x080064b6   0x080064b6   0x00000008   Code   RO          491    i.SysTick_Handler   stm32f4xx_it.o
     0x080064be   0x080064be   0x00000002   PAD
     0x080064c0   0x080064c0   0x000000b8   Code   RO           17    i.SystemClock_Config  main.o
-    0x08006578   0x08006578   0x00000014   Code   RO         3556    i.SystemInit        system_stm32f4xx.o
-    0x0800658c   0x0800658c   0x00000010   Code   RO          603    i.TIM6_DAC_IRQHandler  stm32f4xx_it.o
-    0x0800659c   0x0800659c   0x000000e8   Code   RO         2293    i.TIM_Base_SetConfig  stm32f4xx_hal_tim.o
-    0x08006684   0x08006684   0x00000014   Code   RO         3225    i.UART_DMAAbortOnError  stm32f4xx_hal_uart.o
-    0x08006698   0x08006698   0x00000050   Code   RO         3226    i.UART_DMAError     stm32f4xx_hal_uart.o
-    0x080066e8   0x080066e8   0x000000b4   Code   RO         3227    i.UART_DMAReceiveCplt  stm32f4xx_hal_uart.o
-    0x0800679c   0x0800679c   0x00000024   Code   RO         3229    i.UART_DMARxHalfCplt  stm32f4xx_hal_uart.o
-    0x080067c0   0x080067c0   0x0000006c   Code   RO         3235    i.UART_EndRxTransfer  stm32f4xx_hal_uart.o
-    0x0800682c   0x0800682c   0x00000020   Code   RO         3236    i.UART_EndTransmit_IT  stm32f4xx_hal_uart.o
-    0x0800684c   0x0800684c   0x00000026   Code   RO         3237    i.UART_EndTxTransfer  stm32f4xx_hal_uart.o
-    0x08006872   0x08006872   0x000000fc   Code   RO         3238    i.UART_Receive_IT   stm32f4xx_hal_uart.o
+    0x08006578   0x08006578   0x00000014   Code   RO         3439    i.SystemInit        system_stm32f4xx.o
+    0x0800658c   0x0800658c   0x00000010   Code   RO          492    i.TIM6_DAC_IRQHandler  stm32f4xx_it.o
+    0x0800659c   0x0800659c   0x000000e8   Code   RO         2176    i.TIM_Base_SetConfig  stm32f4xx_hal_tim.o
+    0x08006684   0x08006684   0x00000014   Code   RO         3108    i.UART_DMAAbortOnError  stm32f4xx_hal_uart.o
+    0x08006698   0x08006698   0x00000050   Code   RO         3109    i.UART_DMAError     stm32f4xx_hal_uart.o
+    0x080066e8   0x080066e8   0x000000b4   Code   RO         3110    i.UART_DMAReceiveCplt  stm32f4xx_hal_uart.o
+    0x0800679c   0x0800679c   0x00000024   Code   RO         3112    i.UART_DMARxHalfCplt  stm32f4xx_hal_uart.o
+    0x080067c0   0x080067c0   0x0000006c   Code   RO         3118    i.UART_EndRxTransfer  stm32f4xx_hal_uart.o
+    0x0800682c   0x0800682c   0x00000020   Code   RO         3119    i.UART_EndTransmit_IT  stm32f4xx_hal_uart.o
+    0x0800684c   0x0800684c   0x00000026   Code   RO         3120    i.UART_EndTxTransfer  stm32f4xx_hal_uart.o
+    0x08006872   0x08006872   0x000000fc   Code   RO         3121    i.UART_Receive_IT   stm32f4xx_hal_uart.o
     0x0800696e   0x0800696e   0x00000002   PAD
-    0x08006970   0x08006970   0x0000022c   Code   RO         3239    i.UART_SetConfig    stm32f4xx_hal_uart.o
-    0x08006b9c   0x08006b9c   0x000000c8   Code   RO         3240    i.UART_Start_Receive_DMA  stm32f4xx_hal_uart.o
-    0x08006c64   0x08006c64   0x00000060   Code   RO         3242    i.UART_Transmit_IT  stm32f4xx_hal_uart.o
-    0x08006cc4   0x08006cc4   0x00000010   Code   RO          604    i.USART1_IRQHandler  stm32f4xx_it.o
-    0x08006cd4   0x08006cd4   0x00000010   Code   RO          605    i.USART2_IRQHandler  stm32f4xx_it.o
-    0x08006ce4   0x08006ce4   0x00000010   Code   RO          606    i.USART6_IRQHandler  stm32f4xx_it.o
-    0x08006cf4   0x08006cf4   0x00000004   Code   RO          607    i.UsageFault_Handler  stm32f4xx_it.o
-    0x08006cf8   0x08006cf8   0x00000030   Code   RO         5512    i.__ARM_fpclassify  m_wm.l(fpclassify.o)
-    0x08006d28   0x08006d28   0x00000026   Code   RO         5444    i.__ARM_fpclassifyf  m_wm.l(fpclassifyf.o)
+    0x08006970   0x08006970   0x0000022c   Code   RO         3122    i.UART_SetConfig    stm32f4xx_hal_uart.o
+    0x08006b9c   0x08006b9c   0x000000c8   Code   RO         3123    i.UART_Start_Receive_DMA  stm32f4xx_hal_uart.o
+    0x08006c64   0x08006c64   0x00000060   Code   RO         3125    i.UART_Transmit_IT  stm32f4xx_hal_uart.o
+    0x08006cc4   0x08006cc4   0x00000010   Code   RO          493    i.USART1_IRQHandler  stm32f4xx_it.o
+    0x08006cd4   0x08006cd4   0x00000010   Code   RO          494    i.USART2_IRQHandler  stm32f4xx_it.o
+    0x08006ce4   0x08006ce4   0x00000010   Code   RO          495    i.USART6_IRQHandler  stm32f4xx_it.o
+    0x08006cf4   0x08006cf4   0x00000004   Code   RO          496    i.UsageFault_Handler  stm32f4xx_it.o
+    0x08006cf8   0x08006cf8   0x00000030   Code   RO         5351    i.__ARM_fpclassify  m_wm.l(fpclassify.o)
+    0x08006d28   0x08006d28   0x00000026   Code   RO         5283    i.__ARM_fpclassifyf  m_wm.l(fpclassifyf.o)
     0x08006d4e   0x08006d4e   0x00000002   PAD
-    0x08006d50   0x08006d50   0x00000010   Code   RO         1803    i.__NVIC_GetPriorityGrouping  stm32f4xx_hal_cortex.o
-    0x08006d60   0x08006d60   0x00000028   Code   RO         1804    i.__NVIC_SetPriority  stm32f4xx_hal_cortex.o
-    0x08006d88   0x08006d88   0x00000118   Code   RO         5195    i.__hardfp_acosf    m_wm.l(acosf.o)
-    0x08006ea0   0x08006ea0   0x000002ac   Code   RO         5219    i.__hardfp_atan2f   m_wm.l(atan2f.o)
-    0x0800714c   0x0800714c   0x00000150   Code   RO         5231    i.__hardfp_cosf     m_wm.l(cosf.o)
-    0x0800729c   0x0800729c   0x000000b0   Code   RO         5249    i.__hardfp_fmodf    m_wm.l(fmodf.o)
-    0x0800734c   0x0800734c   0x00000190   Code   RO         5265    i.__hardfp_sinf     m_wm.l(sinf.o)
-    0x080074dc   0x080074dc   0x0000003a   Code   RO         5277    i.__hardfp_sqrtf    m_wm.l(sqrtf.o)
-    0x08007516   0x08007516   0x00000006   Code   RO         5447    i.__mathlib_flt_infnan  m_wm.l(funder.o)
-    0x0800751c   0x0800751c   0x00000006   Code   RO         5448    i.__mathlib_flt_infnan2  m_wm.l(funder.o)
+    0x08006d50   0x08006d50   0x00000010   Code   RO         1686    i.__NVIC_GetPriorityGrouping  stm32f4xx_hal_cortex.o
+    0x08006d60   0x08006d60   0x00000028   Code   RO         1687    i.__NVIC_SetPriority  stm32f4xx_hal_cortex.o
+    0x08006d88   0x08006d88   0x00000118   Code   RO         5034    i.__hardfp_acosf    m_wm.l(acosf.o)
+    0x08006ea0   0x08006ea0   0x000002ac   Code   RO         5058    i.__hardfp_atan2f   m_wm.l(atan2f.o)
+    0x0800714c   0x0800714c   0x00000150   Code   RO         5070    i.__hardfp_cosf     m_wm.l(cosf.o)
+    0x0800729c   0x0800729c   0x000000b0   Code   RO         5088    i.__hardfp_fmodf    m_wm.l(fmodf.o)
+    0x0800734c   0x0800734c   0x00000190   Code   RO         5104    i.__hardfp_sinf     m_wm.l(sinf.o)
+    0x080074dc   0x080074dc   0x0000003a   Code   RO         5116    i.__hardfp_sqrtf    m_wm.l(sqrtf.o)
+    0x08007516   0x08007516   0x00000006   Code   RO         5286    i.__mathlib_flt_infnan  m_wm.l(funder.o)
+    0x0800751c   0x0800751c   0x00000006   Code   RO         5287    i.__mathlib_flt_infnan2  m_wm.l(funder.o)
     0x08007522   0x08007522   0x00000002   PAD
-    0x08007524   0x08007524   0x00000010   Code   RO         5449    i.__mathlib_flt_invalid  m_wm.l(funder.o)
-    0x08007534   0x08007534   0x00000010   Code   RO         5452    i.__mathlib_flt_underflow  m_wm.l(funder.o)
-    0x08007544   0x08007544   0x00000154   Code   RO         5461    i.__mathlib_rredf2  m_wm.l(rredf.o)
-    0x08007698   0x08007698   0x0000000e   Code   RO         5356    i._is_digit         c_w.l(__printf_wp.o)
-    0x080076a6   0x080076a6   0x00000046   Code   RO         4413    i.bezier_se         walk.o
-    0x080076ec   0x080076ec   0x00000078   Code   RO         4525    i.can_filter_init   gld_can.o
-    0x08007764   0x08007764   0x00000420   Code   RO         3748    i.dog_Go_int        yushu_app.o
-    0x08007b84   0x08007b84   0x00000ce8   Code   RO         3752    i.dog_back_bit_still  yushu_app.o
-    0x0800886c   0x0800886c   0x000001b0   Code   RO         3753    i.dog_back_bit_still_int  yushu_app.o
-    0x08008a1c   0x08008a1c   0x00000228   Code   RO         3754    i.dog_back_bit_still_out  yushu_app.o
-    0x08008c44   0x08008c44   0x00000cf4   Code   RO         3755    i.dog_back_mid      yushu_app.o
-    0x08009938   0x08009938   0x000001ac   Code   RO         3756    i.dog_back_mid_int  yushu_app.o
-    0x08009ae4   0x08009ae4   0x00000224   Code   RO         3757    i.dog_back_mid_out  yushu_app.o
-    0x08009d08   0x08009d08   0x00000674   Code   RO         3763    i.dog_bunny_jump_force  yushu_app.o
-    0x0800a37c   0x0800a37c   0x000006a8   Code   RO         3767    i.dog_bunny_jump_forward2  yushu_app.o
-    0x0800aa24   0x0800aa24   0x000006a0   Code   RO         3769    i.dog_bunny_jump_forward7  yushu_app.o
-    0x0800b0c4   0x0800b0c4   0x0000086c   Code   RO         3770    i.dog_bunny_jump_up  yushu_app.o
-    0x0800b930   0x0800b930   0x00000040   Code   RO         3772    i.dog_double_jump_force2  yushu_app.o
-    0x0800b970   0x0800b970   0x00000ce8   Code   RO         3777    i.dog_forward_bit_still  yushu_app.o
-    0x0800c658   0x0800c658   0x000001b0   Code   RO         3778    i.dog_forward_bit_still_int  yushu_app.o
-    0x0800c808   0x0800c808   0x00000228   Code   RO         3779    i.dog_forward_bit_still_out  yushu_app.o
-    0x0800ca30   0x0800ca30   0x00000cf4   Code   RO         3780    i.dog_forward_mid   yushu_app.o
-    0x0800d724   0x0800d724   0x000001ac   Code   RO         3781    i.dog_forward_mid_int  yushu_app.o
-    0x0800d8d0   0x0800d8d0   0x00000224   Code   RO         3782    i.dog_forward_mid_out  yushu_app.o
-    0x0800daf4   0x0800daf4   0x00000864   Code   RO         3783    i.dog_forward_rear  yushu_app.o
-    0x0800e358   0x0800e358   0x00000104   Code   RO         3784    i.dog_forward_rear_int  yushu_app.o
-    0x0800e45c   0x0800e45c   0x00000140   Code   RO         3788    i.dog_forward_rear_out  yushu_app.o
-    0x0800e59c   0x0800e59c   0x000006bc   Code   RO         3793    i.dog_jump          yushu_app.o
-    0x0800ec58   0x0800ec58   0x00000398   Code   RO         3794    i.dog_jump2         yushu_app.o
-    0x0800eff0   0x0800eff0   0x000008e4   Code   RO         3797    i.dog_jump_force10  yushu_app.o
-    0x0800f8d4   0x0800f8d4   0x00000ce8   Code   RO         3801    i.dog_left_bit_still  yushu_app.o
-    0x080105bc   0x080105bc   0x000001b0   Code   RO         3802    i.dog_left_bit_still_int  yushu_app.o
-    0x0801076c   0x0801076c   0x00000228   Code   RO         3803    i.dog_left_bit_still_out  yushu_app.o
-    0x08010994   0x08010994   0x00000cf8   Code   RO         3804    i.dog_left_mid      yushu_app.o
-    0x0801168c   0x0801168c   0x000001b0   Code   RO         3805    i.dog_left_mid_int  yushu_app.o
-    0x0801183c   0x0801183c   0x00000228   Code   RO         3806    i.dog_left_mid_out  yushu_app.o
-    0x08011a64   0x08011a64   0x00000864   Code   RO         3807    i.dog_left_rear     yushu_app.o
-    0x080122c8   0x080122c8   0x00000104   Code   RO         3808    i.dog_left_rear_int  yushu_app.o
-    0x080123cc   0x080123cc   0x00000140   Code   RO         3809    i.dog_left_rear_out  yushu_app.o
-    0x0801250c   0x0801250c   0x000002e4   Code   RO         3814    i.dog_rear_flip     yushu_app.o
-    0x080127f0   0x080127f0   0x000002e4   Code   RO         3815    i.dog_rear_leg      yushu_app.o
-    0x08012ad4   0x08012ad4   0x00000860   Code   RO         3816    i.dog_rear_mid      yushu_app.o
-    0x08013334   0x08013334   0x00000100   Code   RO         3817    i.dog_rear_mid_int  yushu_app.o
-    0x08013434   0x08013434   0x0000013c   Code   RO         3818    i.dog_rear_mid_out  yushu_app.o
-    0x08013570   0x08013570   0x00000ce8   Code   RO         3822    i.dog_right_bit_still  yushu_app.o
-    0x08014258   0x08014258   0x000001b0   Code   RO         3823    i.dog_right_bit_still_int  yushu_app.o
-    0x08014408   0x08014408   0x00000228   Code   RO         3824    i.dog_right_bit_still_out  yushu_app.o
-    0x08014630   0x08014630   0x00000cf8   Code   RO         3825    i.dog_right_mid     yushu_app.o
-    0x08015328   0x08015328   0x000001b0   Code   RO         3826    i.dog_right_mid_int  yushu_app.o
-    0x080154d8   0x080154d8   0x00000228   Code   RO         3827    i.dog_right_mid_out  yushu_app.o
-    0x08015700   0x08015700   0x00000864   Code   RO         3828    i.dog_right_rear    yushu_app.o
-    0x08015f64   0x08015f64   0x00000104   Code   RO         3829    i.dog_right_rear_int  yushu_app.o
-    0x08016068   0x08016068   0x00000140   Code   RO         3830    i.dog_right_rear_out  yushu_app.o
-    0x080161a8   0x080161a8   0x0000015c   Code   RO           18    i.dog_small_still   main.o
-    0x08016304   0x08016304   0x000001a8   Code   RO           19    i.dog_small_still2  main.o
-    0x080164ac   0x080164ac   0x000002b4   Code   RO         3837    i.dog_squat_int     yushu_app.o
-    0x08016760   0x08016760   0x0000024c   Code   RO         3838    i.dog_squat_int_still  yushu_app.o
-    0x080169ac   0x080169ac   0x000002b4   Code   RO         3839    i.dog_squat_out     yushu_app.o
-    0x08016c60   0x08016c60   0x00000340   Code   RO         3844    i.dog_start         yushu_app.o
-    0x08016fa0   0x08016fa0   0x0000005c   Code   RO         3846    i.dog_treble_jump_force2  yushu_app.o
-    0x08016ffc   0x08016ffc   0x00001060   Code   RO           20    i.main              main.o
-    0x0801805c   0x0801805c   0x0000003c   Code   RO         4707    i.rt_ringbuffer_data_len  ringbuffer.o
-    0x08018098   0x08018098   0x00000094   Code   RO         4710    i.rt_ringbuffer_init  ringbuffer.o
-    0x0801812c   0x0801812c   0x000000f0   Code   RO         4712    i.rt_ringbuffer_put  ringbuffer.o
-    0x0801821c   0x0801821c   0x0000002a   Code   RO         4717    i.rt_ringbuffer_status  ringbuffer.o
-    0x08018246   0x08018246   0x00000002   PAD
-    0x08018248   0x08018248   0x00000058   Code   RO         4414    i.sample_foot_pos   walk.o
-    0x080182a0   0x080182a0   0x0000003e   Code   RO         5279    i.sqrtf             m_wm.l(sqrtf.o)
-    0x080182de   0x080182de   0x00000002   PAD
-    0x080182e0   0x080182e0   0x00000078   Code   RO         4415    i.stance_traj       walk.o
-    0x08018358   0x08018358   0x000000d4   Code   RO         4416    i.swing_traj        walk.o
-    0x0801842c   0x0801842c   0x0000003c   Code   RO         3678    i.uart_init         usart_app.o
-    0x08018468   0x08018468   0x000000c0   Code   RO         4526    i.unitree_CAN_Send  gld_can.o
-    0x08018528   0x08018528   0x00000144   Code   RO         4527    i.unitree_CAN_receive  gld_can.o
-    0x0801866c   0x0801866c   0x0000001a   Code   RO         4528    i.unitree_setpara   gld_can.o
-    0x08018686   0x08018686   0x00000002   PAD
-    0x08018688   0x08018688   0x00000038   Code   RO         4417    i.walk_enter        walk.o
-    0x080186c0   0x080186c0   0x00000240   Code   RO         4418    i.walk_run          walk.o
-    0x08018900   0x08018900   0x0000002c   Code   RO         5561    locale$$code        c_w.l(lc_numeric_c.o)
-    0x0801892c   0x0801892c   0x0000002c   Code   RO         5584    locale$$code        c_w.l(lc_ctype_c.o)
-    0x08018958   0x08018958   0x00000062   Code   RO         5159    x$fpl$d2f           fz_wm.l(d2f.o)
-    0x080189ba   0x080189ba   0x00000002   PAD
-    0x080189bc   0x080189bc   0x00000150   Code   RO         5161    x$fpl$dadd          fz_wm.l(daddsub_clz.o)
-    0x08018b0c   0x08018b0c   0x00000018   Code   RO         5393    x$fpl$dcmpinf       fz_wm.l(dcmpi.o)
-    0x08018b24   0x08018b24   0x00000078   Code   RO         5171    x$fpl$deqf          fz_wm.l(deqf.o)
-    0x08018b9c   0x08018b9c   0x00000078   Code   RO         5187    x$fpl$dleqf         fz_wm.l(dleqf.o)
-    0x08018c14   0x08018c14   0x00000154   Code   RO         5189    x$fpl$dmul          fz_wm.l(dmul.o)
-    0x08018d68   0x08018d68   0x0000009c   Code   RO         5395    x$fpl$dnaninf       fz_wm.l(dnaninf.o)
-    0x08018e04   0x08018e04   0x0000000c   Code   RO         5397    x$fpl$dretinf       fz_wm.l(dretinf.o)
-    0x08018e10   0x08018e10   0x0000006c   Code   RO         5191    x$fpl$drleqf        fz_wm.l(drleqf.o)
-    0x08018e7c   0x08018e7c   0x00000016   Code   RO         5162    x$fpl$drsb          fz_wm.l(daddsub_clz.o)
-    0x08018e92   0x08018e92   0x00000002   PAD
-    0x08018e94   0x08018e94   0x000001d4   Code   RO         5163    x$fpl$dsub          fz_wm.l(daddsub_clz.o)
-    0x08019068   0x08019068   0x00000056   Code   RO         5193    x$fpl$f2d           fz_wm.l(f2d.o)
-    0x080190be   0x080190be   0x0000008c   Code   RO         5401    x$fpl$fnaninf       fz_wm.l(fnaninf.o)
-    0x0801914a   0x0801914a   0x0000000a   Code   RO         5648    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x08019154   0x08019154   0x000000f4   Code   RO         5403    x$fpl$frem          fz_wm.l(frem_clz.o)
-    0x08019248   0x08019248   0x0000000a   Code   RO         5405    x$fpl$fretinf       fz_wm.l(fretinf.o)
-    0x08019252   0x08019252   0x00000004   Code   RO         5407    x$fpl$printf1       fz_wm.l(printf1.o)
-    0x08019256   0x08019256   0x00000004   Code   RO         5409    x$fpl$printf2       fz_wm.l(printf2.o)
-    0x0801925a   0x0801925a   0x00000000   Code   RO         5415    x$fpl$usenofp       fz_wm.l(usenofp.o)
-    0x0801925a   0x0801925a   0x00000002   PAD
-    0x0801925c   0x0801925c   0x00000020   Data   RO           22    .constdata          main.o
-    0x0801927c   0x0801927c   0x00000008   Data   RO         1517    .constdata          stm32f4xx_hal_dma.o
-    0x08019284   0x08019284   0x00000018   Data   RO         3557    .constdata          system_stm32f4xx.o
-    0x0801929c   0x0801929c   0x00000140   Data   RO         3849    .constdata          yushu_app.o
-    0x080193dc   0x080193dc   0x00000060   Data   RO         4796    .constdata          dog.o
-    0x0801943c   0x0801943c   0x0000092d   Data   RO         5122    .constdata          oled_data.o
-    0x08019d69   0x08019d69   0x00000003   PAD
-    0x08019d6c   0x08019d6c   0x00000008   Data   RO         5315    .constdata          c_w.l(_printf_wctomb.o)
-    0x08019d74   0x08019d74   0x00000028   Data   RO         5344    .constdata          c_w.l(_printf_hex_int_ll_ptr.o)
-    0x08019d9c   0x08019d9c   0x00000011   Data   RO         5364    .constdata          c_w.l(__printf_flags_ss_wp.o)
-    0x08019dad   0x08019dad   0x00000003   PAD
-    0x08019db0   0x08019db0   0x00000020   Data   RO         5462    .constdata          m_wm.l(rredf.o)
-    0x08019dd0   0x08019dd0   0x00000026   Data   RO         5497    .constdata          c_w.l(_printf_fp_hex.o)
-    0x08019df6   0x08019df6   0x00000002   PAD
-    0x08019df8   0x08019df8   0x00000094   Data   RO         5536    .constdata          c_w.l(bigflt0.o)
-    0x08019e8c   0x08019e8c   0x00000020   Data   RO         5697    Region$$Table       anon$$obj.o
-    0x08019eac   0x08019eac   0x0000001c   Data   RO         5560    locale$$data        c_w.l(lc_numeric_c.o)
-    0x08019ec8   0x08019ec8   0x00000110   Data   RO         5583    locale$$data        c_w.l(lc_ctype_c.o)
+    0x08007524   0x08007524   0x00000010   Code   RO         5288    i.__mathlib_flt_invalid  m_wm.l(funder.o)
+    0x08007534   0x08007534   0x00000010   Code   RO         5291    i.__mathlib_flt_underflow  m_wm.l(funder.o)
+    0x08007544   0x08007544   0x00000154   Code   RO         5300    i.__mathlib_rredf2  m_wm.l(rredf.o)
+    0x08007698   0x08007698   0x0000000e   Code   RO         5195    i._is_digit         c_w.l(__printf_wp.o)
+    0x080076a6   0x080076a6   0x00000046   Code   RO         4258    i.bezier_se         walk.o
+    0x080076ec   0x080076ec   0x00000078   Code   RO         4364    i.can_filter_init   gld_can.o
+    0x08007764   0x08007764   0x00000420   Code   RO         3623    i.dog_Go_int        yushu_app.o
+    0x08007b84   0x08007b84   0x00000ce8   Code   RO         3627    i.dog_back_bit_still  yushu_app.o
+    0x0800886c   0x0800886c   0x000001b0   Code   RO         3628    i.dog_back_bit_still_int  yushu_app.o
+    0x08008a1c   0x08008a1c   0x00000228   Code   RO         3629    i.dog_back_bit_still_out  yushu_app.o
+    0x08008c44   0x08008c44   0x00000cf4   Code   RO         3630    i.dog_back_mid      yushu_app.o
+    0x08009938   0x08009938   0x000001ac   Code   RO         3631    i.dog_back_mid_int  yushu_app.o
+    0x08009ae4   0x08009ae4   0x00000224   Code   RO         3632    i.dog_back_mid_out  yushu_app.o
+    0x08009d08   0x08009d08   0x000006a0   Code   RO         3640    i.dog_bunny_jump_forward7  yushu_app.o
+    0x0800a3a8   0x0800a3a8   0x0000086c   Code   RO         3641    i.dog_bunny_jump_up  yushu_app.o
+    0x0800ac14   0x0800ac14   0x00000040   Code   RO         3644    i.dog_double_jump_force2  yushu_app.o
+    0x0800ac54   0x0800ac54   0x00000ce8   Code   RO         3649    i.dog_forward_bit_still  yushu_app.o
+    0x0800b93c   0x0800b93c   0x000001b0   Code   RO         3650    i.dog_forward_bit_still_int  yushu_app.o
+    0x0800baec   0x0800baec   0x00000228   Code   RO         3651    i.dog_forward_bit_still_out  yushu_app.o
+    0x0800bd14   0x0800bd14   0x00000cf4   Code   RO         3652    i.dog_forward_mid   yushu_app.o
+    0x0800ca08   0x0800ca08   0x000001ac   Code   RO         3653    i.dog_forward_mid_int  yushu_app.o
+    0x0800cbb4   0x0800cbb4   0x00000224   Code   RO         3654    i.dog_forward_mid_out  yushu_app.o
+    0x0800cdd8   0x0800cdd8   0x00000864   Code   RO         3655    i.dog_forward_rear  yushu_app.o
+    0x0800d63c   0x0800d63c   0x00000104   Code   RO         3656    i.dog_forward_rear_int  yushu_app.o
+    0x0800d740   0x0800d740   0x00000140   Code   RO         3660    i.dog_forward_rear_out  yushu_app.o
+    0x0800d880   0x0800d880   0x00000660   Code   RO         3667    i.dog_jump_floor2   yushu_app.o
+    0x0800dee0   0x0800dee0   0x000008e4   Code   RO         3668    i.dog_jump_force10  yushu_app.o
+    0x0800e7c4   0x0800e7c4   0x00000620   Code   RO         3669    i.dog_jump_stair    yushu_app.o
+    0x0800ede4   0x0800ede4   0x00000620   Code   RO         3670    i.dog_jump_stair2   yushu_app.o
+    0x0800f404   0x0800f404   0x00000012   Code   RO         3671    i.dog_jump_stairs   yushu_app.o
+    0x0800f416   0x0800f416   0x00000002   PAD
+    0x0800f418   0x0800f418   0x00000ce8   Code   RO         3675    i.dog_left_bit_still  yushu_app.o
+    0x08010100   0x08010100   0x000001b0   Code   RO         3676    i.dog_left_bit_still_int  yushu_app.o
+    0x080102b0   0x080102b0   0x00000228   Code   RO         3677    i.dog_left_bit_still_out  yushu_app.o
+    0x080104d8   0x080104d8   0x00000cf8   Code   RO         3678    i.dog_left_mid      yushu_app.o
+    0x080111d0   0x080111d0   0x000001b0   Code   RO         3679    i.dog_left_mid_int  yushu_app.o
+    0x08011380   0x08011380   0x00000228   Code   RO         3680    i.dog_left_mid_out  yushu_app.o
+    0x080115a8   0x080115a8   0x00000864   Code   RO         3681    i.dog_left_rear     yushu_app.o
+    0x08011e0c   0x08011e0c   0x00000104   Code   RO         3682    i.dog_left_rear_int  yushu_app.o
+    0x08011f10   0x08011f10   0x00000140   Code   RO         3683    i.dog_left_rear_out  yushu_app.o
+    0x08012050   0x08012050   0x000002e4   Code   RO         3688    i.dog_rear_flip     yushu_app.o
+    0x08012334   0x08012334   0x000002e4   Code   RO         3689    i.dog_rear_leg      yushu_app.o
+    0x08012618   0x08012618   0x00000860   Code   RO         3690    i.dog_rear_mid      yushu_app.o
+    0x08012e78   0x08012e78   0x00000100   Code   RO         3691    i.dog_rear_mid_int  yushu_app.o
+    0x08012f78   0x08012f78   0x0000013c   Code   RO         3692    i.dog_rear_mid_out  yushu_app.o
+    0x080130b4   0x080130b4   0x00000ce8   Code   RO         3696    i.dog_right_bit_still  yushu_app.o
+    0x08013d9c   0x08013d9c   0x000001b0   Code   RO         3697    i.dog_right_bit_still_int  yushu_app.o
+    0x08013f4c   0x08013f4c   0x00000228   Code   RO         3698    i.dog_right_bit_still_out  yushu_app.o
+    0x08014174   0x08014174   0x00000cf8   Code   RO         3699    i.dog_right_mid     yushu_app.o
+    0x08014e6c   0x08014e6c   0x000001b0   Code   RO         3700    i.dog_right_mid_int  yushu_app.o
+    0x0801501c   0x0801501c   0x00000228   Code   RO         3701    i.dog_right_mid_out  yushu_app.o
+    0x08015244   0x08015244   0x00000864   Code   RO         3702    i.dog_right_rear    yushu_app.o
+    0x08015aa8   0x08015aa8   0x00000104   Code   RO         3703    i.dog_right_rear_int  yushu_app.o
+    0x08015bac   0x08015bac   0x00000140   Code   RO         3704    i.dog_right_rear_out  yushu_app.o
+    0x08015cec   0x08015cec   0x0000015c   Code   RO           18    i.dog_small_still   main.o
+    0x08015e48   0x08015e48   0x000001a8   Code   RO           19    i.dog_small_still2  main.o
+    0x08015ff0   0x08015ff0   0x000002b4   Code   RO         3711    i.dog_squat_int     yushu_app.o
+    0x080162a4   0x080162a4   0x0000024c   Code   RO         3712    i.dog_squat_int_still  yushu_app.o
+    0x080164f0   0x080164f0   0x000002b4   Code   RO         3713    i.dog_squat_out     yushu_app.o
+    0x080167a4   0x080167a4   0x00000340   Code   RO         3714    i.dog_start         yushu_app.o
+    0x08016ae4   0x08016ae4   0x0000005c   Code   RO         3716    i.dog_treble_jump_force2  yushu_app.o
+    0x08016b40   0x08016b40   0x00001030   Code   RO           20    i.main              main.o
+    0x08017b70   0x08017b70   0x0000003c   Code   RO         4546    i.rt_ringbuffer_data_len  ringbuffer.o
+    0x08017bac   0x08017bac   0x00000094   Code   RO         4549    i.rt_ringbuffer_init  ringbuffer.o
+    0x08017c40   0x08017c40   0x000000f0   Code   RO         4551    i.rt_ringbuffer_put  ringbuffer.o
+    0x08017d30   0x08017d30   0x0000002a   Code   RO         4556    i.rt_ringbuffer_status  ringbuffer.o
+    0x08017d5a   0x08017d5a   0x00000002   PAD
+    0x08017d5c   0x08017d5c   0x00000058   Code   RO         4259    i.sample_foot_pos   walk.o
+    0x08017db4   0x08017db4   0x0000003e   Code   RO         5118    i.sqrtf             m_wm.l(sqrtf.o)
+    0x08017df2   0x08017df2   0x00000002   PAD
+    0x08017df4   0x08017df4   0x00000078   Code   RO         4260    i.stance_traj       walk.o
+    0x08017e6c   0x08017e6c   0x000000d4   Code   RO         4261    i.swing_traj        walk.o
+    0x08017f40   0x08017f40   0x0000003c   Code   RO         3553    i.uart_init         usart_app.o
+    0x08017f7c   0x08017f7c   0x000000c0   Code   RO         4365    i.unitree_CAN_Send  gld_can.o
+    0x0801803c   0x0801803c   0x00000144   Code   RO         4366    i.unitree_CAN_receive  gld_can.o
+    0x08018180   0x08018180   0x0000001a   Code   RO         4367    i.unitree_setpara   gld_can.o
+    0x0801819a   0x0801819a   0x00000002   PAD
+    0x0801819c   0x0801819c   0x00000038   Code   RO         4262    i.walk_enter        walk.o
+    0x080181d4   0x080181d4   0x00000240   Code   RO         4263    i.walk_run          walk.o
+    0x08018414   0x08018414   0x0000002c   Code   RO         5400    locale$$code        c_w.l(lc_numeric_c.o)
+    0x08018440   0x08018440   0x0000002c   Code   RO         5423    locale$$code        c_w.l(lc_ctype_c.o)
+    0x0801846c   0x0801846c   0x00000062   Code   RO         4998    x$fpl$d2f           fz_wm.l(d2f.o)
+    0x080184ce   0x080184ce   0x00000002   PAD
+    0x080184d0   0x080184d0   0x00000150   Code   RO         5000    x$fpl$dadd          fz_wm.l(daddsub_clz.o)
+    0x08018620   0x08018620   0x00000018   Code   RO         5232    x$fpl$dcmpinf       fz_wm.l(dcmpi.o)
+    0x08018638   0x08018638   0x00000078   Code   RO         5010    x$fpl$deqf          fz_wm.l(deqf.o)
+    0x080186b0   0x080186b0   0x00000078   Code   RO         5026    x$fpl$dleqf         fz_wm.l(dleqf.o)
+    0x08018728   0x08018728   0x00000154   Code   RO         5028    x$fpl$dmul          fz_wm.l(dmul.o)
+    0x0801887c   0x0801887c   0x0000009c   Code   RO         5234    x$fpl$dnaninf       fz_wm.l(dnaninf.o)
+    0x08018918   0x08018918   0x0000000c   Code   RO         5236    x$fpl$dretinf       fz_wm.l(dretinf.o)
+    0x08018924   0x08018924   0x0000006c   Code   RO         5030    x$fpl$drleqf        fz_wm.l(drleqf.o)
+    0x08018990   0x08018990   0x00000016   Code   RO         5001    x$fpl$drsb          fz_wm.l(daddsub_clz.o)
+    0x080189a6   0x080189a6   0x00000002   PAD
+    0x080189a8   0x080189a8   0x000001d4   Code   RO         5002    x$fpl$dsub          fz_wm.l(daddsub_clz.o)
+    0x08018b7c   0x08018b7c   0x00000056   Code   RO         5032    x$fpl$f2d           fz_wm.l(f2d.o)
+    0x08018bd2   0x08018bd2   0x0000008c   Code   RO         5240    x$fpl$fnaninf       fz_wm.l(fnaninf.o)
+    0x08018c5e   0x08018c5e   0x0000000a   Code   RO         5487    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x08018c68   0x08018c68   0x000000f4   Code   RO         5242    x$fpl$frem          fz_wm.l(frem_clz.o)
+    0x08018d5c   0x08018d5c   0x0000000a   Code   RO         5244    x$fpl$fretinf       fz_wm.l(fretinf.o)
+    0x08018d66   0x08018d66   0x00000004   Code   RO         5246    x$fpl$printf1       fz_wm.l(printf1.o)
+    0x08018d6a   0x08018d6a   0x00000004   Code   RO         5248    x$fpl$printf2       fz_wm.l(printf2.o)
+    0x08018d6e   0x08018d6e   0x00000000   Code   RO         5254    x$fpl$usenofp       fz_wm.l(usenofp.o)
+    0x08018d6e   0x08018d6e   0x00000002   PAD
+    0x08018d70   0x08018d70   0x00000020   Data   RO           22    .constdata          main.o
+    0x08018d90   0x08018d90   0x00000008   Data   RO         1400    .constdata          stm32f4xx_hal_dma.o
+    0x08018d98   0x08018d98   0x00000018   Data   RO         3440    .constdata          system_stm32f4xx.o
+    0x08018db0   0x08018db0   0x00000140   Data   RO         3719    .constdata          yushu_app.o
+    0x08018ef0   0x08018ef0   0x00000060   Data   RO         4635    .constdata          dog.o
+    0x08018f50   0x08018f50   0x0000092d   Data   RO         4961    .constdata          oled_data.o
+    0x0801987d   0x0801987d   0x00000003   PAD
+    0x08019880   0x08019880   0x00000008   Data   RO         5154    .constdata          c_w.l(_printf_wctomb.o)
+    0x08019888   0x08019888   0x00000028   Data   RO         5183    .constdata          c_w.l(_printf_hex_int_ll_ptr.o)
+    0x080198b0   0x080198b0   0x00000011   Data   RO         5203    .constdata          c_w.l(__printf_flags_ss_wp.o)
+    0x080198c1   0x080198c1   0x00000003   PAD
+    0x080198c4   0x080198c4   0x00000020   Data   RO         5301    .constdata          m_wm.l(rredf.o)
+    0x080198e4   0x080198e4   0x00000026   Data   RO         5336    .constdata          c_w.l(_printf_fp_hex.o)
+    0x0801990a   0x0801990a   0x00000002   PAD
+    0x0801990c   0x0801990c   0x00000094   Data   RO         5375    .constdata          c_w.l(bigflt0.o)
+    0x080199a0   0x080199a0   0x00000020   Data   RO         5536    Region$$Table       anon$$obj.o
+    0x080199c0   0x080199c0   0x0000001c   Data   RO         5399    locale$$data        c_w.l(lc_numeric_c.o)
+    0x080199dc   0x080199dc   0x00000110   Data   RO         5422    locale$$data        c_w.l(lc_ctype_c.o)
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08019fd8, Size: 0x00001700, Max: 0x0001c000, ABSOLUTE, COMPRESSED[0x0000010c])
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08019aec, Size: 0x00001700, Max: 0x0001c000, ABSOLUTE, COMPRESSED[0x00000108])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000000   COMPRESSED   0x00000075   Data   RW           23    .data               main.o
     0x20000075   COMPRESSED   0x00000003   PAD
-    0x20000078   COMPRESSED   0x00000004   Data   RW          418    .data               can.o
-    0x2000007c   COMPRESSED   0x00000009   Data   RW         1967    .data               stm32f4xx_hal.o
+    0x20000078   COMPRESSED   0x00000004   Data   RW          307    .data               can.o
+    0x2000007c   COMPRESSED   0x00000009   Data   RW         1850    .data               stm32f4xx_hal.o
     0x20000085   COMPRESSED   0x00000003   PAD
-    0x20000088   COMPRESSED   0x00000004   Data   RW         3558    .data               system_stm32f4xx.o
+    0x20000088   COMPRESSED   0x00000004   Data   RW         3441    .data               system_stm32f4xx.o
     0x2000008c   COMPRESSED   0x00000004   PAD
-    0x20000090   COMPRESSED   0x00000154   Data   RW         3850    .data               yushu_app.o
-    0x200001e4   COMPRESSED   0x0000000c   Data   RW         4380    .data               dwt_timing.o
-    0x200001f0   COMPRESSED   0x0000004c   Data   RW         4420    .data               walk.o
-    0x2000023c   COMPRESSED   0x00000013   Data   RW         4529    .data               gld_can.o
-    0x2000024f   COMPRESSED   0x00000001   PAD
+    0x20000090   COMPRESSED   0x00000150   Data   RW         3720    .data               yushu_app.o
+    0x200001e0   COMPRESSED   0x0000000c   Data   RW         4225    .data               dwt_timing.o
+    0x200001ec   COMPRESSED   0x0000004c   Data   RW         4265    .data               walk.o
+    0x20000238   COMPRESSED   0x00000013   Data   RW         4368    .data               gld_can.o
+    0x2000024b   COMPRESSED   0x00000005   PAD
     0x20000250        -       0x00000410   Zero   RW           21    .bss                main.o
-    0x20000660        -       0x00000050   Zero   RW          417    .bss                can.o
-    0x200006b0        -       0x00000090   Zero   RW          490    .bss                tim.o
-    0x20000740        -       0x000001f8   Zero   RW          539    .bss                usart.o
-    0x20000938        -       0x0000010b   Zero   RW         3680    .bss                usart_app.o
+    0x20000660        -       0x00000050   Zero   RW          306    .bss                can.o
+    0x200006b0        -       0x00000090   Zero   RW          379    .bss                tim.o
+    0x20000740        -       0x000001f8   Zero   RW          428    .bss                usart.o
+    0x20000938        -       0x0000010b   Zero   RW         3555    .bss                usart_app.o
     0x20000a43   COMPRESSED   0x00000005   PAD
-    0x20000a48        -       0x00000060   Zero   RW         3848    .bss                yushu_app.o
-    0x20000aa8        -       0x00000010   Zero   RW         4419    .bss                walk.o
-    0x20000ab8        -       0x000001e8   Zero   RW         4795    .bss                dog.o
-    0x20000ca0        -       0x00000400   Zero   RW         4913    .bss                oled.o
-    0x200010a0        -       0x00000060   Zero   RW         5517    .bss                c_w.l(libspace.o)
+    0x20000a48        -       0x00000060   Zero   RW         3718    .bss                yushu_app.o
+    0x20000aa8        -       0x00000010   Zero   RW         4264    .bss                walk.o
+    0x20000ab8        -       0x000001e8   Zero   RW         4634    .bss                dog.o
+    0x20000ca0        -       0x00000400   Zero   RW         4752    .bss                oled.o
+    0x200010a0        -       0x00000060   Zero   RW         5356    .bss                c_w.l(libspace.o)
     0x20001100        -       0x00000200   Zero   RW            2    HEAP                startup_stm32f407xx.o
     0x20001300        -       0x00000400   Zero   RW            1    STACK               startup_stm32f407xx.o
 
 
-    Execution Region RW_IRAM2 (Exec base: 0x2001c000, Load base: 0x0801a0e4, Size: 0x00000000, Max: 0x00004000, ABSOLUTE)
+    Execution Region RW_IRAM2 (Exec base: 0x2001c000, Load base: 0x08019bf4, Size: 0x00000000, Max: 0x00004000, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
@@ -4425,41 +4381,41 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       520         44          0          4         80       2410   can.o
-       120          6          0          0          0        802   dma.o
-      2838        154         96          0        488      10502   dog.o
-       160         46          0         12          0       1225   dwt_timing.o
-        88         10          0          0          0       1386   for_out.o
-      1402        120          0         19          0     577397   gld_can.o
-       212         10          0          0          0     697487   gpio.o
-      6858        482         32        117       1040     710883   main.o
-      1560         44          0          0       1024      11405   oled.o
-         0          0       2349          0          0       1084   oled_data.o
-       490        122          0          0          0       4059   ringbuffer.o
-         0          0          0          0          0       2143   scheduler.o
-        64         26        392          0       1536        832   startup_stm32f407xx.o
-       212         36          0          9          0       9321   stm32f4xx_hal.o
-      2148          6          0          0          0      14191   stm32f4xx_hal_can.o
-       312         22          0          0          0      34263   stm32f4xx_hal_cortex.o
-      1436         16          8          0          0       6938   stm32f4xx_hal_dma.o
-       512         46          0          0          0       2084   stm32f4xx_hal_gpio.o
-        72          4          0          0          0        842   stm32f4xx_hal_msp.o
-      1820         84          0          0          0       5544   stm32f4xx_hal_rcc.o
-       874         76          0          0          0       5971   stm32f4xx_hal_tim.o
-       184         30          0          0          0       2485   stm32f4xx_hal_tim_ex.o
-      2760         28          0          0          0      14484   stm32f4xx_hal_uart.o
-       210         66          0          0          0       9538   stm32f4xx_it.o
-        20          6         24          4          0       1103   system_stm32f4xx.o
-       268         32          0          0        144       2183   tim.o
-       864         84          0          0        504       3349   usart.o
-       148         42          0          0        267       4965   usart_app.o
-      1122         62          0         76         16       5637   walk.o
-     62868       5920        320        340         96      45563   yushu_app.o
+       520         44          0          4         80       2486   can.o
+       120          6          0          0          0        830   dma.o
+      2838        154         96          0        488      10526   dog.o
+       160         46          0         12          0       1269   dwt_timing.o
+        88         10          0          0          0       1434   for_out.o
+      1402        120          0         19          0     577585   gld_can.o
+       212         10          0          0          0       1023   gpio.o
+      6810        476         32        117       1040     716223   main.o
+      1560         44          0          0       1024      11697   oled.o
+         0          0       2349          0          0       1132   oled_data.o
+       490        122          0          0          0       4151   ringbuffer.o
+         0          0          0          0          0       1220   scheduler.o
+        64         26        392          0       1536        844   startup_stm32f407xx.o
+       212         36          0          9          0       9437   stm32f4xx_hal.o
+      2148          6          0          0          0      14491   stm32f4xx_hal_can.o
+       312         22          0          0          0      34367   stm32f4xx_hal_cortex.o
+      1436         16          8          0          0       7074   stm32f4xx_hal_dma.o
+       512         46          0          0          0       2128   stm32f4xx_hal_gpio.o
+        72          4          0          0          0        870   stm32f4xx_hal_msp.o
+      1820         84          0          0          0       5648   stm32f4xx_hal_rcc.o
+       874         76          0          0          0       6111   stm32f4xx_hal_tim.o
+       184         30          0          0          0       2549   stm32f4xx_hal_tim_ex.o
+      2760         28          0          0          0      14760   stm32f4xx_hal_uart.o
+       210         66          0          0          0      10773   stm32f4xx_it.o
+        20          6         24          4          0       1147   system_stm32f4xx.o
+       268         32          0          0        144       2251   tim.o
+       864         84          0          0        504       3445   usart.o
+       148         42          0          0        267       4973   usart_app.o
+      1122         62          0         76         16       5657   walk.o
+     61654       5858        320        336         96      44897   yushu_app.o
 
     ----------------------------------------------------------------------
-     90172       7624       3256        592       5200    2190076   Object Totals
+     88912       7556       3256        588       5204    1500998   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        30          0          3         11          5          0   (incl. Padding)
+        32          0          3         11          9          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -4602,15 +4558,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-    102612       8314       3844        592       5296    2173136   Grand Totals
-    102612       8314       3844        268       5296    2173136   ELF Image Totals (compressed)
-    102612       8314       3844        268          0          0   ROM Totals
+    101352       8246       3844        588       5300    1484058   Grand Totals
+    101352       8246       3844        264       5300    1484058   ELF Image Totals (compressed)
+    101352       8246       3844        264          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)               106456 ( 103.96kB)
+    Total RO  Size (Code + RO Data)               105196 ( 102.73kB)
     Total RW  Size (RW Data + ZI Data)              5888 (   5.75kB)
-    Total ROM Size (Code + RO Data + RW Data)     106724 ( 104.22kB)
+    Total ROM Size (Code + RO Data + RW Data)     105460 ( 102.99kB)
 
 ==============================================================================
 
